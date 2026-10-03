@@ -45,8 +45,14 @@ SAMPLE_HEADLINES = [
 ]
 
 
+EXCHANGE_TAG = re.compile(r"\((?:NYSE|NASDAQ|NYSEARCA|AMEX)[:\s]+([A-Za-z.]{1,6})\)", re.IGNORECASE)
+
+
 def find_ticker(text):
-    """Cashtag first ($AAPL), then company-name match. Returns None if nothing found."""
+    """Exchange tag (NYSE:CORR), then cashtag ($AAPL), then company name. None if nothing found."""
+    m = EXCHANGE_TAG.search(str(text))
+    if m:
+        return m.group(1).upper()
     m = re.search(r"\$([A-Za-z]{1,5})\b", str(text))
     if m:
         return m.group(1).upper()
