@@ -10,7 +10,9 @@ import streamlit as st
 from src.rebalance import load_signals, top_tickers, assign_steps, rebalance
 
 UP, DOWN, GREY = "#1D9E75", "#D85A30", "#C8C6BD"
-DEFAULT_PATH = Path(__file__).parent / "data" / "signals.csv"
+ROOT = Path(__file__).parent
+DEFAULT_PATH = ROOT / "data" / "signals.csv"            # your own run (git-ignored)
+SAMPLE_PATH = ROOT / "sample" / "signals_sample.csv"    # committed sample so anyone can run the demo
 
 st.set_page_config(page_title="Sentiment index rebalancer", layout="wide")
 
@@ -26,9 +28,15 @@ def style(fig, height=400):
 # ---------- sidebar ----------
 st.sidebar.header("Settings")
 upload = st.sidebar.file_uploader("Signals file (optional)", type="csv")
-source = upload if upload is not None else DEFAULT_PATH
-if upload is None and not DEFAULT_PATH.exists():
-    st.error("No signals file found. Put signals.csv in the data/ folder or upload one in the sidebar.")
+if upload is not None:
+    source = upload
+elif DEFAULT_PATH.exists():
+    source = DEFAULT_PATH
+elif SAMPLE_PATH.exists():
+    source = SAMPLE_PATH
+    st.sidebar.info("Using the bundled sample signals.")
+else:
+    st.error("No signals file found. Run src/run_engine.py, or upload a signals.csv in the sidebar.")
     st.stop()
 
 signals = load_signals(source)
@@ -47,11 +55,18 @@ sensitivity = st.sidebar.slider("Sensitivity", 0.1, 3.0, 1.5, 0.1,
 decay = st.sidebar.slider("Decay", 0.0, 0.5, 0.05, 0.05,
                           help="Share of each weight pulled back toward equal weight every step.")
 max_weight = st.sidebar.slider("Max weight per stock", 0.05, 0.40, 0.15, 0.01, format="%.2f")
-n_steps = st.sidebar.slider("Replay steps", 5, 40, 20,
-                            help="Only used when the data has no real dates.")
+_, probe_mode = assign_steps(signals)
+if probe_mode == "replay":
+    freq = "auto"
+    n_steps = st.sidebar.slider("Replay steps", 5, 40, 20,
+                                help="This file has no usable dates, so signals are replayed in file order.")
+else:
+    n_steps = 20
+    freq = st.sidebar.selectbox("Time step", ["Auto", "Day", "Week", "Month"],
+                                help="How dated signals are grouped into rebalancing steps.").lower()
 
 # ---------- compute ----------
-signals, mode = assign_steps(signals, n_steps)
+signals, mode = assign_steps(signals, n_steps, freq)
 weights, scores = rebalance(signals, tickers, sensitivity, decay, max_weight)
 used = signals[signals["ticker"].isin(tickers)]
 change = (weights.iloc[-1] - weights.iloc[0]) * 100
@@ -75,6 +90,7 @@ with tab1:
         fig = px.bar(d, x="pts", y="ticker", orientation="h", color="dir",
                      color_discrete_map={"Up": UP, "Down": DOWN},
                      labels={"pts": "", "ticker": ""})
+        fig.update_traces(hovertemplate="%{y}: %{x:+.2f} pts<extra></extra>")
         fig.add_vline(x=0, line_color="#999", line_width=1)
         st.plotly_chart(style(fig, 80 + 28 * len(tickers)), width="stretch")
     with right:

@@ -27,7 +27,7 @@ def load_signals(source):
     ]
     df = df.dropna(subset=["ticker"]).copy()
     df["ticker"] = df["ticker"].str.upper()
-    df["ts"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True).dt.tz_localize(None)
+    df["ts"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True, format="mixed").dt.tz_localize(None)
     return df.reset_index(drop=True)
 
 
@@ -35,23 +35,29 @@ def top_tickers(df, n=15):
     return df["ticker"].value_counts().head(n).index.tolist()
 
 
-def assign_steps(df, n_steps=20):
-    """Group signals into time steps. Real dates if the data has enough of them,
-    otherwise replay the file in order, split into n_steps chunks."""
+def assign_steps(df, n_steps=20, freq="auto"):
+    """Group signals into time steps.
+
+    Dated data: one step per day, week or month (freq="auto" picks day for up to 60 distinct
+    days, otherwise week). Undated data: replay the file in order, split into n_steps chunks.
+    Returns (df with 'step' and 'step_label', mode) where mode is 'by day/week/month' or 'replay'.
+    """
     df = df.copy()
-    if df["ts"].notna().all():
+    if df["ts"].notna().all() and df["ts"].dt.normalize().nunique() >= 5:
+        df = df.sort_values("ts").reset_index(drop=True)
         days = df["ts"].dt.normalize()
-        if days.nunique() >= 5:
-            df = df.sort_values("ts").reset_index(drop=True)
-            days = df["ts"].dt.normalize()
-            if days.nunique() > 60:
-                key = df["ts"].dt.to_period("W").dt.start_time
-            else:
-                key = days
-            order = {k: i for i, k in enumerate(sorted(key.unique()))}
-            df["step"] = key.map(order)
-            df["step_label"] = key.dt.strftime("%Y-%m-%d")
-            return df, "by date"
+        if freq == "auto":
+            freq = "week" if days.nunique() > 60 else "day"
+        if freq == "month":
+            key = df["ts"].dt.to_period("M").dt.start_time
+        elif freq == "week":
+            key = df["ts"].dt.to_period("W").dt.start_time
+        else:
+            freq, key = "day", days
+        order = {k: i for i, k in enumerate(sorted(key.unique()))}
+        df["step"] = key.map(order)
+        df["step_label"] = key.dt.strftime("%Y-%m-%d")
+        return df, f"by {freq}"
     n = max(1, min(n_steps, len(df)))
     df["step"] = np.arange(len(df)) * n // len(df)
     df["step_label"] = "Step " + (df["step"] + 1).astype(str)
