@@ -3,9 +3,9 @@
 Runs on plain pandas/numpy, so it works on your laptop (no torch needed).
 
 Rule, applied once per time step:
-  1. For each stock, score = impact-weighted average sentiment of that step's signals
-     (0 if the stock had no news this step).
-  2. Tilt:   w_new = w_old * (1 + sensitivity * score)
+  1. For each stock, net signal = sum of (sentiment * impact / 10) over that step's signals
+     (0 if no news). More and stronger news means a bigger signal, capped at +/-2.
+  2. Tilt:   w_new = w_old * exp(sensitivity * net_signal)
   3. Decay:  pull a fraction of the weight back toward the equal-weight start,
              so one burst of news doesn't move the index forever.
   4. Limits: clip each weight to [min_weight, max_weight] and renormalize to 100%.
@@ -82,11 +82,10 @@ def rebalance(df, tickers, sensitivity=0.5, decay=0.1, max_weight=0.15, min_weig
 
     for step, label in labels.items():
         sub = df[(df["step"] == step) & (df["ticker"].isin(tickers))].copy()
-        sub["wx"] = sub["sentiment"] * sub["impact"]
-        g = sub.groupby("ticker")[["wx", "impact"]].sum()
-        score = (g["wx"] / g["impact"]).reindex(tickers).fillna(0.0).values
+        sub["wx"] = sub["sentiment"] * sub["impact"] / 10.0
+        score = sub.groupby("ticker")["wx"].sum().reindex(tickers).fillna(0.0).clip(-2, 2).values
 
-        tilted = np.maximum(w * (1 + sensitivity * score), 1e-6)
+        tilted = w * np.exp(sensitivity * score)
         tilted = tilted / tilted.sum()
         w = _apply_limits((1 - decay) * tilted + decay * w0, lo, hi)
 

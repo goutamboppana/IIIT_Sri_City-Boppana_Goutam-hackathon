@@ -1,24 +1,34 @@
 """Module A dashboard. Run from the project root:  streamlit run app.py"""
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 
 from src.rebalance import load_signals, top_tickers, assign_steps, rebalance
 
-st.set_page_config(page_title="Sentiment Index Rebalancer", layout="wide")
-st.title("Tactical Index Rebalancer")
-st.caption("Module A: stock weights adjust as the NLP risk engine's sentiment signals arrive.")
-
+UP, DOWN, GREY = "#1D9E75", "#D85A30", "#C8C6BD"
 DEFAULT_PATH = Path(__file__).parent / "data" / "signals.csv"
 
+st.set_page_config(page_title="Sentiment index rebalancer", layout="wide")
+
+
+def style(fig, height=400):
+    fig.update_layout(template="simple_white", height=height, showlegend=False,
+                      margin=dict(l=0, r=0, t=10, b=0), font=dict(size=13))
+    fig.update_xaxes(showgrid=False)
+    fig.update_yaxes(showgrid=True, gridcolor="#EEECE6", zeroline=False)
+    return fig
+
+
 # ---------- sidebar ----------
-st.sidebar.header("Data")
-upload = st.sidebar.file_uploader("Upload signals.csv (optional)", type="csv")
+st.sidebar.header("Settings")
+upload = st.sidebar.file_uploader("Signals file (optional)", type="csv")
 source = upload if upload is not None else DEFAULT_PATH
 if upload is None and not DEFAULT_PATH.exists():
-    st.error("No signals file found. Put signals.csv in the data/ folder, or upload one in the sidebar.")
+    st.error("No signals file found. Put signals.csv in the data/ folder or upload one in the sidebar.")
     st.stop()
 
 signals = load_signals(source)
@@ -26,88 +36,106 @@ if signals.empty:
     st.error("No signals with a ticker were found, so there is nothing to rebalance.")
     st.stop()
 
-st.sidebar.header("Index")
 all_tickers = signals["ticker"].value_counts().index.tolist()
-default_tickers = top_tickers(signals, 15)
-tickers = st.sidebar.multiselect("Stocks in the index", all_tickers, default=default_tickers)
+tickers = st.sidebar.multiselect("Stocks in the index", all_tickers, default=top_tickers(signals, 15))
 if len(tickers) < 3:
     st.warning("Pick at least 3 stocks.")
     st.stop()
 
-st.sidebar.header("Rebalancing rule")
-sensitivity = st.sidebar.slider("Sensitivity", 0.1, 1.0, 0.5, 0.05,
-                                help="How strongly sentiment moves a weight in one step.")
-decay = st.sidebar.slider("Decay toward equal weight", 0.0, 0.5, 0.1, 0.05,
-                          help="Fraction pulled back to the starting weight each step.")
+sensitivity = st.sidebar.slider("Sensitivity", 0.1, 3.0, 1.5, 0.1,
+                                help="How strongly news moves a weight in one step.")
+decay = st.sidebar.slider("Decay", 0.0, 0.5, 0.05, 0.05,
+                          help="Share of each weight pulled back toward equal weight every step.")
 max_weight = st.sidebar.slider("Max weight per stock", 0.05, 0.40, 0.15, 0.01, format="%.2f")
-n_steps = st.sidebar.slider("Replay steps (when data has no real dates)", 5, 40, 20)
+n_steps = st.sidebar.slider("Replay steps", 5, 40, 20,
+                            help="Only used when the data has no real dates.")
 
 # ---------- compute ----------
 signals, mode = assign_steps(signals, n_steps)
 weights, scores = rebalance(signals, tickers, sensitivity, decay, max_weight)
 used = signals[signals["ticker"].isin(tickers)]
-
 change = (weights.iloc[-1] - weights.iloc[0]) * 100
-c1, c2, c3, c4 = st.columns(4)
-c1.metric("Signals used", len(used))
-c2.metric("Time steps", len(weights) - 1, help=f"Grouping mode: {mode}")
-c3.metric("Biggest gainer", change.idxmax(), f"{change.max():+.2f} pts")
-c4.metric("Biggest loser", change.idxmin(), f"{change.min():+.2f} pts")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Weights over time", "Start vs now", "Replay a step", "How it works"])
+st.title("Sentiment-driven index rebalancer")
+st.markdown(
+    f"{len(tickers)} stocks, {len(used)} signals, {len(weights) - 1} time steps ({mode}).  "
+    f"Biggest gain: **{change.idxmax()}** ({change.max():+.2f} pts).  "
+    f"Biggest drop: **{change.idxmin()}** ({change.min():+.2f} pts)."
+)
 
+tab1, tab2, tab3 = st.tabs(["Overview", "Over time", "Replay a step"])
+
+# ---------- overview: who moved ----------
 with tab1:
-    long = (weights * 100).reset_index(names="step").melt(
-        id_vars="step", var_name="ticker", value_name="weight_pct")
-    fig = px.area(long, x="step", y="weight_pct", color="ticker",
-                  labels={"weight_pct": "Weight (%)", "step": ""})
-    fig.update_layout(height=450, legend_title_text="")
-    st.plotly_chart(fig, width="stretch")
-    lines = px.line(long, x="step", y="weight_pct", color="ticker",
-                    labels={"weight_pct": "Weight (%)", "step": ""})
-    lines.update_layout(height=350, legend_title_text="")
-    st.plotly_chart(lines, width="stretch")
+    left, right = st.columns([3, 2])
+    with left:
+        st.caption("Change in weight, start to now (percentage points)")
+        d = change.sort_values().rename("pts").rename_axis("ticker").reset_index()
+        d["dir"] = np.where(d["pts"] >= 0, "Up", "Down")
+        fig = px.bar(d, x="pts", y="ticker", orientation="h", color="dir",
+                     color_discrete_map={"Up": UP, "Down": DOWN},
+                     labels={"pts": "", "ticker": ""})
+        fig.add_vline(x=0, line_color="#999", line_width=1)
+        st.plotly_chart(style(fig, 80 + 28 * len(tickers)), width="stretch")
+    with right:
+        st.caption("Weights (%)")
+        tbl = pd.DataFrame({"Start": weights.iloc[0] * 100, "Now": weights.iloc[-1] * 100})
+        tbl["Change"] = tbl["Now"] - tbl["Start"]
+        st.dataframe(tbl.sort_values("Change", ascending=False).round(2), width="stretch")
 
+# ---------- over time: highlight the movers, grey out the rest ----------
 with tab2:
-    cmp = pd.DataFrame({
-        "Start": weights.iloc[0] * 100,
-        "Now": weights.iloc[-1] * 100,
-    })
-    cmp["Change (pts)"] = cmp["Now"] - cmp["Start"]
-    bar = px.bar(cmp.reset_index(names="ticker").melt(
-        id_vars="ticker", value_vars=["Start", "Now"], var_name="when", value_name="weight_pct"),
-        x="ticker", y="weight_pct", color="when", barmode="group",
-        labels={"weight_pct": "Weight (%)", "ticker": ""})
-    bar.update_layout(height=420, legend_title_text="")
-    st.plotly_chart(bar, width="stretch")
-    st.dataframe(cmp.sort_values("Change (pts)", ascending=False).round(2), width="stretch")
+    delta = (weights - weights.iloc[0]) * 100
+    final = delta.iloc[-1].sort_values()
+    movers = list(dict.fromkeys(list(final.index[:3]) + list(final.index[-3:])))
+    show = st.multiselect("Highlighted stocks (the rest stay grey)", tickers, default=movers)
+    st.caption("Change in weight vs the equal-weight start (percentage points)")
 
+    x = list(delta.index)
+    fig = go.Figure()
+    for t in tickers:
+        if t not in show:
+            fig.add_trace(go.Scatter(x=x, y=delta[t], mode="lines", line=dict(color=GREY, width=1),
+                                     hovertemplate=f"%{{x}}<br>{t}: %{{y:.2f}} pts<extra></extra>"))
+    for t in show:
+        c = UP if delta[t].iloc[-1] >= 0 else DOWN
+        fig.add_trace(go.Scatter(x=x, y=delta[t], mode="lines", line=dict(color=c, width=2.5),
+                                 hovertemplate=f"%{{x}}<br>{t}: %{{y:.2f}} pts<extra></extra>"))
+        fig.add_trace(go.Scatter(x=[x[-1]], y=[delta[t].iloc[-1]], mode="text", text=[f"  {t}"],
+                                 textposition="middle right", textfont=dict(color=c),
+                                 hoverinfo="skip", cliponaxis=False))
+    fig.add_hline(y=0, line_color="#999", line_width=1)
+    fig.update_xaxes(type="category", nticks=8)
+    style(fig, 450)
+    fig.update_layout(margin=dict(l=0, r=70, t=10, b=0))
+    st.plotly_chart(fig, width="stretch")
+
+# ---------- replay one step ----------
 with tab3:
     idx = st.slider("Step", 0, len(weights) - 1, len(weights) - 1)
     label = weights.index[idx]
-    st.subheader(label)
-    left, right = st.columns([1, 1])
+    left, right = st.columns(2)
     with left:
+        st.caption(f"Weights at: {label}")
         step_w = (weights.iloc[idx] * 100).rename("Weight (%)").round(2).to_frame()
-        step_w["Sentiment score"] = scores.iloc[idx].round(2)
+        step_w["Net signal"] = scores.iloc[idx].round(2)
         st.dataframe(step_w.sort_values("Weight (%)", ascending=False), width="stretch")
     with right:
+        st.caption("Signals that arrived in this step")
         if idx == 0:
             st.info("Start: equal weights, no signals yet.")
         else:
-            step_sig = used[used["step_label"] == label][
-                ["ticker", "sentiment", "event", "impact", "text"]]
+            step_sig = used[used["step_label"] == label][["ticker", "sentiment", "event", "impact", "text"]]
             st.dataframe(step_sig, width="stretch", hide_index=True)
 
-with tab4:
-    st.markdown(f"""
-**Each time step** the engine's signals are grouped by stock (grouping mode: *{mode}*), then:
+with st.expander("How the rebalancing works"):
+    st.markdown("""
+Each time step, signals are grouped by stock, then:
 
-1. **Score**: impact-weighted average sentiment of that stock's signals (0 if no news).
-2. **Tilt**: `new = old × (1 + sensitivity × score)`. Positive sentiment raises a weight, negative lowers it.
-3. **Decay**: a fraction of each weight is pulled back toward the equal-weight start, so old news fades.
-4. **Limits**: weights are clipped to a floor and a cap, then renormalized so they sum to 100%.
+1. **Net signal**: sum of sentiment x impact/10 over that stock's signals (0 if no news), so more and stronger news moves a weight more.
+2. **Tilt**: `new = old x exp(sensitivity x net signal)`. Positive news raises a weight, negative lowers it.
+3. **Decay**: part of each weight is pulled back toward the equal-weight start, so old news fades.
+4. **Limits**: weights are clipped to a floor and cap, then renormalized to sum to 100%.
 
-The index starts equal-weighted. Signals come from `src/run_engine.py` (FinBERT sentiment, zero-shot event
-classification, rule-based impact score).
+Signals come from `src/run_engine.py`: FinBERT sentiment, zero-shot event class, rule-based impact score.
 """)
