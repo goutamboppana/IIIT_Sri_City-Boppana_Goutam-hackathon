@@ -1,0 +1,1991 @@
+source,timestamp,ticker,text,sentiment,event,event_confidence,impact
+sample_headlines,2026-10-04T19:31:28+00:00,AAPL,Apple raises quarterly dividend and expands share buyback program,0.311,Dividend or Buyback,0.825,2
+sample_headlines,2026-10-04T19:31:28+00:00,TSLA,Tesla shares fall after analyst downgrade over weak delivery outlook,-0.96,Analyst Rating,0.596,2
+sample_headlines,2026-10-04T19:31:28+00:00,JPM,JPMorgan beats earnings expectations on strong trading revenue,0.902,Earnings,0.759,5
+sample_headlines,2026-10-04T19:31:28+00:00,,Fed signals further interest rate hikes as inflation stays elevated,0.508,Macroeconomic,0.38,4
+sample_headlines,2026-10-04T19:31:28+00:00,BA,Boeing faces new regulatory probe over safety inspections,-0.942,Regulatory/Legal,0.663,5
+sample_headlines,2026-10-04T19:31:28+00:00,MSFT,Microsoft announces acquisition of a cybersecurity startup,0.016,Merger/Acquisition,0.805,3
+sample_headlines,2026-10-04T19:31:28+00:00,,Oil prices jump as geopolitical tensions escalate in the Middle East,-0.837,Geopolitical,0.809,7
+sample_headlines,2026-10-04T19:31:28+00:00,BAC,Bank of America warns of rising credit card defaults,-0.942,Credit Event,0.638,7
+sample_headlines,2026-10-04T19:31:28+00:00,NVDA,"Nvidia unveils new AI chip, shares rally",0.34,Product Launch,0.883,3
+sample_headlines,2026-10-04T19:31:28+00:00,PFE,Pfizer CFO to step down at the end of the quarter,-0.528,Management Change,0.824,3
+kaggle_stock_tweets,2022-01-14 22:01:21+00:00,TSLA,"Today was a good day! 🐶
+
+#dogecoin #doge @elonmusk @Tesla https://t.co/UQREBHLqZg",0.456,Other,0.153,1
+kaggle_stock_tweets,2022-05-17 04:09:43+00:00,TSLA,$TSLA Shanghai production capacity is near 50%,0.231,Other,0.207,1
+kaggle_stock_tweets,2021-12-05 21:04:38+00:00,MSFT,"$AMZN: Creating and Ascending Broadening Wedge it seems like. 
+
+Textbook setup, just have to see if monday we will get a bounce at the bottom or a proper breakdown, either way we can play the bounce to top trendline to the break of bottom trend. 
+
+Mixed flow overall. https://t.co/Nu0EeFUhpE",0.034,Market Commentary,0.337,1
+kaggle_stock_tweets,2021-12-14 13:12:22+00:00,TSLA,BREAKING: Daiwa Capital Markets raises $TSLA PT to $1050 from $860.,0.909,Analyst Rating,0.494,2
+kaggle_stock_tweets,2021-11-27 23:54:49+00:00,TSLA,"If you say you can’t afford an EV as you put $5 a gallon or $110 a week into your ICE car. And maintenance, brakes and oil. My net cost to own my model 3 for 3.5 years was $125 a month. You must factor all costs and resale value.   #tesla $tsla",-0.004,Other,0.194,1
+kaggle_stock_tweets,2022-04-01 14:57:54+00:00,TSLA,"Today at @Tesla #GigaBerlin 
+
+Video will follow later at https://t.co/f7mNxoR6Mr https://t.co/OlSEUrfBNZ",0.007,Other,0.141,1
+kaggle_stock_tweets,2022-09-22 19:52:59+00:00,TSLA,"A new long range heavy electric truck: the
+@Mercedes eActross (500 km / 600 kWh LFP) expected in 2024
+
+This/next year we already expect the 
+@Tesla semi (500-800 km) and 
+@daimler Freightliner eCascadia (400 km / 550 kWh)
+https://t.co/YwQ9itAoKB",0.272,Product Launch,0.409,2
+kaggle_stock_tweets,2022-03-30 14:32:57+00:00,NIO,$NIO remember all those idiots yelling random numbers? $8 $10 $12 yeah they are gone! 😝,-0.324,Other,0.196,1
+kaggle_stock_tweets,2022-06-02 23:43:36+00:00,TSLA,"If you're @Tesla and want to keep working at a distributed company, come work with us @GraphCDN!
+
+We just announced One Job, One Pay: no matter where you are in the world, we'll pay you the same for the same job. 😎
+
+https://t.co/X4sp2UwdNz 👈 https://t.co/CNTuv0sg8X",0.042,Other,0.199,1
+kaggle_stock_tweets,2022-04-24 23:52:07+00:00,TSLA,"This is really bad. Musk realizing he's about to be charged for fraud and could lose his position/the company. 
+
+Goes to the Saudis to essentially tell them to manufacture a narrative to help bail him out.
+
+In the end, wrist slap by @SEC_Enforcement and ""worth it"" $TSLA $TSLAQ https://t.co/OP7cn4EyLC",-0.682,Management Change,0.305,3
+kaggle_stock_tweets,2021-11-18 23:17:58+00:00,TSLA,"Another favorable, unbiased $TSLA story by @DowJonesAl. @elonmusk https://t.co/LHr3GE4pTk",0.077,Other,0.227,1
+kaggle_stock_tweets,2022-08-24 12:32:42+00:00,AMZN,$PTON to sell on $AMZN.,0.058,Other,0.233,1
+kaggle_stock_tweets,2021-12-22 13:53:09+00:00,CRM,"$CRM Evercore ISI Reiterates Top Pick, Sees 50% Upside as Shares Trade at a Discount
+
+“We expect high-valuation stocks are likely to remain volatile (even a small misstep = trip to the penalty box) and as such, investors need to focus on software names that are: 1) durable..",0.452,Analyst Rating,0.471,2
+kaggle_stock_tweets,2022-02-20 13:16:29+00:00,COST,"💰10 Dividend Growth Stocks💰
+
+$V 💳
+$PG 🧼
+$HD 👷🏻‍♂️
+$WM ♻️
+$TGT 🛍
+$TXN 🏙
+$JPM  🏦
+$ABBV 💊
+$MSFT  ☁️
+$COST  🛒",0.111,Dividend or Buyback,0.676,2
+kaggle_stock_tweets,2022-07-09 00:29:14+00:00,TSLA,"Now with twitter basically a duck, will someone else quack? Not sure how this gets resolved but a huge mess for sure. The only real winner here is tesla.  $tsla $twtr",-0.074,Other,0.185,1
+kaggle_stock_tweets,2022-06-10 18:58:34+00:00,AMZN,"Not sure when or how this all ends, but I would view the following as can't-miss, generational buying opportunities:
+
+$AMZN below $90
+$DIS below $80
+$GOOG below $95 (post-split)
+$HD below $250
+$MTN below $200
+$PLD below $100
+
+What are you watching?",-0.038,Other,0.204,1
+kaggle_stock_tweets,2022-01-04 06:03:30+00:00,TSLA,"“What does physics say we can do? Because physics is the law, everything else is a recommendation."" - @elonmusk
+
+#Tesla #PlaidModelS @Tesla https://t.co/U3IMpuwAPY",0.023,Other,0.166,1
+kaggle_stock_tweets,2021-10-18 18:47:10+00:00,AAPL,"The Phases of $FB:
+
+Phase 1: Ad platform
+Phase 2: +Shopping and payment platform
+Phase 3: +AR/VR hardware platform
+Phase 4: +Metaverse App store
+
+So basically $FB becomes ( $FB + $AMZN + $AAPL ) in one company.",0.036,Product Launch,0.306,1
+kaggle_stock_tweets,2022-03-03 18:34:40+00:00,TSLA,"Republicans should invite @Tesla CEO @elonmusk to Capitol Hill “to be part of the conversation” about the transition to electric vehicles, as the Biden administration shows favoritism to @GM and @Ford, says Republican @RepHerrell.
+#JustTheNews 
+https://t.co/EU6RfvmLjl",0.001,Other,0.244,1
+kaggle_stock_tweets,2021-11-12 01:07:01+00:00,TSLA,Who’s ready for a $TSLA stock split?,-0.035,Other,0.209,1
+kaggle_stock_tweets,2021-10-18 19:53:33+00:00,NIO,Last $NIO day we hit $66.99 I wonder how high we will reach this time?!! https://t.co/mwNVJLW90d,0.053,Other,0.211,1
+kaggle_stock_tweets,2022-06-08 02:36:52+00:00,TSM,Taiwan's $TSM says global high inflation has no direct impact on semiconductor industry.,-0.395,Macroeconomic,0.305,3
+kaggle_stock_tweets,2021-10-27 15:38:11+00:00,PYPL,$PYPL could have just bought $PINS 🤷‍♂️,-0.0,Merger/Acquisition,0.356,2
+kaggle_stock_tweets,2021-12-08 15:26:57+00:00,AAPL,Apple 5% away from a $3T valuation.  $AAPL,-0.844,Other,0.214,1
+kaggle_stock_tweets,2022-05-11 02:23:33+00:00,TSLA,"At $780 apiece you are getting $tsla that will change the world and take you to Mars in few years 
+
+Instead of looking at this you are bickering whether Jerome gonna pucker his lips and raise another 50 or 25 BP next month 
+
+Frankly it’s pathetic and sad 😢",-0.584,Other,0.182,1
+kaggle_stock_tweets,2022-07-27 06:31:55+00:00,TSM,Supposedly more TSM moves coming 👀,0.006,Management Change,0.352,2
+kaggle_stock_tweets,2022-08-12 15:10:28+00:00,INTC,"Very interesting data from Jefferies showing CPU and GPU instance share in the top cloud providers. Haven't come across this level of granularity before $NVDA $AMD $INTC 
+
+CPUs - clear trend of AMD taking share from Intel, but also AWS's Graviton being pushed strongly as well https://t.co/62pvghhgpL",0.856,Analyst Rating,0.437,2
+kaggle_stock_tweets,2021-11-12 21:56:22+00:00,PYPL,"11/12 Results 🏆
+
+$BA 222.5c: .86 ➡️ 1.8 ✅ 110%
+
+$PYPL 205c: .44 ➡️ 5.0 ✅✅✅ 1036%
+
+$SQ 230c: .89 ➡️ 1.25 ✅ 40%
+
+$NIO 43c: .60 ➡️ .79 ✅ 32%
+
+Have a great weekend! https://t.co/6pyONiBjHM",0.08,Earnings,0.313,2
+kaggle_stock_tweets,2022-04-11 05:08:26+00:00,TSLA,"*IF* @elonmusk decides to buy twitter (all of it) would you support this decision? 
+
+To do so, the sale of more $TSLA stock is likely necessary unless Elon takes out the largest line of credit in the history of earth.",0.072,Credit Event,0.418,3
+kaggle_stock_tweets,2022-01-18 01:21:57+00:00,TSLA,.@elonmusk starts @Tesla wrap division 🤣👍🏾 https://t.co/1Cvba3Y4lj,0.027,Management Change,0.567,2
+kaggle_stock_tweets,2022-04-14 03:59:33+00:00,TSLA,"I suspect at least a few are in this boat... hoping to hang on to their juicy salary for another 5 years before ""oops, we couldn't have seen this coming, don't blame me, SEEYA!!!""  
+
+$TSLA",-0.019,Earnings,0.376,2
+kaggle_stock_tweets,2022-06-23 15:45:00+00:00,TSLA,"More than 715k $TSLA option contracts traded already, 51% call 26% put",0.116,Other,0.213,1
+kaggle_stock_tweets,2021-12-19 19:19:28+00:00,TSLA,"Biden will bring back BBB piecemeal so Dems have accomplishments for 2022 midterms. Biden’s 4 key objectives as President:
+1/ Economic recovery
+2/ Covid
+3/ Racial equality
+4/ Clean energy
+The EV credit can pass as a standalone without the $4.5K union bonus, driven by $GM. $tsla https://t.co/MQfPRy6qmb",0.339,Management Change,0.331,2
+kaggle_stock_tweets,2021-11-08 12:07:10+00:00,TSLA,"$RIVN increased this week’s IPO price to $72-$74 ($65B), from $57-$62 previously. Ironically, @elonmusk tweet poll on whether to sell 10% of $TSLA shares to pay taxes due next Aug w/ options exercise, likely increases demand for $RIVN (20% owned by $AMZN) for EV diversification. https://t.co/LYxNCSenaO",0.902,Other,0.169,1
+kaggle_stock_tweets,2022-06-15 16:36:06+00:00,TSLA,"🥳Congrats everyone, we have reached 3.2K followers. THANKS to you guys.
+
+Lets celebrate 🎉 - we are giving away 320 $usdt to 5 lucky winner 🎁
+
+👉🏻Follow us @themoneyjacks 
+👉🏻Comment &amp; tag 5 friends
+👉🏻RETWEET
+
+Hurry up - ending in 12h ⏰
+
+$sol $luna $tsla
+
+https://t.co/VkHTGbmxg6",0.654,Other,0.234,1
+kaggle_stock_tweets,2022-04-23 01:51:47+00:00,MSFT,"2022 Returns...
+$TWTR: +13%
+$TSLA: -5%
+$AAPL: -9%
+$AMZN: -13%
+$GOOGL: -17%
+$MSFT: -18%
+$NOW: -27%
+$ADBE: -28%
+$CRM: -33%
+$NVDA: -34%
+$SQ: -36%
+$TEAM: -36%
+$SNAP: -37%
+$AMD: -39%
+$MRNA: -45%
+$FB: -45%
+$PINS: -46%
+$SNOW: -49%
+$PYPL: -54%
+$NFLX: -64%
+$SHOP: -67%
+$RIVN: -68%",-0.038,Earnings,0.395,2
+kaggle_stock_tweets,2022-07-11 16:33:32+00:00,AMD,"2022 Returns
+$AAPL: -18%
+$GOOG: -19%
+$MSFT: -21%
+$TWTR: -22%
+$MRNA: -31%
+$CRM: -31%
+$AMZN: -32%
+$ADBE: -32%
+$TSLA: -34%
+$ZM: -40%
+$TEAM: -44%
+$AMD: -46%
+$NVDA: -48%
+$META: -51%
+$SNOW: -54%
+$SPOT: -57%
+$ETSY: -60%
+$SQ: -61%
+$PYPL: -62%
+$NFLX: -70%
+$SNAP: -70%
+$W: -73%
+$SHOP: -76%",-0.044,Other,0.264,1
+kaggle_stock_tweets,2022-07-05 17:33:22+00:00,COST,"NUNCA VENDO ESTAS EMPRESAS
+
+Johnson &amp; Johnson $JNJ LVMH $MC Costco $COST
+Apple $Aaple Mastercard $MA Microsoft $MSFT
+AbbVie $ABBV ASML $ASML Alphabet $GOOGL
+Amazon $AMZN
+
+Fuente: stocktorch https://t.co/DDCWijPWnM",0.11,Other,0.256,1
+kaggle_stock_tweets,2022-06-28 22:27:48+00:00,TSLA,"THIS DAY IN $TSLAQ HISTORY:
+
+The last 4 years have been rough on $TSLA: backlog gone, demand evaporated... so sad.😥
+🤭 https://t.co/HHb1P0MCUT",-0.946,Other,0.193,1
+kaggle_stock_tweets,2021-11-07 18:55:04+00:00,TSLA,"All we need to do is convince 20 million different ppl to buy 1 share, and poof, no more Elon selling problem.
+
+💡
+
+$TSLA",0.078,Other,0.201,1
+kaggle_stock_tweets,2022-03-10 04:50:17+00:00,TSLA,"Tesla on ""autopilot"" crashes into  road maintenance vehicle. The 25 y.o. worker setting up traffic cones killed. $TSLAQ $TSLA  https://t.co/G39sECcEJS",-0.881,Other,0.146,1
+kaggle_stock_tweets,2022-02-16 12:43:22+00:00,PG,"$SHOP expects capex of $200m in 2022, $AMZN expects capex north of $60b in 2022.
+
+Even if you go by Amazon's recent acknowledgment that 40% of capex is for AWS &amp; 5% is for offices/stores that leaves $33b of 1p/3p capex vs $200m from shopify. https://t.co/o34pJp7iTt",0.088,Other,0.286,1
+kaggle_stock_tweets,2022-05-20 22:12:53+00:00,AMD,"BEGINNER OPTIONS STARTER PACK:
+
+•$500-$1,000 cash account
+
+•1-2 Contracts MAX
+
+•10-15% Max Loss per trade
+
+•.3 Delta or Higher
+
+•At least 1K vol on strike
+
+•Trade $SPY $QQQ $AMD $IWM
+
+•1-3 OTM Strikes
+
+•NO 0DTE, 2+ DTE at least
+
+•No more than 4 trades a day",-0.016,Other,0.26,1
+kaggle_stock_tweets,2022-09-16 11:47:46+00:00,TSLA,"Fed ex is a fed ex issue and not macro issue. I think markets will absorb the news today. That why I just bought 3,000 $tsla at $301 and will sell if opportunity is there or hold into next week. Enjoy the weekend everyone! https://t.co/a5irLbsBQ2",0.049,Other,0.19,1
+kaggle_stock_tweets,2022-04-11 13:52:25+00:00,TSLA,"Before anyone asks, today’s $TSLA Stephenson Indicator™️ is $952.73.
+
+Not trading advice, do your own research, for entertainment purposes only, technical analysis is phrenology, etc. 
+https://t.co/BOwrHeS7Zg https://t.co/YhCTwhCENB",-0.016,Market Commentary,0.68,1
+kaggle_stock_tweets,2022-05-28 00:20:43+00:00,TSLA,"@CathyKichler @RealDanODowd @elonmusk @Tesla ""I would've killed a guy but my car wouldn't let me"" is not the defense you think it is",-0.289,Other,0.201,1
+kaggle_stock_tweets,2022-04-28 20:57:26+00:00,AMZN,"$AAPL 🚀
+$AMZN 🪦
+
+Apple shows once again why it's on top. 90 billion in buybacks, beats on nearly everything. Amazon has its hands in everything and acts like it can't turn a profit.",-0.096,Dividend or Buyback,0.366,1
+kaggle_stock_tweets,2022-04-04 15:56:21+00:00,TSLA,$TSLA gunnin for $1150 today. 🚀,0.039,Other,0.213,1
+kaggle_stock_tweets,2022-05-02 21:22:03+00:00,TSLA,@WholeMarsBlog I am sure you are right.  It’s in Elon’s best interests to keep $TSLA stock stable or the $TWTR deal won’t get done. Finding new equity investors (beside Elon) is crucial to that objective.,0.14,Management Change,0.301,2
+kaggle_stock_tweets,2022-06-24 23:46:54+00:00,TSM,"@mikey_cisco @TSM ah yes cause everyone in every state has the capability to change their homes,jobs,lives because the stooges running their state won't provide them their basic human right of choice in what happens to their own body",-0.047,Other,0.28,1
+kaggle_stock_tweets,2022-05-21 17:23:27+00:00,TSM,"TIMADO DO IT FOR NA AND SA 
+
+LETS GO @TSM",0.048,Other,0.171,1
+kaggle_stock_tweets,2021-11-16 01:32:46+00:00,DIS,"11/16 Watchlist 🔮
+
+$AMD 150c &gt; 147.40 | 143p &lt; 145.20
+$QCOM 175c &gt; 170 | 162.5p &lt; 167.35
+$DIS 162.5c &gt; 159 | 155p &lt; 157.80
+$SQ 242.5c &gt; 234.60 | 225p &lt; 231.20
+$BA 240c &gt; 234 | 227.5p &lt; 232",-0.045,Other,0.174,1
+kaggle_stock_tweets,2022-02-18 21:07:35+00:00,META,"I went through a very violent 50% bear market in China with $BABA and the reason why I survived was bc of puts
+One piece of advice: TAKE YOUR TIME to buy dips! 
+Do real margin of safety work. 
+Usually when it starts crashing it crashes WAY more. $FB was at $260 now it's at 206.",0.009,Other,0.285,1
+kaggle_stock_tweets,2022-01-21 13:36:24+00:00,AAPL,"If $PTON built their bikes to break in a year like $AAPL does with their iPhone, they’d be fine. 😂",0.224,Other,0.184,1
+kaggle_stock_tweets,2022-02-09 14:27:44+00:00,META,The negativity and controversy around $FB is the most I have EVER seen around a mega-cap in my 25+ years of investing/trading...,-0.033,Market Commentary,0.468,1
+kaggle_stock_tweets,2022-01-12 04:14:03+00:00,TSLA,@teslaownersSV @GavinNewsom @Tesla @TeslaSolar @elonmusk I can’t decide if this is out of character for California or not. On one hand sandbagging renewable energy really isn’t their style. On the other I can’t be surprised that if any state were to try to find a way to tax the sun itself it would be California.,-0.174,Other,0.192,1
+kaggle_stock_tweets,2021-12-10 12:19:18+00:00,TSLA,"I wonder if CNBC even knows that @elonmusk has now bought more $TSLA shares (12.8M) than he’s sold (11.0M) since the Twitter poll?
+@JoeSquawk
+@BeckyQuick 
+@carlquintanilla
+@jimcramer
+@SquawkCNBC 
+@SquawkStreet https://t.co/68fSRddavZ",-0.019,Other,0.249,1
+kaggle_stock_tweets,2022-08-12 02:47:32+00:00,AAPL,"AAPL long-dated puts look like a dream rn 
+
+Crazy crazy low IV too
+
+Eyeing 20Jan2023 $145 puts ($4.85 ask)
+
+Usually don't share setups like this but this stands out a lot https://t.co/M62GLFZo0z",0.014,Other,0.207,1
+kaggle_stock_tweets,2022-08-02 02:15:00+00:00,AAPL,"With many tech companies citing uncertain macroeconomic times and bracing for a downturn in their earnings calls, we look at some of the biggest tech names and their cash vs. LT debt positions heading into the next few quarters. First up: FAANG. 
+
+$META $AAPL $AMZN $NFLX $GOOGL https://t.co/4Y0DlkqewP",-0.011,Macroeconomic,0.488,3
+kaggle_stock_tweets,2022-03-21 00:51:12+00:00,ENPH,"$TAN Solar stocks are showing up on my scans or just buy the ETF 
+$SEDG $ENPH $NOVA $FSLR https://t.co/IcdNznM9Uq",0.077,Other,0.275,1
+kaggle_stock_tweets,2021-10-07 13:22:20+00:00,TSLA,People called me crazy when I bought after $TSLA split in the $300s and $400s. They said I was buying in too high when it fell below $700. “Wait till it crashes!!” is what I’ve been hearing all the time. I’ll get the last laugh when I look back in 5 yrs 😏 https://t.co/R8crnECdx0,-0.361,Market Commentary,0.59,1
+kaggle_stock_tweets,2021-11-21 16:25:52+00:00,NIO,"Are you all ready for Monday? $NIO 
+Time to leave the 30$ club and move into mid or high 40$ club this week!",0.005,Other,0.178,1
+kaggle_stock_tweets,2022-04-07 11:16:08+00:00,AMZN,Short EU &amp; EM equities with US shorts  on SPX NDX INDU RTY and US mid caps. Short semis SMH &amp; US EU banks XLF EUFN &amp; 6 mega tech shorts AAPL AMZN FB MSFT NVDA GOOGL. Short credit LQD IGSB HYG JNK with short US T-bonds &amp; EM bonds. Short Bitcoin. Short US mortgages and real estate.,0.018,Credit Event,0.434,3
+kaggle_stock_tweets,2021-11-26 02:32:58+00:00,TSLA,"Tesla has a market capitalization above $1 trillion dollars because the people holding it think it will be worth more in the future, people not holding it are lagging benchmarks, and people who want to bet against it are scared to have their face melted off yet again. $TSLA",-0.193,Market Commentary,0.387,1
+kaggle_stock_tweets,2022-02-22 18:45:24+00:00,TSM,hey lol my name is valorant apex league twitch streamer gamer girl looking for duo anime boba TSM SoaR 100T FaZe Synergy XSET KCP FTX help sewers… A HA HA wyd rn wanna play spike rush? (courtesy of @chefhomiekwon) https://t.co/hkEWwJIgyc,0.039,Other,0.191,1
+kaggle_stock_tweets,2021-12-29 06:14:15+00:00,TSLA,"Just tried TIDAL for the first time in a refresh Model S with the active noise cancelling on 🤯🤯🤯
+@elonmusk @tesla",0.087,Product Launch,0.416,2
+kaggle_stock_tweets,2022-02-16 22:02:16+00:00,MSFT,"WSJ: ""Activist investor Daniel Loeb, whose Third Point LLC counts Amazon as one of its biggest holdings, told investors on Wednesday that he sees roughly $1 trillion in untapped value at the e-commerce giant."" (AMZN)",0.052,Other,0.276,1
+kaggle_stock_tweets,2021-10-24 17:18:46+00:00,AAPL,"Public Weekly Watchlist:
+
+$AAPL over 150, 150c
+$ATVI over 81, 82c
+$FDX over 235, 240c
+$JPM over 172, 175c
+$NVDA over 232, 235c
+
+Charts and 2 #BONUS picks will be uploaded later tonight. Good luck, traders!",0.079,Market Commentary,0.422,1
+kaggle_stock_tweets,2022-05-02 13:29:29+00:00,TSLA,"Daily update on $TSLA in ETFs (4/29).
+@garyblack00 increasing $FFND's exposure, now leading the pack with 12.15%.
+$ARKK purchase due to small inflows, but cannot mask the bleeding Assets under Management, now below $12bn for what was $42bn 15 months ago (see comment). 
+🐮💙🧡💚🖤 https://t.co/FfnSi97kTU",0.92,Other,0.184,1
+kaggle_stock_tweets,2022-03-17 16:08:21+00:00,PG,$AMZN is setting up perfectly for #LottoFriday,0.162,Other,0.286,1
+kaggle_stock_tweets,2022-01-22 21:07:44+00:00,TSLA,"@TeslaPodcast We can agree to disagree, you’re a very valuable asset to $TSLA community and think you and @heydave7 deserve a direct interview with @elonmusk sooner or later…I have faith it will happen someday.  It will be historic for all of us $TSLA investors if/when it happens",0.328,Other,0.217,1
+kaggle_stock_tweets,2022-04-28 20:03:19+00:00,AMZN,Wait a minute! This pump wasn't real?!?! #SPY #QQQ #AMZN #AAPL,-0.043,Other,0.21,1
+kaggle_stock_tweets,2022-03-08 00:41:57+00:00,TSM,@ImperialHal The CEO across every platform possible 🤝,0.095,Management Change,0.326,2
+kaggle_stock_tweets,2022-04-19 14:23:56+00:00,AMD,1 ❤️ and I’ll end the 5 month downtrend on $AMD,-0.749,Other,0.238,1
+kaggle_stock_tweets,2022-08-01 16:44:40+00:00,TSLA,"Spent this last week in Merida Mexico. Considering retiring there next year.
+
+Thanks $TSLA. https://t.co/JNgrWIWPPR",0.016,Other,0.162,1
+kaggle_stock_tweets,2022-02-03 14:05:08+00:00,META,"The CEO of Rumble will be joining @matt_kohrs LIVE at 1pm ET to discuss the future of social media, his opinions on recent $FB $GOOG announcements, the events around @joerogan and $SPOT, how Rumble intersects with all of this and more.
+
+Links to the stream will be shared shortly.",0.01,Other,0.177,1
+kaggle_stock_tweets,2022-02-25 21:57:56+00:00,TSLA,"Here's a possible path to 4700/4800.
+
+It won't be a direct line but it's possible,  as long as we hold that 4200. 
+
+See the technical lay of land below. I can see 4600 4700 from where I sit. Now 4380. 
+
+$aapl  $tsla $pltr $arkk $pypl $fb https://t.co/dGiRdGGoee",0.053,Other,0.163,1
+kaggle_stock_tweets,2022-02-22 04:38:16+00:00,TSM,oh boy a T1 vs TSM matchup tomorrow! im sure this will be a normal match of valorant between two teams that have no spite for each other with no underlying tones around the matchup!,0.028,Other,0.153,1
+kaggle_stock_tweets,2022-06-05 00:56:21+00:00,TSLA,"If you're looking to buy an EV, be careful what you listen to. Do your own research and you'll find  the true leader of the sustainable electric vehicle revolution... 
+$TSLA https://t.co/BdcIQ8Slwo",0.1,Other,0.207,1
+kaggle_stock_tweets,2022-09-21 16:56:45+00:00,AAPL,"Apple, $AAPL, to move 25% iPhone production to India by 2025, 20% iPad and Apple Watch to Vietnam, per TechCrunch.",0.492,Other,0.242,1
+kaggle_stock_tweets,2022-07-28 20:02:06+00:00,PG,"$AMZN Q2 Earnings
+
+Revenue: $121.2B v $119.7B Expected
+EPS: -$0.20 v $0.15 Expected",-0.017,Earnings,0.738,3
+kaggle_stock_tweets,2022-09-20 21:44:11+00:00,TSM,"As exciting as the Astralis vs TSM match is, it will never be as impressive as this. 😂 https://t.co/PReGOtJzlZ",0.275,Other,0.134,1
+kaggle_stock_tweets,2022-02-01 21:55:57+00:00,PG,"In all seriousness, I don't know how you can look at the results from $MSFT $AAPL $GOOG and soon to be $FB and $AMZN (although the last is a big ?) and conclude that indices with big weightings in these companies are somehow going to ""mean revert"" 30/40/50% lower.",-0.655,Earnings,0.507,4
+kaggle_stock_tweets,2022-02-04 15:19:59+00:00,TSLA,"Many people think spending &amp; investing $100K, $250K, $500K, $1M at a time is easy and generating $1M is lucky.
+
+Please try it. 
+
+The only people that will understand how difficult it actually is are the people that actually do it.
+
+$TSLA #Tesla",0.032,Other,0.178,1
+kaggle_stock_tweets,2022-09-07 23:01:39+00:00,INTC,"Pat Gelsinger says $INTC's Q3 and full-year sales are ""trending toward the lower end"" of the guidance ranges it issued in July (big ? is how much of this is due to demand weakening more vs. additional share loss). https://t.co/WcRnJM8axq",-0.949,Analyst Rating,0.361,2
+kaggle_stock_tweets,2022-03-23 02:54:21+00:00,TSLA,"Which Elon dance do you guys like better? 🕺
+
+Giga Shanghai 🇨🇳 vs Giga Berlin 🇩🇪
+
+$TSLA #Tesla 
+
+https://t.co/jP6emPKd1L",0.051,Geopolitical,0.338,3
+kaggle_stock_tweets,2022-01-13 21:04:16+00:00,PYPL,"Another beauty 😅
+
+At least $CCL was green 😂 
+
+Added a few more $PYPL calls at the close
+
+Btm $SE $SHOP $PYPL $CRWD $TTD $AMZN $SQ $ATY $U $APPS $AMD $ROKU etc etc. 
+
+So much for a flat day 🤷‍♂️ 
+
+Hope you guys survived it 🙏
+
+On to tomorrow 💪
+
+🦜 https://t.co/cEkGDm4Tnr",0.435,Other,0.243,1
+kaggle_stock_tweets,2021-10-25 00:17:04+00:00,PYPL,"Watchlist 👀:
+
+$LC - Earnings Oct 27
+$AFRM - Ready for new highs
+$DWAC - Options open up
+$SOFI - Consolidation in the $20’s
+$MELI - Oversold E-Commence play
+$PINS - $PYPL rumoured bid
+$SNAP - Over-reaction to earnings miss?
+$LCID - Production roll-out begins
+
+Good luck all!",0.006,Earnings,0.801,3
+kaggle_stock_tweets,2022-04-17 04:02:20+00:00,TSM,"this vid randomly hit 100k views on yt 🥲 
+throwback to some guy who INSISTED i was a pro valorant player and wanted to cancel me via TSM https://t.co/ydz1VVSwiM",-0.141,Other,0.121,1
+kaggle_stock_tweets,2021-11-08 01:46:06+00:00,AMZN,"-Trade ideas
+-Chart updates
+-Education 
+
+Watch it all in the weekend video here:
+https://t.co/3McuHAvtUn
+
+Reviewed:
+$SPY 
+$QQQ
+$IWM
+$BTC
+$ETH
+$TSLA
+$NIO
+$BLNK
+$GE
+$BA
+$LYFT
+$GRWG
+$DIS
+$UPST
+$BIGC
+$AMZN
+$NVDA
+$LCID
+$FCEL
+$FUBO",0.024,Market Commentary,0.393,1
+kaggle_stock_tweets,2022-04-12 12:51:13+00:00,TSLA,"TESLA LAUNCHES MODEL Y STANDARD RANGE AWD FOR EMPLOYEES STARTING AT $60,000 AND WITH A FEW UPGRADES - ELECTREK
+$TSLA",0.15,Product Launch,0.84,2
+kaggle_stock_tweets,2021-11-04 16:47:43+00:00,TSLA,I will never check the $TSLA ticker again.,-0.067,Other,0.169,1
+kaggle_stock_tweets,2022-02-14 02:59:37+00:00,TSLA,I’m willing to bet that $TSLA does a new All-Time High before end of 2022. That means a 44% upside from Friday’s close.,0.907,Other,0.234,1
+kaggle_stock_tweets,2022-01-07 00:35:53+00:00,TSLA,"Annualised production capacity estimates for Tesla factories at end of 2022*:
+
+~1M  Shanghai
+~0.75M  Fremont
+~0.3M  Austin
+~0.3M  Berlin
+
+TOTAL ~2.35M
+
+* Capacity ≠ actual production + all factories are ramping so actual production # will be MUCH lower. 
+
+$TSLA",-0.763,Other,0.179,1
+kaggle_stock_tweets,2022-08-27 23:09:05+00:00,TSLA,$TSLA will deliver 500k cars in Q4’22,0.228,Product Launch,0.438,2
+kaggle_stock_tweets,2022-04-29 08:07:09+00:00,TSLA,Retweet this post if you want @tesla to accept #BabyDoge 🔥,0.008,Other,0.153,1
+kaggle_stock_tweets,2022-02-03 21:07:40+00:00,MSFT,"Amazon’s $AMZN Annual Revenue 
+
+2021: $469.8B
+2020: $386.1B
+2019: $280.5B
+2018: $232.9B
+2017: $177.9B
+2016: $136B
+2015: $107B
+2014: $89B
+2013: $74.5B
+2012: $61.1B
+2011: $48.1B
+2010: $34.2B
+2009: $24.5B
+2008: $19.2B
+2007: $14.8B
+2006: $10.7B
+2005: $8.5B",0.026,Other,0.235,1
+kaggle_stock_tweets,2022-03-15 19:34:39+00:00,TSLA,Stop celebrating that $tsla broke 800. It is still down 400 dollars than where it should be. I don’t celebrate til it breaks 1200 again.,-0.81,Other,0.209,1
+kaggle_stock_tweets,2022-04-20 00:15:03+00:00,MSFT,"Trade plan for Wednesday ✅
+
+$SPX if it breaks above 4474 we can see another push to 4500,4545. Calls can work above 4474
+
+$AMZN setting up for 3242 if it holds 3151 into Thursday. Calls can work above 3151
+
+$NVDA may need another day or two to set up for 233,241, Watch 225 tmrw",0.138,Other,0.297,1
+kaggle_stock_tweets,2022-01-26 21:06:26+00:00,TSLA,very nice $TSLA https://t.co/X48NSNsJuq,0.159,Other,0.277,1
+kaggle_stock_tweets,2022-01-21 00:53:37+00:00,TSLA,Another perspective on $TSLA and India. https://t.co/2tD7PCTglH,0.051,Geopolitical,0.344,3
+kaggle_stock_tweets,2022-02-03 04:30:00+00:00,META,"Seen on WSB: ""Earnings so bad $FB will have to change their name again""",-0.798,Earnings,0.922,5
+kaggle_stock_tweets,2022-04-08 19:37:49+00:00,TSM,"Another recap of rostermania:
+
+100T: +Stellar, Derrek, and Will(?)
+
+FaZe: +Poised, Supamen, Poach, Shanks (6th man)
+
+NYFU: +Dre, Shot_Up, JSUNG, Neptune (?)
+
+GenG: Last known trialing jcStani and PureR
+
+TSM: + gMd and Seven
+
+Ghost: + aproto 
+
+T1: last seen with dynamic
+
+#VCT",0.037,Other,0.133,1
+kaggle_stock_tweets,2021-12-02 20:27:05+00:00,TSLA,Capitulation won't happen until $AAPL $NVDA and $TSLA are shitting the bed ... those were the safety net stocks when all the mid cap growth garbage was selling off,-0.153,Other,0.18,1
+kaggle_stock_tweets,2022-03-18 16:47:36+00:00,TSLA,$TSLA call holders right now https://t.co/Qa5slpG8XZ,-0.096,Other,0.197,1
+kaggle_stock_tweets,2021-11-18 19:08:53+00:00,NIO,$NIO I’ve increased my shares by adding 1k in the last week. 300 away from my goal. This manipulation cannot last much longer. NIO has all the fundamentals to take off 🚀 soon. https://t.co/6RG35IEZbl,0.481,Other,0.265,1
+kaggle_stock_tweets,2022-08-08 17:31:37+00:00,TSM,New VALORANT agent voicelines just leaked??? @Subroza 😳 https://t.co/Zf6nKPFytE,-0.068,Other,0.202,1
+kaggle_stock_tweets,2021-12-12 08:22:57+00:00,TSLA,Not really rough for me. I’m happy we are above $1000. Just in September we were in 700s and I was very happy with that as-well. $TSLA https://t.co/D8rgOV2ogr,0.591,Other,0.287,1
+kaggle_stock_tweets,2022-07-21 02:09:07+00:00,PG,"7/21/22 Watchlist 🤑
+
+$GOOG 115/116c &gt; $113.4
+$AMZN 120/121p &lt; $122.8
+
+I'll have more guidance in the AM. Markets are nearing high recent range so I expect volatility with opportunities to upside and weakness.
+
+Let's hit 2/2 just like we did today!
+
+#stocks #optionstrading https://t.co/DNo4xQbFhy",0.038,Market Commentary,0.706,1
+kaggle_stock_tweets,2022-04-15 02:44:40+00:00,TSLA,"ARK out with their new $TSLA price target: $4,600 in 2026. Curr $985. https://t.co/UnQPyXgtVr",0.116,Analyst Rating,0.524,1
+kaggle_stock_tweets,2022-01-05 03:55:30+00:00,TSLA,watchlist for tomorrow: $F $CRTX $TSLA $TSM $ISIG &amp;’ $MU ! for shares and puts/calls! good setups!,0.053,Market Commentary,0.432,1
+kaggle_stock_tweets,2022-07-16 11:38:47+00:00,BX,"#earnings for the week 
+
+https://t.co/lObOE0uRjZ 
+
+$TSLA $NFLX $BAC $GS $SCHW $JNJ $CLF $HAL $SNAP $PLD $IBM $SYF $T $ASML $LMT $AAL $NOK $SI $ALLY $GNTY $UAL $FCX $VZ $BX $HAS $AXP $ABT $NDAQ $SLB $NUE $AA $DOW $JBHT $CFG $TWTR $DHI $MAN $MRTN $BKR $DPZ $SBNY $PM $NVS $TFC $UNP https://t.co/Cr6UMV7eJN",0.356,Earnings,0.948,4
+kaggle_stock_tweets,2022-02-01 01:05:44+00:00,TSLA,"$TSLA wants to go higher. 
+
+Let’s see what the market allows this week!",0.067,Market Commentary,0.49,1
+kaggle_stock_tweets,2022-02-04 21:10:55+00:00,GOOG,"FinTwit is falling apart. We've got people high on copium on $FB, worrying that AWS is a commodity in 10 years and that $AMZN is a short now, $GOOG is the best thing ever, nobody is talking about $MSFT &amp; $AAPL other than to joke about how Tim made Mark cry. 
+
+Y'all need a weekend",-0.455,Other,0.241,1
+kaggle_stock_tweets,2022-03-11 15:27:21+00:00,TSLA,"I think Tesla is setting up for a monstrous Q1. ⚡️
+
+Then Q2 is when Giga Berlin &amp; Texas start. 🔥 
+
+$TSLA #Tesla",0.068,Other,0.205,1
+kaggle_stock_tweets,2022-06-16 07:58:57+00:00,AAPL,"Market Recap:
+https://t.co/05bKoV2a1X
+The Fed is hiding something BIG! + Macro data worsen + Layoff are spreading + FOMC conference review: Watch how The Maverick decode Jerome Powell's lies + Bull trap in the making? + Charts $SPY $QQQ $IWM $DXY $TLT $VIX $GLD $AAPL $TSLA $BTC https://t.co/oIoD3rvcBp",-0.298,Macroeconomic,0.834,4
+kaggle_stock_tweets,2022-04-06 18:20:03+00:00,TSLA,The 20 mins has passed. We should now see it reverse again. $TSLA,-0.209,Other,0.173,1
+kaggle_stock_tweets,2022-05-31 02:24:55+00:00,MSFT,"🚨WEEKLY WATCHLIST🚨
+
+Bullish 
+$MRNA 
+$AMZN
+$PDD
+$MP (swing)
+
+Bearish 
+$KSS
+
+👉https://t.co/0EFmnWGB7c👈
+
+All based on TA + Macro + options flow supported via @unusual_whales 
+
+Small week, expecting chop. 
+
+♥️ and ♻️ https://t.co/8cmKydCxTq",0.16,Market Commentary,0.403,1
+kaggle_stock_tweets,2021-11-29 18:26:12+00:00,TSLA,"It seems like @Tesla finally released the charging update for the LG 77 kWh Pack - E5(C)D -  with version 2021.40.6.
+First reports indicate an increase of 10-20 kW over the whole charging curve.
+
+Will test on my car as soon as I have time.
+
+Source:
+https://t.co/wq6h7tKa9g https://t.co/swfXEPS750",0.416,Other,0.198,1
+kaggle_stock_tweets,2022-03-17 23:58:05+00:00,META,"Weekly Highlights 🏆
+ 
+$NKE 114p 0.50➡️1.54 (+200%) 👟
+$RBLX 40c 0.95➡️6.45 (+580%) 🤖
+$FB 210c 0.08➡️1.06 (+1225%) 🖥
+$SQ 130c 0.12➡️1.83  (+1425%) 💳
+
+Compounding these Trades turns $2K into $4.05 Million💰",0.022,Earnings,0.34,2
+kaggle_stock_tweets,2022-03-17 03:56:37+00:00,TSLA,"Market Recap:
+https://t.co/QGvVtPO1yF
+China pumps stocks higher + The economic hurdle stopping Russia and Ukraine from reaching an agreement + Laugh with clown J Powell + Winners vs. Losers Charts &amp; My strategy + Charts $SPY $QQQ $IWM $DXY $GLD $VIX $TLT $AAPL $TSLA $BTC $AMC https://t.co/3ZO6713ru9",0.834,Geopolitical,0.499,5
+kaggle_stock_tweets,2021-12-05 23:03:04+00:00,AAPL,"$TSLA - Above 1000 - Trade Idea 💡 -  Dec 10 1100C
+$TSLA - Under 979 - Trade Idea 💡 -  Dec 10 900P
+
+Closed at 1014.96
+
+If TSLA can hold 978 it can bounce 50-70 pts this week
+-
+$AAPL $AMD $AMZN $BA $FB $LCID $MSFT $NFLX $NIO $NVDA $MRNA $ROKU $SNAP $SPCE $SPX $SPY $SQ $ZM https://t.co/CyY9frU8zG",0.116,Market Commentary,0.314,1
+kaggle_stock_tweets,2022-01-31 00:51:06+00:00,TSM,"👏 Proud of our boys regardless of the outcome 👏 
+
+GG's @TSM 🤝
+
+Good luck to everyone at the 2022 Six Invitational. 
+
+Thank you to everyone who tuned in to support this weekend 🧡
+
+Time for us to prep for NAL, see you soon! https://t.co/sQmIeLQKIE",0.761,Other,0.14,1
+kaggle_stock_tweets,2022-04-27 20:30:53+00:00,AAPL,"So $FB managed to grow Q1 rev by 7% YoY off the back of a +48% comp during a period where $AAPL did all it could to screw them with ATT, Reels transition, supply chain/macro hitting SMBs and ad $ more broadly, &amp; Russia/Ukraine headwind. 2yr rev CAGR held steady QoQ @ 25% in Q1...",0.928,Earnings,0.346,4
+kaggle_stock_tweets,2022-06-03 20:04:14+00:00,AMZN,💭 $AMZN will be 122.35 on Monday.,0.007,Other,0.209,1
+kaggle_stock_tweets,2021-10-18 22:45:06+00:00,META,"Even after its +32% run-up since the 2Q EPS print (7/26), $TSLA still looks very cheap at 86x 2022 EPS vs +55% Vol and EPS growth (1.6x PEG). Only $GOOG (1.4x PEG) and $FB (1.2x PEG) are cheaper. R1G trades at 42.8x 2022 EPS (2.1x PEG). TSLA growing into its P/E (2025 P/E 26x). https://t.co/ssDXfE23TP",0.632,Earnings,0.564,4
+kaggle_stock_tweets,2022-05-21 17:55:28+00:00,MSFT,"Important dates:
+
+$AMZN stock split will be issued on June 3 2022. The shareholder approval vote on 5/27/22.
+
+$GOOGL stock split will be issued on July 15 2022. The shareholder approval and will be put to a vote on 6/1/22.
+
+$SPY $SPX $QQQ",0.006,Other,0.171,1
+kaggle_stock_tweets,2022-06-10 14:06:48+00:00,AMD,"In 1969 the arrow mark was created to represent progress and advancement. 
+
+The launch of “together we advance_” reflects our commitment to advancing high performance &amp; adaptive computing and how we engage with each other, our customers, and our partners. #AMD #TogetherWeAdvance",0.243,Other,0.298,1
+kaggle_stock_tweets,2022-07-01 10:50:57+00:00,NIO,"NIO's official websites for Germany, the Netherlands, Sweden and Denmark went live today. $NIO https://t.co/lmDlGDxJ7V",0.012,Other,0.193,1
+kaggle_stock_tweets,2021-11-09 15:40:33+00:00,NIO,"#earnings after the close 
+
+https://t.co/lObOE0dgsr 
+
+$COIN $NIO $UPST $FUBO $PLUG $U $WYNN $DASH $PRPL $ELY $PUBM $ACB $DOCS $FLGT $VRM $RNG $HYLN $GLBE $CARG $DNUT $POSH $SKIN $INO $SAIL $FC $TWOU $DAR $JAZZ $NLS $VET $GOCO $ABCL $ALTO $AEMD $TWNK $HYRE $PAYS $CCXI $WTER $AVID https://t.co/oncOCeBWzm",0.421,Earnings,0.941,4
+kaggle_stock_tweets,2022-03-10 13:54:32+00:00,TSLA,"I can’t imagine the demand Tesla is seeing during these times. 
+
+$TSLA #Tesla",0.046,Other,0.197,1
+kaggle_stock_tweets,2022-01-22 05:55:49+00:00,TSM,"@TSM_Reps @96TeQ96 On a related note, I just landed Frag East and see nothing unusual https://t.co/eoT7fzkayH",-0.049,Other,0.295,1
+kaggle_stock_tweets,2022-02-08 05:00:00+00:00,META,"Seen on WSB: ""Just came back from vacation, didn’t have reception. How are my $FB $350 calls doing?""",-0.089,Other,0.192,1
+kaggle_stock_tweets,2022-02-28 07:05:47+00:00,TSM,@TSM_Achieved Reveal yourself 😂,-0.052,Other,0.154,1
+kaggle_stock_tweets,2022-07-21 15:21:23+00:00,TSLA,The best investment of our lifetime is unfolding before our eyes. $TSLA,0.176,Other,0.19,1
+kaggle_stock_tweets,2022-06-28 02:38:08+00:00,TSLA,Agree 💯 and you can take advantage of the clean energy future through my fund. $GK $tsla #tesla https://t.co/OCZnRa9MVz,0.386,Other,0.192,1
+kaggle_stock_tweets,2021-11-01 10:29:46+00:00,TSLA,"#1 missing @tesla safety feature: the option to unlock ONLY the driver’s door upon approach (2019 #Model3). 
+
+DST is this weekend…it will be darker sooner. This option would make a lot of us feel safer going to our cars alone at night. 
+
+Please, @elonmusk.",0.035,Other,0.161,1
+kaggle_stock_tweets,2021-11-28 14:28:15+00:00,TSLA,"I also want to thank the @tesla community for all their support
+I also want to thank the engineers of Tesla  for creating such a safe car. It literally saved my wife's life.  They had to use the jaws of life to cut her out 3/4",0.093,Other,0.141,1
+kaggle_stock_tweets,2022-04-26 00:58:00+00:00,NFLX,"Congrats on the huge $NFLX win last week.
+
+But for those starting out options, do not think this is the norm.
+
+Losses are expected, especially while learning.
+
+So take time, paper trade, and be patient!
+
+Do not rush into option trading - it's risky, even with great tooling! https://t.co/Ww0xDkoiH7",-0.244,Market Commentary,0.304,1
+kaggle_stock_tweets,2021-12-17 10:50:42+00:00,NIO,"Let's compare $NIO, $RIVN and $LCID:
+Q3 Revenue
+$RIVN: $1M
+$LCID: $2.3M
+$NIO: $1.5B
+
+Loss per share
+$RIVN: $12.21
+$LCID: $0.43
+$NIO: $0.28
+
+Market Cap
+$RIVN: $93B
+$LCID: $66B
+$NIO: $47B
+
+Take your own conclusions. 🤔",-0.49,Other,0.255,1
+kaggle_stock_tweets,2021-11-07 13:50:33+00:00,TSLA,$TSLA $1300 weekly call buyer after Elon’s tweet: https://t.co/qUQFpqAvEd,-0.029,Other,0.263,1
+kaggle_stock_tweets,2022-07-20 20:15:05+00:00,TSLA,Tesla $tsla Q2 earnings https://t.co/1CEnA6f0vB,0.023,Earnings,0.898,3
+kaggle_stock_tweets,2021-10-23 20:35:54+00:00,MSFT,"Next week is a huge week for tech ER season.
+
+I'm most focused on:
+- $LC 10/27
+- $ATOM 10/28
+
+But I'm also watch these for broad market impacts:
+- $FB 10/25
+- $AMD $ENPH $GOOGL $MSFT 10/26
+- $AAPL $NOW $TWLO 10/27
+- $AMZN $SHOP $TEAM",0.037,Other,0.299,1
+kaggle_stock_tweets,2021-11-21 21:59:05+00:00,AMD,"$AMD 155c, Jan 2022 saw repeated activity on Friday.
+
+Looking at historical activity via @unusual_whales, it becomes clear that whales have been building a position all month long - made evident through the increasing OI.
+
+To note, volume exceeded OI for the chain on Friday. https://t.co/EH5REgyAmp",0.925,Other,0.187,1
+kaggle_stock_tweets,2022-08-30 01:52:31+00:00,TSLA,"Hey $TWTR $TSLA family. Made a huge decision tonight. Decided to sell all of my 4,000 Google shares. Order put in @ $120.  Once it fills the whole $480k will go to purchase more $TSLA shares. Why to hold #2 $GOOGL if you can have #1 $TSLA ♥️? @elonmusk https://t.co/AEwFbAYswJ",0.016,Other,0.174,1
+kaggle_stock_tweets,2021-10-18 12:19:19+00:00,AAPL,"My 10K Portfolio:
+20% Techs
+$AAPL
+$MSFT
+$AMD
+20% Dividend 
+$XOM
+$MO
+$SPG
+20% Growth 
+$TSLA
+$SQ
+$PLTR
+15% Index 
+$QQQ
+$DIA
+$SPY 
+5% Consumer 
+$KO
+$MCD
+$COST
+5% Safety 
+$GLD
+$SLV 
+$TLT
+Next 15% is cash on hand for any opportunity arise to DCA.
+What would you change?
+Comment below👇🏾",0.024,Dividend or Buyback,0.306,1
+kaggle_stock_tweets,2022-04-20 17:41:22+00:00,TSM,"If you are the new TSM mid laner, please DM me",0.023,Other,0.264,1
+kaggle_stock_tweets,2021-10-07 16:44:04+00:00,AMD,$AMD ... 4th time a charm?? https://t.co/0Y5bOvnDlE,0.028,Other,0.202,1
+kaggle_stock_tweets,2022-07-19 20:10:45+00:00,NFLX,"⚠️BREAKING:
+
+*NETFLIX SHARES UP 6% AFTER THE BELL FOLLOWING RESULTS
+
+$NFLX https://t.co/Ej2je1CfYn",0.925,Earnings,0.505,4
+kaggle_stock_tweets,2022-05-09 18:47:05+00:00,TSLA,"@elonmusk @historydefined It will be an incredible challenge for Tesla to build FSD for India. 
+We are known to be the most unruly road users ☺️
+That said, when are you coming here to deliver first @Tesla here at The Taj  ? 🙏🏼",0.045,Product Launch,0.403,1
+kaggle_stock_tweets,2021-12-08 21:13:35+00:00,TSLA,"I’m really hoping for a $TSLA stock split… it helps lower the consumer barriers of purchasing a single share, also boosts trading volume prior to the split.",0.914,Other,0.156,1
+kaggle_stock_tweets,2022-01-19 23:27:26+00:00,AMZN,"Amzn aapl tsja gonna break next.  Fb to 262.   There is no metaverse for yrs and yrs.  
+
+In the metaverse Dak juked entire Sf team and scored …",0.116,Other,0.127,1
+kaggle_stock_tweets,2021-12-09 15:24:03+00:00,TSM,"It's not the same as with Bjerg, but it feels like TSM is trying to recapture that magic.
+
+Younger players who are less known, you can get them cheaper and hopefully build them into your image etc. Was a similar thought process with BrokenBlade when TSM got him as well.",0.174,Other,0.246,1
+kaggle_stock_tweets,2022-01-26 22:53:31+00:00,TSLA,Production growth to be comfortably above 50%. $TSLA,0.88,Other,0.274,1
+kaggle_stock_tweets,2022-01-20 21:02:32+00:00,TSLA,"$TSLA closes in the green in this bloody market! 📉📈
+
+Hold on tight, Q4 ER with Elon will be next week! 🌟 https://t.co/oTUO701WnY",0.051,Market Commentary,0.345,1
+kaggle_stock_tweets,2022-08-04 23:14:57+00:00,TSLA,Elon Musk expects $TSLA to have 10-12 gigafactories,0.107,Other,0.294,1
+kaggle_stock_tweets,2022-02-19 03:34:20+00:00,TSM,"Smashers and team org loyalty is one of the biggest benefits of having a Smasher. 
+
+Cloud9 - Mango
+TSM - Leffen
+Team Liquid - Hungrybox
+CLG - SFAT
+
+Believe it or not, they are one of the longest if not, the longest, tenured players on their respective orgs",0.033,Other,0.154,1
+kaggle_stock_tweets,2022-05-09 23:29:31+00:00,TSLA,P/L: +$16.2K 👍 Late post.  Was out most of the day.  Traded for only the first 1.5 hours and had to go.  $TSLA nailed the pop shorts at the open against 840 then 820.  Pretty solid trades.  No losing trades today again.  Barely any losing trades in over a week. https://t.co/66hNCWVd6J,-0.013,Other,0.232,1
+kaggle_stock_tweets,2022-01-13 22:21:13+00:00,XPEV,$NIO will be one of the largest &amp; dominate pure EV plays in China &amp; the World by end of 2025. Pure EV means they don’t sell any Gas cars. Long $TSLA $NIO $XPEV,0.037,Other,0.209,1
+kaggle_stock_tweets,2022-02-07 17:24:05+00:00,META,Shhh my sweet prince $fb. Don't speak... only buybacks now until the end of days.,0.006,Dividend or Buyback,0.431,1
+kaggle_stock_tweets,2022-08-02 01:09:40+00:00,VZ,"$VZ Dividend received $200.84. 
+Do you own this stock? https://t.co/OjGuBIqShx",0.01,Dividend or Buyback,0.357,1
+kaggle_stock_tweets,2022-08-10 07:23:44+00:00,TSLA,"JUST AS I PREDICTED @elonmusk WAS SELLING MORE $TSLA SHARES
+
+*MUSK SELLS AT LEAST 7.92M TESLA SHARES WORTH $6.9 BILLION https://t.co/HbI94qogJh",0.101,Market Commentary,0.31,1
+kaggle_stock_tweets,2022-03-09 14:43:28+00:00,TSLA,"Anyone bearish on Tesla stock should consider this secret: 
+
+a lot of portfolio managers are underweight Tesla stock.
+
+🐻 
+
+$TSLA #Tesla",-0.128,Other,0.298,1
+kaggle_stock_tweets,2022-01-31 03:36:39+00:00,PG,"2/ Sunday night update #2:   Equity futures have turned positive (SPX +0.2%, NDX +0.4%) in front of this week’s earnings from bell weathers GOOG, SBUX, UPS, FB, AMZN and after a rough Jan (NDX -11.6%). 10yrTY 1.789% (+2.0bp). https://t.co/Dyuozeh9Fh",0.916,Earnings,0.554,4
+kaggle_stock_tweets,2022-01-30 12:43:16+00:00,TSM,"An unnamed T1 coach violated Riot's competitive rules regarding unauthorized communication during their series vs TSM.
+
+The official ruling resulted in a forfeit for T1, and elimination from the first #VCTChallengersNA Open Qualifier.
+
+https://t.co/lGEaCiC64R",-0.941,Other,0.266,1
+kaggle_stock_tweets,2022-09-05 03:00:00+00:00,AAPL,"$AAPL 🍎 Apple falls 70% of the time in September, Apple also carries a $SPY weight of 7.3% 🍏 https://t.co/zxNMGyUmrz",-0.466,Market Commentary,0.309,1
+kaggle_stock_tweets,2021-10-13 06:17:01+00:00,TSLA,"I give it much better than even odds that $TSLA marches steadily to $1,000 from here.
+
+1 year PT is $1,100 (bear case).",0.439,Other,0.215,1
+kaggle_stock_tweets,2021-10-18 09:46:19+00:00,DIS,"BARCLAYS: “Disney+ growth has slowed significantly.. In order to get to its long term streaming sub guide, $DIS needs to more than double its current pace of growth to at least the same level as $NFLX.. Long term streaming guidance could be at risk.” 
+
+Cuts to equal-weight, $175 https://t.co/hEefX3U2yK",-0.901,Analyst Rating,0.503,2
+kaggle_stock_tweets,2022-04-20 17:24:44+00:00,NIO,NIO ET7 battery swapping for the first time @NIOGlobal ✈️🚀📈 https://t.co/X3SfDE30fi,0.086,Product Launch,0.565,2
+kaggle_stock_tweets,2021-11-23 17:03:00+00:00,AAPL,$AAPL reiterated with 'Overweight' rating by JPMorgan Chase and Co,0.685,Analyst Rating,0.561,2
+kaggle_stock_tweets,2021-12-02 04:30:38+00:00,TSM,@5uppps @TSM WHAT A GOOD LOOKING FELLA,0.2,Other,0.154,1
+kaggle_stock_tweets,2022-06-06 03:12:05+00:00,AAPL,"Market Recap:
+https://t.co/whtzAYanth
+Elon issues a dire warning about the ""Super Bad"" economy + The Fed is playing this last trick to defeat inflation, it will backfire and here is why + The Maverick vs. Janet Yellen + Charts $SPY $QQQ $IWM $DXY $GLD $TLT $VIX $AAPL $TSLA $BTC https://t.co/20SBaXaQ6c",-0.097,Macroeconomic,0.313,3
+kaggle_stock_tweets,2022-06-15 19:24:39+00:00,TSM,GG TSM. Not the start we wanted but we are playing better. Small mistakes here and there the main difference in close games going our way or theirs. Back next week!,-0.012,Other,0.134,1
+kaggle_stock_tweets,2022-09-20 23:06:33+00:00,AMZN,"Dotcom bubbles 2.0 already happened but we just don’t see it 
+
+$TSLA VS GROWTH STOCKS &amp; FAANG YoY
+
+$TSLA ✅25.27%
+
+$SE 🔻82.56%
+$RBLX 🔻53.82%
+$ROKU 🔻78.56%
+$SQ 🔻75.54%
+$TDOC 🔻78.75%
+
+$FB 🔻59.13%
+$AMZN 🔻26.91%
+$AAPL ✅9.39%
+$NFLX 🔻57.63%
+$GOOGL 🔻27.25%",0.022,Other,0.225,1
+kaggle_stock_tweets,2021-11-25 10:35:05+00:00,XPEV,"Xpeng, NUMBER ONE ever in copying Tesla. Yoke included. $XPEV $TSLA https://t.co/6cuzsc8GC3",0.105,Other,0.16,1
+kaggle_stock_tweets,2022-06-22 16:34:00+00:00,AAPL,"Here’s a list of 10 GREAT Dividend Stocks🔥
+
+$AAPL Apple
+$COST Costco
+$DE Deere &amp; Co.
+$MSFT Microsoft
+$HD Home Depot
+$DG Dollar General
+$TSCO Tractor Supply
+$LMT Lockheed Martin
+$JNJ Johnson &amp; Johnson
+$WM Waste Management
+
+What others would you add here?",0.004,Dividend or Buyback,0.712,2
+kaggle_stock_tweets,2022-08-11 14:30:00+00:00,TSLA,We must make legislation to protect the public from 80 plus year old drivers. This is a huge risk to all. No doubt our system allows completely senile people to drive and many maim and kill people. We must stop this @PeteButtigieg - #tesla $tsla,-0.625,Other,0.291,1
+kaggle_stock_tweets,2022-03-30 21:52:30+00:00,AMD,"🌊 As flow on chips continues, $AMD $QCOM $MRVL $NVDA just massive flows into next week and into Q2. $AMD huge algo divergence. https://t.co/GlU75U4Vxu",-0.094,Other,0.215,1
+kaggle_stock_tweets,2021-10-15 17:26:53+00:00,NIO,The same people not buying $NIO today are the same people that will buy over $50,-0.035,Other,0.19,1
+kaggle_stock_tweets,2022-05-25 21:34:52+00:00,META,"Recap of today’s $AMZN, $FB and $TWTR shareholder meetings. https://t.co/LcmRVgfT5I",-0.016,Other,0.227,1
+kaggle_stock_tweets,2022-02-20 20:57:08+00:00,TSM,"I have created a C9 coaching wheel
+
+Whoever it lands on will be the head coach against TSM https://t.co/4vXrVBgQeD",0.031,Other,0.171,1
+kaggle_stock_tweets,2022-01-09 04:06:46+00:00,AAPL,"“When big tech corrects”….
+
+Seeing a lot of this on here. 
+
+If any real correction happens to big tech, most of us will be more scared than ever. 
+
+All those furus calling for it will be the first to run. $QQQ $SPX $AMZN $FB $AAPL $MSFT $GOOGL",-0.314,Other,0.266,1
+kaggle_stock_tweets,2022-05-27 01:08:10+00:00,TSLA,Basically $TSLA since 2003.... https://t.co/Q2DvH2fxc0,0.028,Other,0.157,1
+kaggle_stock_tweets,2022-05-21 02:49:11+00:00,TSLA,"@correctist @Mjarchie1 @Tesla What a weird request, if it's your time for Valhalla then so be it ma'am. A true warriors death. 😭",0.007,Other,0.258,1
+kaggle_stock_tweets,2022-05-12 12:35:35+00:00,TSLA,PPI data was good news but markets not picking it up yet. Interesting. $TSLA,0.223,Macroeconomic,0.313,3
+kaggle_stock_tweets,2022-06-02 22:05:28+00:00,PG,"#LottoFriday Watchlist:
+
+$AMZN 2550C &gt;2510 | No PUTS
+$SHOP 420C &gt;415 | 380P &lt;385
+$SNOW 145C &gt;143 | No PUTS
+$FB 202.5C &gt;201 | 195P &lt;196
+
+$SPY levels have been shared. I am very bullish on Tech. I love the island bottom on $QQQ. Good Luck Snipers",0.063,Market Commentary,0.5,1
+kaggle_stock_tweets,2022-05-23 21:36:31+00:00,MSFT,"you havent seen anything yet...........
+
+so many preannouncements coming
+
+fb  152  131
+googl 2009  1952
+amzn 2000  1921
+tsla 591  552
+avgo 481  432  371  wowo 371
+nvda  152  131
+lrcx   432  391
+
+oh my mode    shop  to 252",0.023,Other,0.144,1
+kaggle_stock_tweets,2022-06-10 20:54:09+00:00,TSLA,"I’m extremely happy to finally order my first Tesla the new Model 3 performance. 
+⚡️🖤🔋🦾
+@tesla @elonmusk https://t.co/ZR1KJfRWoe",0.156,Product Launch,0.51,2
+kaggle_stock_tweets,2022-05-20 15:04:36+00:00,TSLA,"$TSLA bulls don’t get why I keep advocating for a TSLA PR team. Today’s events again show why TSLA needs to invest in TSLA’s long term brand value along the safety dimension, which will likely become the critical driver of EV consumer purchasing decisions over the next 3-5 years.",0.302,Other,0.208,1
+kaggle_stock_tweets,2021-12-27 20:11:58+00:00,MSFT,"Bezos quit $AMZN to focus on boats, roids and hoes https://t.co/IrEAKvYkJH",-0.086,Management Change,0.806,2
+kaggle_stock_tweets,2021-11-01 17:41:53+00:00,TSLA,$TSLA is now worth more than the next 12 most valuable automakers in the world,0.249,Other,0.177,1
+kaggle_stock_tweets,2022-03-29 02:49:44+00:00,TSLA,$TSLA #TSLA Monthly setup getting tight. https://t.co/9W62mZsIOG,-0.745,Other,0.27,1
+kaggle_stock_tweets,2022-03-04 16:28:33+00:00,TSLA,"@POTUS wake up on this. Use this opportunity to get strong bipartisan support for a new $8K EV credit to send a message to Russia we don’t need their oil. 
+
+Hello - is anyone at the WH?
+$tsla https://t.co/ozLqMQ4MKC",0.329,Geopolitical,0.371,4
+kaggle_stock_tweets,2022-03-04 16:34:40+00:00,TSLA,"1 month from today, if I see tweets from people wishing for a dip/wondering why they didn’t buy $TSLA when it was trading $80 below the Stephenson Indicator™️, below the 200-day moving average, and at a 14-day RSI below 30, I’m going to 🤣 and say 🤷‍♂️.
+
+Not investment advice, etc. https://t.co/wE6r5Hf8tk",-0.473,Market Commentary,0.33,1
+kaggle_stock_tweets,2022-02-08 11:35:32+00:00,META,"2/ I continue to think $AAPL, $AMZN, $GOOG (owns Fitbit) or dare I say $FB winds up with $PTON. Peloton remains a fabulous fitness brand, and offers huge opportunity for leverage into the VR fitness space. I don’t see the fit with $NKE, $DIS or Sony. Mgmt owns &gt;50% voting shares.",0.117,Other,0.273,1
+kaggle_stock_tweets,2021-10-14 22:41:20+00:00,TSLA,$TSLA ~7% from ATH closing price.,0.828,Other,0.205,1
+kaggle_stock_tweets,2021-10-01 11:59:30+00:00,TSLA,"JUST FOR THE RECORD . . .
+
+Tesla Norway did such a good job of their Q3 deliveries that today it seems they can only find 2 Model 3s remaining to deliver
+
+- and 0 Model Y
+
+Congratulations to Tesla Team Norway
+
+@elonmusk @Tesla https://t.co/WLV7aN4lb1",0.163,Other,0.161,1
+kaggle_stock_tweets,2022-05-14 15:01:00+00:00,TSM,"*Checks Notes*
+
+We're playing TSM in Dota? That doesn't sound right but here we are, should be fun #LetsGoLiquid https://t.co/qb4Wab0l47",0.08,Earnings,0.367,2
+kaggle_stock_tweets,2022-06-02 15:39:07+00:00,NIO,$NIO in case everyone needs a reminder I still Believe in my heart a few years down the road this stock will be well over $100+ per share! All the haters feel free to unfollow me.,0.168,Other,0.217,1
+kaggle_stock_tweets,2022-05-31 12:28:00+00:00,TSLA,"Tesla, $TSLA, has restored weekly output at its Shanghai plant to nearly 70% of the level which it had operated at before the city's lockdown, according to Reuters.",0.843,Other,0.204,1
+kaggle_stock_tweets,2022-07-19 06:19:12+00:00,TSM,Welcome TSM.SirActionSlacks as our 2nd coach for this event https://t.co/MgOfqrywVg,0.242,Other,0.144,1
+kaggle_stock_tweets,2022-05-18 20:04:04+00:00,TSLA,"P/L: +$12.5K 👍 Decent day.  Recovered half of yesterday's losses.  Unlike yesterday, pretty much hit the #FiveFigureClub and walked before I gave it back.  $TSLA nice short on pops. $OTRA pop short.  $AMD $VERU https://t.co/KRUHijaamE",0.597,Other,0.192,1
+kaggle_stock_tweets,2021-12-10 19:52:28+00:00,AAPL,"Short $AAPL 
+
+Next week it is gonna get is ass whopped",-0.029,Market Commentary,0.38,1
+kaggle_stock_tweets,2021-12-11 00:24:04+00:00,AAPL,"from an LP who, years before meeting me, bought 100 shares of $AAPL in 2004, for $6k 👀 https://t.co/QjGNifMNsn",0.047,Other,0.175,1
+kaggle_stock_tweets,2022-04-03 22:06:50+00:00,TSLA,A journey through the $TSLA Gigafactory in Germany https://t.co/eQAuZYWxnM,0.072,Other,0.192,1
+kaggle_stock_tweets,2022-06-01 17:12:41+00:00,TSLA,"Fuck diversification, I’m all in. 
+
+I only invest in CEOs and companies that are all in on the product &amp; mission. 
+
+It’s the same with relationships - I never wanted someone that is diversified with other people, just in case a relationship didn’t work out. 
+
+$TSLA #Tesla",0.02,Other,0.195,1
+kaggle_stock_tweets,2022-01-13 21:09:24+00:00,TSLA,$SPY $NVDA $TSLA Wow what a day these were my trade ideas I posted a few days ago I was going to live with the results win or lose. https://t.co/agtv1bLEt9 https://t.co/FrmW28S24q,0.042,Market Commentary,0.6,1
+kaggle_stock_tweets,2022-02-06 03:06:38+00:00,TSM,i'm going to sleep if TSM lose somebody wake me up that shit will be HILARIOUS,-0.087,Other,0.163,1
+kaggle_stock_tweets,2022-04-05 15:19:27+00:00,MSFT,"Here are the largest companies in the S&amp;P 500 by...
+Market Cap: $AAPL, $MSFT, $GOOGL
+Net Income: $AAPL, $BRKB, $GOOGL
+Revenue: $WMT, $AMZN, $AAPL
+# of Employees: $WMT, $AMZN, $ACN
+
+Data via @ycharts https://t.co/IwAT59vxln",-0.032,Earnings,0.346,2
+kaggle_stock_tweets,2022-07-29 14:28:34+00:00,TSLA,"These are all Tesla. They are not going to a dealership lot, they are going directly to their owners. Never ending demand!
+
+Think about that! $TSLA https://t.co/W8rRK83ZGq",0.005,Other,0.147,1
+kaggle_stock_tweets,2022-03-07 16:41:43+00:00,META,I hope $FB is ramping up these purchases of the buyback program at these levels. The stock is trading at a 12x ex-cash P/E...ridiculous.,0.141,Dividend or Buyback,0.489,2
+kaggle_stock_tweets,2022-02-03 15:06:12+00:00,META,$FB STOCK IS UP 69% IN THE METAVERSE TODAY.,0.934,Macroeconomic,0.569,5
+kaggle_stock_tweets,2022-05-24 16:55:34+00:00,META,"In case you are lost. I was all about going “all-in” on $BABA. But, that’s when $FB was between $220-$240. Given it has not only dropped to $200 but under $180. My big change is that I will be splitting these too. I’ll be bullish on both so long as no major changes arise.",-0.058,Other,0.186,1
+kaggle_stock_tweets,2021-10-07 16:39:40+00:00,TSM,@lolesports @teamDFM CONGRATS @teamDFM 🇯🇵,0.052,Other,0.249,1
+kaggle_stock_tweets,2022-09-08 19:45:32+00:00,TSLA,Tesla 4680 jelly-roll. Wonderfully Tab-less. Full video coming Monday on @live_munro #tesla @Tesla @teslaownersSV @elonmusk #batteries https://t.co/8oEIWzKAKJ,-0.008,Product Launch,0.443,1
+kaggle_stock_tweets,2021-12-09 15:30:52+00:00,TSM,"🇪🇺Liquid 
+🇨🇳TSM
+🇰🇷Cloud9",-0.023,Other,0.187,1
+kaggle_stock_tweets,2022-07-20 20:29:23+00:00,TSLA,In trading terms: $TSLA got itself margin called and liquidated a large chunk of its digital asset portfolio to make itself free cash flow positive &amp; improve its balance sheet.,0.943,Other,0.23,1
+kaggle_stock_tweets,2021-11-11 18:09:36+00:00,TSM,Even after our working relationship was over Andy would check in with me regularly to make sure I was doing fine and I was surprised that he would make time to check in on an ex-employee knowing how crazy busy he is with running TSM.,-0.019,Other,0.225,1
+kaggle_stock_tweets,2022-05-11 23:17:35+00:00,META,"$FB Meta is cutting back on Metaverse spending and postponing some costly projects. 
+
+I think this is great news.
+
+H/t to @AJButton2 for informing me https://t.co/hxFcIqNn9q",-0.87,Other,0.201,1
+kaggle_stock_tweets,2022-02-02 00:42:37+00:00,TSLA,"5.
+
+With or without PR, the FUD won't stop until Tesla is no longer an easy target. That won't happen until Tesla is no longer disruptING legacy auto, but has completely disruptED legacy auto and Tesla's are absolutely everywhere. By then, the truth will have won.
+
+$TSLA",-0.043,Other,0.184,1
+kaggle_stock_tweets,2021-11-20 19:50:50+00:00,TSM,"The first piece of the @TSM puzzle 🧩
+
+@Tactical joins their #LCS roster! #TSMWIN https://t.co/hr72uBPIvl",0.046,Other,0.189,1
+kaggle_stock_tweets,2022-02-03 22:19:48+00:00,NFLX,"FinTwit after $NFLX: Short big tech
+FinTwit after $MSFT: Long big tech
+FinTwit after $TSLA: Short big tech
+FinTwit after $GOOGL &amp; $AMD: Long big tech
+FinTwit after $FB &amp; $PYPL: Short big tech
+FinTwit after $AMZN &amp; $SNAP: Long big tech https://t.co/gyS882ADFe",-0.006,Other,0.285,1
+kaggle_stock_tweets,2021-11-29 03:15:59+00:00,ENPH,"Focus List for this Week 11-28-2021 #RMWL
+
+$AMD
+$BROS
+$ENPH 
+$GLBE
+$MRAM
+$MTTR
+$NVDA
+$PUBM
+$QCOM
+$RBLX
+$SI
+$TTD
+$U
+
+What did I forget? Let me know below 👇
+
+ 👍 Like and Retweet! 🔁
+
+https://t.co/TEnKzsf3wI",-0.042,Other,0.181,1
+kaggle_stock_tweets,2022-09-23 02:04:39+00:00,ENPH,"and finally, let's plot $enph trade. It was the last soldier standing in my portfolio.
+* 09/06 low pivot entry
+* 09/13 added on pullback buy trigger
+* Stopped out today on full position (red line stop level). https://t.co/l54q5LmUTU",-0.799,Other,0.235,1
+kaggle_stock_tweets,2022-08-24 15:50:58+00:00,TSLA,The new twitter whistleblower information is damning of twitter and its broken management. It’s also a very bad look for Jack Dorsey who ignored all of the potential fraud and misuse. Elon’s case gets stronger by the day… $twtr $tsla,-0.761,Management Change,0.447,3
+kaggle_stock_tweets,2022-04-21 04:34:00+00:00,TSLA,Investor grade rating incoming. $TSLA 🚀🌙,0.046,Credit Event,0.357,3
+kaggle_stock_tweets,2021-11-16 16:59:21+00:00,TSLA,Selling $TSLA is extremely dumb idea.,-0.469,Other,0.155,1
+kaggle_stock_tweets,2022-03-25 13:06:00+00:00,MSFT,"Over 45% of $QQQ is made up of 6 stocks:
+
+12% $AAPL 
+10% $MSFT 
+8% $GOOG 
+7% $AMZN 
+5% $TSLA 
+3% $FB",-0.004,Market Commentary,0.389,1
+kaggle_stock_tweets,2022-03-19 16:21:18+00:00,NFLX,"Retornos en los últimos 10 años...
+
+Bitcoin $BTC: +890,500%
+Tesla $TSLA: +12,717%
+Netflix $NFLX: +2,323%
+Amazon $AMZN: +1,643%
+Domino's $DPZ: 1,137%
+Microsoft $MSFT: +1,033%
+Apple $AAPL: +816%
+Google $GOOGL: +770%
+S&amp;P 500 $SPY: +283%
+Gold $GLD: +4%
+
+@charliebilello",0.029,Other,0.189,1
+kaggle_stock_tweets,2021-12-15 02:42:55+00:00,TSLA,"https://t.co/MllilfpEok - Tesla Stock Gets SMOKED Again, Analyst STILL Clueless
+
+NEW
+
+$TSLA @Tesla #Tesla #TeslaStock #ElonMusk https://t.co/UGCUtMmTr1",0.022,Market Commentary,0.614,1
+kaggle_stock_tweets,2022-06-06 20:01:40+00:00,PG,$AMZN finishes up 1.99% after stock split.,0.89,Other,0.223,1
+kaggle_stock_tweets,2022-08-04 13:45:00+00:00,KO,"Look at these annual payouts Warren Buffett gets from these 6 positions:
+
+$CVX *new position for Berkshire
+$BAC
+$AAPL
+$KO
+$KHC
+$AXP https://t.co/Plli6W2GDy",0.158,Dividend or Buyback,0.369,2
+kaggle_stock_tweets,2021-10-04 16:37:51+00:00,META,"Now the hackers have taken down all the site, Facebook, Instagram and whats app. All down. $FB",-0.73,Other,0.204,1
+kaggle_stock_tweets,2021-10-16 09:16:23+00:00,TSLA,"Nice people. 
+$TSLA $TSLAQ https://t.co/tHUMEA8wcR",0.028,Other,0.141,1
+kaggle_stock_tweets,2022-07-01 11:08:27+00:00,TSLA,"Welcome to Q3, my super hyper $TSLA bulls! 
+Enjoy the next ride! 
+I am always all in $TSLA and nothing else.",0.035,Market Commentary,0.357,1
+kaggle_stock_tweets,2021-12-08 01:08:34+00:00,TSLA,"With a current outstanding share count of 1.004 billion, $TSLA will hit a $3T valuation at $2,988 per share. 
+
+$2T market cap: $1,992/share
+$3T: $2,988
+$4T: $3,984
+$5T: $4,980
+$6T: $5,976
+$7T: $6,972
+$8T: $7,968
+$9T: $8,964
+10T: $9,960
+$15T: $14,940
+$100T (hi @WR4NYGov): $99,603 https://t.co/qgempLlYmf",-0.001,Other,0.203,1
+kaggle_stock_tweets,2022-07-18 18:43:31+00:00,TSLA,"Tesla, $TLSA, reports earnings after hours on Wednesday.
+
+Join some of the biggest $TSLA know-it-alls to discuss, including:
+
+@GerberKawasaki 
+@WholeMarsBlog 
+@jasondebolt 
+@CryptoKaleo 
+@Kristennetten 
+@KlenderJoey 
+@tesla_raj 
+@InvestrTrades 
+
+And more!
+
+https://t.co/ijo0d4q329",0.011,Earnings,0.755,3
+kaggle_stock_tweets,2021-12-23 12:45:00+00:00,CRM,"Here are some of tech's best returns from founder-led tech companies since IPO
+
+$DDOG $NVDA $AKAM $TCHEY $NFLX $ESTC $TSLA $CRM $SPOT $TEAM $SQ $FB https://t.co/SrYoEB8AXv",0.168,Other,0.238,1
+kaggle_stock_tweets,2022-05-10 12:51:49+00:00,NFLX,"Your tech stocks may be down 90%, 80%, 70%, but the Dow Jones isn’t even down 15% yet
+
+$upst $pton $tdoc $rivn $rblx $roku $shop $coin $sofi $u $nflx $dji $dia $ym_f https://t.co/wlXbVxgaqr",-0.901,Market Commentary,0.346,1
+kaggle_stock_tweets,2022-03-01 14:14:44+00:00,DIS,"Nancy Pelosi exercised her call options in American Express $AXP, Apple $AAPL, PayPal $PYPL and Disney $DIS https://t.co/h39HEu8zhK",0.131,Other,0.184,1
+kaggle_stock_tweets,2022-06-27 15:38:08+00:00,TSLA,"$TSLA
+
+""Several workers who prefer to remain anonymous told the publication that they couldn't find desk space at the corporate offices in Tesla's Fremont complex. Some also said the WiFi was too weak for them to work at the office.""
+
+https://t.co/bEsaUeWSqE",-0.894,Other,0.246,1
+kaggle_stock_tweets,2022-07-30 15:04:01+00:00,PG,Market ignored $AMZN burning 🔥 $33.5bn of free cash flow this quarter...,0.364,Other,0.283,1
+kaggle_stock_tweets,2022-02-04 05:18:13+00:00,MSFT,"Kind of excited for tomorrow.
+Looking forward to smashing some small stock trades  long and take advantage of this $AMZN driven market bounce higher.
+ Ok good night  ...... see everyone in the morning.",0.396,Market Commentary,0.356,1
+kaggle_stock_tweets,2022-01-11 17:01:40+00:00,TSM,Riot Games is now investigating TSM CEO Reginald over bullying and verbal abuse accusations brought to light by Doublelift months ago https://t.co/m8lq8ciLhz,-0.86,Other,0.293,1
+kaggle_stock_tweets,2022-03-29 12:48:46+00:00,AMZN,"Got trolled for both
+
+$TSLA given 700 Feb 24
+$AMZN given sub 2700
+
+700 &amp; 400 points later 😇",0.074,Market Commentary,0.357,1
+kaggle_stock_tweets,2022-08-12 00:45:28+00:00,AMZN,"8/12/22 Stock Options Trading Watchlist 🤑
+
+$AAPL 167.5/170p &lt; $169.2
+$AMZN 142/143c &gt; $140.4
+
+Watchlists have been red hot. Strong market analysis &amp; disciplined trading as always. I'll review in the AM. 
+
+Drop some ❤️here please. 
+Flow via UW (see bio)
+
+#Stock #StocksInFocus https://t.co/Vgv7obSJl3",0.06,Market Commentary,0.676,1
+kaggle_stock_tweets,2022-02-13 05:33:52+00:00,TSLA,@DrUnKeNLYSoberr @JohnBlazeWolver @TAEter_Totter @Tesla I gotta stop drinking!! I thought that was your car 🤣🤣🤣 https://t.co/Y8EX8OnipS,-0.2,Other,0.169,1
+kaggle_stock_tweets,2022-05-21 02:52:33+00:00,TSLA,"@Mjarchie1 @Tesla weird elon fans always show up on these tweets like ""you can still get out you know"" ""gas cars catch fire too"" ""you can die in all kinds of places"" like bruh the cars are buggy untested deathtraps lmao",-0.055,Other,0.201,1
+kaggle_stock_tweets,2022-02-19 19:12:56+00:00,TSLA,"In inspiration of @rhemrajani9 recent post , here’s my companies for the next decade ⬇️
+
+$GOOGL 🌐
+$TSLA ⚡️
+$COIN ⛓
+$AAPL 📱
+$MSFT 👾
+$CRWD 🔐
+$DDOG ☁️
+$NVDA 🎮
+$SHOP ❇️
+$ABNB 🏡 
+$SE 💹
+$U 🖲
+$FB Ⓜ️
+$BEAM 🧬 
+$IONQ ⚛️
+$PL 🌏
+$GGR 🔋
+$ASTS 🛰 
+$GENI 📊",0.075,Other,0.175,1
+kaggle_stock_tweets,2021-10-22 23:12:43+00:00,AMZN,"$33k today on the $AMZN flush 
+
+8R+ trade 🏌️
+
+Didn’t size as heavy as I’d like to due to traveling but still caught some. How’d you guys do today? https://t.co/6trAmAvTeR",0.11,Other,0.158,1
+kaggle_stock_tweets,2022-01-24 23:08:16+00:00,TSM,"@GeorgeCGed @GenG @rhymeVAL Really great joke George, made us all laugh.",0.36,Other,0.154,1
+kaggle_stock_tweets,2022-04-09 18:16:17+00:00,TSM,"I am tsm’s new 5th man officially, happy to be apart of @TSM and can’t wait for this journey 🥳 https://t.co/xZSY6h10Pu",0.135,Management Change,0.338,2
+kaggle_stock_tweets,2022-01-06 02:30:00+00:00,TSLA,$TSLA gained 13.5% on Monday and lost 9.7% between yesterday and today. Predictions for tomorrow?,-0.666,Market Commentary,0.338,1
+kaggle_stock_tweets,2021-10-27 00:35:27+00:00,TSLA,"Let's go!
+
+$TSLA https://t.co/dOfQ1vCUSa",0.041,Other,0.17,1
+kaggle_stock_tweets,2022-05-27 20:35:02+00:00,TSLA,"TSLA closed at $759.63 per share today
+
+UP $51.90 (+7.33%) on the day
+
+DOWN $56.41 (-6.91%) since @jasondebolt announced his retirement on 7 Jan 2021
+
+Jason’s retirement portfolio is valued at ~$11,118,704. 
+Total LOSS of ~$826,185 since 7 Jan 2021
+
+$TSLA $TSLAQ",-0.894,Other,0.192,1
+kaggle_stock_tweets,2022-03-29 19:04:18+00:00,TSLA,I just want $TSLA to close above $1100 today. That’s all I ask.,0.078,Other,0.196,1
+kaggle_stock_tweets,2022-03-07 20:57:48+00:00,MSFT,"$GOOG $GOOGL now trading at a PE of 22.5 which is the second lowest of the FAANG names
+
+$AAPL 26.5
+$AMZN 42.6
+$MSFT 29.7
+$NFLX 32.9
+$FB 13.6",-0.867,Other,0.221,1
+kaggle_stock_tweets,2022-08-31 05:35:37+00:00,TSM,@RossyUA Love you more,0.038,Other,0.14,1
+kaggle_stock_tweets,2021-12-09 20:32:32+00:00,TSLA,"Bought more. Now 3,500 in today. $tsla.",0.031,Other,0.178,1
+kaggle_stock_tweets,2022-07-11 05:13:04+00:00,TSM,Just @TSM_Albralelie walking off the pressure. https://t.co/Ae5QvDxIMn,-0.08,Other,0.278,1
+kaggle_stock_tweets,2022-05-13 18:19:45+00:00,TSLA,"Happy Friday everyone! It’s the weekend, which means we could see the long release notes for Tesla Full Self-Driving Beta 10.12 leak any day now.  
+
+Can’t wait. Will provide full coverage here if it lands on schedule. $TSLA https://t.co/3BNHOgrF0n",0.199,Product Launch,0.625,2
+kaggle_stock_tweets,2021-09-30 17:56:14+00:00,PG,Great snapshot of what it looks like when an incumbent get disrupted. $SHOP $SE and $MELI compared to $AMZN stock returns over last 3 years. This is why tech investing is so exciting and rewarding. We get to invest in entrepreneurs that do the impossible. https://t.co/3Zxytff8Lk,0.2,Other,0.205,1
+kaggle_stock_tweets,2022-05-24 17:33:22+00:00,GOOG,"Free Cash Flow yield update
+
+$FB 7.9%
+$GOOG 4.9%
+$AAPL 4.6%
+$MSFT 3.2%
+
+All gone up a lot this year. FCF might be under pressure in the near term though
+
+Amazing to see that when Berkshire bought $AAPL (around 2016) it’s FCF yield was way higher - above 10%! https://t.co/6BV4Zg672H",0.919,Other,0.212,1
+kaggle_stock_tweets,2022-07-29 10:46:37+00:00,TSLA,"The EV bill also extends credits for solar and energy storage for another 10 yrs. This is very good for $TSLA Energy.
+
+Good find by @TeslaPodcast. https://t.co/26C7q02MyE",0.685,Credit Event,0.361,5
+kaggle_stock_tweets,2022-07-28 00:15:01+00:00,MSFT,"Trade plan for Thursday ✅
+
+$SPX broke above the key level at 4020 today. We should see a move to 4116-4132 if the market can have a pos. reaction to $AAPL $AMZN earnings
+
+$NVDA setting up for 183,189 if it holds above 176 this week
+
+$AMD possible to see 95-100 by next week",0.69,Earnings,0.506,4
+kaggle_stock_tweets,2022-01-08 22:01:06+00:00,AMZN,"Season Premiere Episode 3: 
+
+👊 $SE Sea Limited Updates 
+👊 $GME NFT is this a big deal?
+👊 $COIN Coinbase for 2022 and beyond
+👊 What to do with the Fed 
+👊 FANG Stocks holding up the S&amp;P $FB $MSFT $NFLX    
+      $GOOGL $AAPL $AMZN 
+
+Tag a friend below!
+
+https://t.co/i9lkwobYhQ",0.04,Market Commentary,0.314,1
+kaggle_stock_tweets,2021-11-09 23:43:51+00:00,TSLA,"💖💕Thank you Elon for the hard work of your team at Tesla. 
+
+⚡️I am so thankful for the opportunity you have given everyone, and your clear transparent communication.
+
+Great job choosing your pay package and FULFILLING YOUR PROMISE. You earned it. $TSLA 🚀 https://t.co/Rbijs2yAh4",0.805,Earnings,0.315,4
+kaggle_stock_tweets,2021-12-07 14:42:37+00:00,TSLA,$TSLA $950 yesterday and $1033 today. I remember they told me S &amp; P inclusion would kill volatility 😂,0.03,Market Commentary,0.448,1
+kaggle_stock_tweets,2022-09-01 05:38:35+00:00,TSLA,The best ride for any occasion @tesla #plaidarmy https://t.co/6vBOXGfgR7,0.077,Other,0.188,1
+kaggle_stock_tweets,2021-11-23 00:58:53+00:00,TSM,"My normie friend: ""I've heard of faker...is he in TSM?"" Bruhhhh",-0.028,Other,0.181,1
+kaggle_stock_tweets,2022-08-31 17:18:45+00:00,TSLA,"If you are worried about Tesla today, you definitely would NOT have survived during the darkest of days when Elon was sleeping on the factory floor looking at bankruptcy right in the eyes. $TSLA",-0.058,Other,0.237,1
+kaggle_stock_tweets,2022-08-13 12:15:00+00:00,PYPL,"2022 Returns
+$GME: +10%
+$TWTR: +2%
+$AAPL: -3%
+$MSFT: -13%
+$AMZN: -14%
+$TSLA: -15%
+$GOOG: -15%
+$ADBE: -21%
+$CRM: -25%
+$TEAM: -26%
+$AMD: -30%
+$MRNA: -33%
+$NVDA: -36%
+$ZM: -40%
+$ETSY: -45%
+$SQ: -46%
+$PYPL: -46%
+$META: -46%
+$SPOT: -47%
+$SNOW: -50%
+$NFLX: -59%
+$SHOP: -70%
+$SNAP: -75%",-0.045,Earnings,0.311,2
+kaggle_stock_tweets,2022-09-20 14:44:22+00:00,TSLA,"Want green?
+
+SELL EVERYTHING, BUY $TSLA 🚀🌕 https://t.co/jkuHXSIT3i",0.023,Merger/Acquisition,0.306,2
+kaggle_stock_tweets,2022-05-01 02:34:38+00:00,NFLX,Ideas for Netflix @reedhastings - add a ad supported Netflix lite. Add a buddy pass for $3 a month to a subscription. Buy $amc and redefine the movie/Tv experience around community viewing. Add the “movie pass” option for $3 a month. Add a live music option like @nocapshows $NFLX,0.115,Other,0.183,1
+kaggle_stock_tweets,2021-10-01 19:41:36+00:00,AAPL,"Signing off 4 the weekend. 
+
+Friendly reminder in q3 we went long
+
+$CMG 1300 ran +550
+$AMZN 3198 ran +550
+$AAPL 125 with August 150c 
+$SHOP 1201 ran +350 
+$NKE August calls at 130 ran +44
+$NFLX October calls at 515 ran +100 
+
+All free. &amp; those are just a few. Join us q4 #LFG",0.056,Other,0.27,1
+kaggle_stock_tweets,2021-12-14 16:12:20+00:00,TSLA,Market still selling off. Elon keeps selling tesla and giving long term investors a real holiday discount. $tsla,0.211,Market Commentary,0.556,1
+kaggle_stock_tweets,2022-09-27 19:53:24+00:00,TSLA,Tesla is now outperforming the Nasdaq year to date. Q3/Q4 should be 🚀 $TSLA v $QQQ. https://t.co/gyKdlHi8wf,-0.369,Other,0.196,1
+kaggle_stock_tweets,2021-11-30 19:29:11+00:00,PG,"$SOL has returned over 10,000% in the past year.
+
+Which is a greater return than buying $AMZN in 1998.",0.936,Other,0.244,1
+kaggle_stock_tweets,2022-08-27 15:11:40+00:00,AAPL,"1/ $SPY $IVV $VOO S&amp;P 500 ETF
+
+All of these ETFs are the same, but offered by different brokerages
+
+All have LOW expense ratios
+
+Expense Ratio = A % you are charged by the ETF owner based on the amount you invest
+
+Top Holdings:
+$AAPL
+$MSFT
+$AMZN
+$TSLA
+$GOOGL
+$GOOG
+$BRK.A",-0.001,Other,0.189,1
+kaggle_stock_tweets,2022-04-28 20:04:04+00:00,TSLA,"Big call day +$630k🖨️🚀
+
+Waited for $QQQ 325 and $SPX 4260 and had a remarkable day playing calls 
+
+$SPX 4300c 
+$TSLA 880c, 900c
+$NVDA 200c
+
+Thank you @EliteOptions2 🌹 https://t.co/k4HPDymnGc",0.163,Other,0.29,1
+kaggle_stock_tweets,2021-12-07 15:40:06+00:00,TSLA,The Dec. 2021 Omicron/Fed Taper correction is officially over.. $MSFT $AAPL $GOOGL $FB $AMZN $TSLA https://t.co/HiM31Q6NE4,-0.415,Other,0.224,1
+kaggle_stock_tweets,2021-12-15 23:56:15+00:00,NFLX,"Theta Thursday Triggers 🎯  
+
+⚡ $LCID 45c &gt; 41.65 | 36p &lt; 39.43
+🚗 $TSLA 1070c &gt; 987 | 900p &lt; 925
+🛍️ $AMZN 3600c &gt; 3512 | 3330p &lt; 3425
+📺 $NFLX 630c &gt; 610 | 585p &lt; 596
+🕹️ $NVDA 325c &gt; 313 | 275p &lt; 297
+📱 $AAPL 185c &gt; 180 | 175p &lt; 178
+
+50 ❤️ to Unlock my Favorite #Flow Setups https://t.co/ariYr7f8NO",0.006,Other,0.231,1
+kaggle_stock_tweets,2022-05-29 04:14:11+00:00,DIS,Season 3 of The Mandalorian will debut on Disney Plus $DIS in February 2023 https://t.co/X4wWh04bwR,0.032,Other,0.158,1
+kaggle_stock_tweets,2022-01-24 21:18:48+00:00,TSM,"We would like to personally congratulate @TSM as the new Champions in yesterday's ALGS PlayOffs!
+
+🏆@ImperialHal
+🏆@Verhulst
+🏆@TSM_Reps
+
+#ApexLegends @PlayApex @PlayApexEsports https://t.co/o23Fuw8sbB",0.343,Other,0.175,1
+kaggle_stock_tweets,2022-04-27 21:14:57+00:00,META,Why is $FB up so much? Metaverse is back?,0.399,Product Launch,0.42,2
+kaggle_stock_tweets,2022-06-03 15:23:07+00:00,TSLA,Markets will close green today. $TSLA,-0.039,Market Commentary,0.4,1
+kaggle_stock_tweets,2022-02-03 03:00:26+00:00,MSFT,"$meta (facebook) is 2.4% weight in the S&amp;P
+
+It is down 22% after hours
+
+Thus S&amp;P is down 50bps just cuz of Zuck the cuck on the open tomorrow.
+
+If $AMZN shits the bed too (labor costs etc)...well it cud be ugly.
+
+Pretty sure Jay Pow Pow has a call into Bezos pleading
+
+#btc",-0.954,Management Change,0.304,3
+kaggle_stock_tweets,2022-07-31 19:59:27+00:00,TSLA,You can bet $TSLA planning Shanghai 4680 production. https://t.co/Tbc5jMuOzI,0.013,Other,0.295,1
+kaggle_stock_tweets,2022-03-30 17:42:02+00:00,TSLA,Tesla wall street analysts are expecting deliveries of 312k tesla's in Q1. We think the estimates for tesla for 2022 and 2023 deliveries are too low. $TSLA,-0.292,Analyst Rating,0.403,1
+kaggle_stock_tweets,2022-04-11 13:21:31+00:00,TSLA,"Funny how that “shamelessly grandiose portrait” of Elon looks a lot like NIKOLA TESLA.  🤦🏻‍♀️ 
+
+$TSLA
+🥴🤡 $TSLAQ 🤡🥴 https://t.co/tIPRmTgQU7",0.003,Other,0.183,1
+kaggle_stock_tweets,2021-11-14 17:41:35+00:00,TSM,"Got early access to @R6Extraction's hardcore game mode Maelstrom Protocol with @TSM_Beaulo and @zenpharaoh. It's a hardcore game mode designed for a serious challenge, and a challenge it is.
+
+New vid here 👉 https://t.co/fqwEn1TxQO
+#R6Extraction #ad https://t.co/tRFEhAg2MR",0.057,Other,0.16,1
+kaggle_stock_tweets,2021-11-11 15:11:56+00:00,TSLA,"As I tried to warn pre-mkt, $TSLA can’t rise significantly until mgmt discloses they are done selling. In 30 years, I’ve never seen a company sell a 2% block this way. Normally a block would be sold through GS/MS who’d line up buyers who want a discount and it gets done in a day.",0.03,Management Change,0.407,2
+kaggle_stock_tweets,2022-04-21 12:36:02+00:00,TSLA,"This quote from Adam Jonas this morning is unintentionally HILARIOUS:
+
+"" $TSLA is achieving industry leading gross margins with essentially just 2 cars and 2 plants, one of which may be one of the highest cost plants in the world.""
+
+And apparently he BELIEVES those margins, lol.",0.421,Market Commentary,0.384,1
+kaggle_stock_tweets,2022-01-07 15:08:00+00:00,AAPL,"Apple CEO Tim Cook made a compensation of $98.7 million in 2021
+
+Warren Buffett made over $770 million in Dividends alone from $AAPL",0.035,Dividend or Buyback,0.417,1
+kaggle_stock_tweets,2022-01-05 17:38:09+00:00,TSLA,"Nikola Has Given Up on its Patent Lawsuit Against Tesla
+
+(Well expected from day 1 😂)
+
+$TSLA $NKLA 
+https://t.co/C9duLKpag3",-0.31,Regulatory/Legal,0.444,3
+kaggle_stock_tweets,2022-01-03 14:13:06+00:00,TSM,@TheGrimWeirdo @TSM_ProdigyAces When people say 3 stacks they’re not talking about a group of golds lol it usually means a full team of Diamonds / Masters / Preds playing like it’s ranked,-0.031,Other,0.207,1
+kaggle_stock_tweets,2022-01-03 18:45:17+00:00,AAPL,$AAPL 3 trillion dollars! https://t.co/TRnWK4FB9C,0.022,Other,0.165,1
+kaggle_stock_tweets,2022-02-09 00:05:03+00:00,TSLA,"If you are a $TSLA shareholder, you are part of the most unrecognized revolution in human history happening right before our 👀",0.031,Other,0.228,1
+kaggle_stock_tweets,2022-06-09 15:38:08+00:00,TSLA,"Re. the NHTSA $TSLA Autopilot announcement:
+
+""NHTSA is upgrading its probe to an engineering analysis, A REQUIRED STEP BEFORE IT COULD SEEK TO COMPEL A RECALL.""
+
+This shitty product is dead meat.",-0.228,Regulatory/Legal,0.317,2
+kaggle_stock_tweets,2022-06-06 12:09:09+00:00,AMZN,My $AMZN short is absolutely printing money today. RIP to all the bagholders https://t.co/1yoJ4xVVPU,-0.227,Other,0.206,1
+kaggle_stock_tweets,2022-01-06 23:25:11+00:00,AMD,"$AMD $FB
+#ideas 
+My focus will be $AMD &amp; $FB into Feb 1/Feb 2 Earnings Report specially if Nasdaq gives the Bounce we have been talking about
+
+Save below charts, will come handy rest of the month
+$FB for #lt plays https://t.co/IubY4Kr0w2",0.057,Earnings,0.473,2
+kaggle_stock_tweets,2022-09-06 18:29:50+00:00,TSLA,It definitely feels like $TWTR is on the defensive in this hearing. @elonmusk $TSLA,-0.096,Other,0.247,1
+kaggle_stock_tweets,2021-12-13 21:10:36+00:00,TSLA,Sold (Short) $TSLA Jan 7th $800 puts (Bullish) today to collect premiums,0.352,Other,0.218,1
+kaggle_stock_tweets,2021-10-25 11:37:13+00:00,TSLA,$TSLA LOOKING LIKE IT WANTS $1000 THIS WEEK 👀👀👀,0.105,Other,0.181,1
+kaggle_stock_tweets,2022-08-01 03:42:30+00:00,TSLA,.@Tesla makes the best products on the planet. Period. @elonmusk https://t.co/OK3148jHkj https://t.co/twHO3z0tGh,0.121,Other,0.199,1
+kaggle_stock_tweets,2022-08-24 12:16:17+00:00,TSLA,"It's amazing how many suckers don't realize the $TSLA ""hypergrowth"" story is OVER. Look at sequential deliveries:
+Q4 '21: 309K
+Q1 '22: 310K
+Average of Q2's 255K &amp; Q3's 369K est): 312K
+
+And delivery wait worldwide has PLUNGED, meaning the newly increased capacity &gt; the order rate.",-0.866,Other,0.141,1
+kaggle_stock_tweets,2022-04-21 08:22:02+00:00,TSLA,"Giga Texas &amp; Berlin hasn’t fully ramped yet.
+
+4680 battery &amp; structural battery pack hasn’t been ramped yet.
+
+FSD hasn’t been widely released yet.
+
+Cybertruck, Semi, Roadster, Optimus hasn’t been produced yet.
+
+Giga Fremont, Giga Shanghai are still expanding.
+
+$TSLA #Tesla",0.079,Product Launch,0.33,1
+kaggle_stock_tweets,2022-01-17 04:53:51+00:00,TSLA,"@RealDanODowd @elonmusk @heydave7 @nytimes @Tesla @RealDawnProject Was that your company ?
+
+https://t.co/BmaTk1rWVF",-0.02,Other,0.185,1
+kaggle_stock_tweets,2022-01-03 05:29:42+00:00,TSLA,"*Tesla Vehicle Deliveries By Year:
+
+2021: 936,172
+2020: 499,550
+2019: 367,500
+2018: 245,240
+2017: 103,097
+2016: 76,295
+2015: 50,580
+2014: 31,655
+2013: 22,477
+2012: 2,650
+2011: 0
+
+$TSLA https://t.co/zqrMevQfCe",-0.036,Earnings,0.327,2
+kaggle_stock_tweets,2021-10-30 20:13:16+00:00,TSLA,"I have to say that $TSLA Twitter has made me millions
+
+The time I have spent reading and learning from all the fine $TSLA Twitter resources and support has been “worth” more financially then 16 years of post high school education
+
+Thank you to all my Twitter friends and educators",0.237,Earnings,0.698,3
+kaggle_stock_tweets,2021-10-04 13:19:15+00:00,MSFT,"📈#XCLUSIVETRIGGERS WEEKLY 10/4-10/8📉
+
+$FB Calls 344+ | Puts 339-
+$AAPL Calls 144+ | Puts 142-
+$AMZN Calls 3308+ | Puts 3279-
+$NFLX Calls 613+ | Puts 605-
+$GOOGL Calls 2731+ | Puts 2684-
+
+$TSLA Calls 796+ | Puts 778-
+$ROKU Calls 317+ | Puts 310-
+$ZM Calls 268+ | Puts 262-",-0.013,Other,0.283,1
+kaggle_stock_tweets,2022-05-12 16:51:37+00:00,TSM,big @TSM fan here,0.007,Other,0.22,1
+kaggle_stock_tweets,2022-03-04 18:04:24+00:00,TSM,@TSM So much respect to the team and to the org for this,0.15,Other,0.157,1
+kaggle_stock_tweets,2022-06-20 18:14:54+00:00,TSM,"This comes shortly after Shadow alleged TSM of harassment and being exploited, allegations that TSM and team members have called completely false https://t.co/3OfQT6ir7I",-0.895,Other,0.164,1
+kaggle_stock_tweets,2021-12-17 16:25:02+00:00,PG,#TipRanksWrapped is coming to an end! Today we have the top 10 most bought stocks of the year. From $AAPL to $FB now known as the @Meta to $GOOGL &amp; $NVDA it has been a busy year. 📈 See what stocks are trending now: $TSLA $NIO $MSFT $AMZN $PLTR $BABA https://t.co/qxXxEda3yM https://t.co/01gSiqgEwS,0.105,Other,0.265,1
+kaggle_stock_tweets,2021-11-16 06:22:36+00:00,TSLA,"Seeing many ppl talking about or even suggesting how Elon should handle his $TSLA shares selling. It’s very annoying to me. TBH, he has all the right to handle those shares in the way he wanted (under public trading company guidelines).
+
+Don’t forget Musk founded X dot com/PayPal",-0.021,Other,0.299,1
+kaggle_stock_tweets,2022-03-22 20:19:35+00:00,TSLA,"Tesla is about to hit 100,000 employees. Its market cap therefore works out to a value of $10.3 MILLION dollars PER employee. 
+
+By contrast, union-labor Ford's market cap divided by employees = $373.9k of value per employee. $TSLA v $F.",0.175,Other,0.181,1
+kaggle_stock_tweets,2022-04-23 03:28:37+00:00,TSLA,Why would Bill Gates have a $500M short position against $TSLA? 🤔 https://t.co/uy0N7GlA8S,-0.084,Other,0.216,1
+kaggle_stock_tweets,2021-11-21 21:48:30+00:00,AAPL,$AAPL Weekly Symmetrical Triangle breakout and bullish MACD cross. https://t.co/xF18LqJWl6,0.579,Other,0.26,1
+kaggle_stock_tweets,2022-06-03 15:02:24+00:00,PG,One of my biggest single day wins. #spy #qqq #tsla #msft #goog #amzn https://t.co/GBFrvQuHji,0.089,Other,0.23,1
+kaggle_stock_tweets,2022-07-12 14:05:49+00:00,TSLA,"Sold the $690 and took the $5,000. I don't trust this for one second with Elon back to ranting on Twitter every damn day again. $TSLA",-0.083,Other,0.261,1
+kaggle_stock_tweets,2021-10-17 15:16:01+00:00,PG,"Last year, China shipped more than 4 times as many packages as number two on the list, the United States.
+
+Hold up, I think I have a package at the door… #shipping #ecommerce $BABA $AMZN https://t.co/TDEnO3jHf9",0.126,Other,0.127,1
+kaggle_stock_tweets,2022-02-20 13:09:24+00:00,TSM,Putting on my TSM Jersey and cheering for the team I know is about to get their bussies blasted by five dudes who want it so bad they can barely breathe like the shameful little NA Fan I am,-0.448,Other,0.14,1
+kaggle_stock_tweets,2021-11-04 17:19:56+00:00,VZ,"Dividend-Paying Companies You Use Everyday:
+- Graphics $ADBE
+- Phones $AAPL
+- Coffee $SBUX
+- Food $MCD
+- Drugs $JNJ
+- Home $HD
+- Drinks $KO
+- Computer $MSFT
+- Hygiene $PG
+- Internet $VZ
+- Gas $XOM
+- Shopping $TGT
+- Groceries $WMT",0.001,Dividend or Buyback,0.621,2
+kaggle_stock_tweets,2022-08-29 15:08:07+00:00,AAPL,"Bought $AAPL 165c for .68
+#JPAAlert",0.041,Dividend or Buyback,0.378,1
+kaggle_stock_tweets,2022-04-29 00:54:53+00:00,MSFT,"Amazon is a screaming buy imo (I’m buying more tomorrow morning) 
+
+AWS alone did $67B over the last 12 months/growing at 37%
+
+Say that grows to $80B over next 12 months. Slap a P/S of 15 on AWS alone and it’s $1.2T 
+
+Rest of the biz is basically free 🤷‍♂️
+
+Long $AMZN https://t.co/RHNGzo9W0V",0.13,Other,0.222,1
+kaggle_stock_tweets,2022-05-30 15:55:53+00:00,TSLA,"@elonmusk @MadeInTheUSANJ Elon, as a $TSLA investor, I am begging you to not get political. This will only lead to division and will hurt your brand and your companies. I know you are frustrated and have been treated unfairly, but there is a better way to handle this.",-0.763,Other,0.292,1
+kaggle_stock_tweets,2021-12-08 11:53:00+00:00,TSLA,My prediction with omicron and having booster to protect just proven correct. I’m shocked. Not! Markets used omicron as excuse to justify the dip they wanted. $tsla,0.116,Market Commentary,0.477,1
+kaggle_stock_tweets,2021-10-25 20:57:29+00:00,TSLA,"Glad to See so many traders following my teaching and Executed specially $TSLA trade. 
+Such Trades and you are done for a week or day. 
+Its a SIMPLE REPEATABLE SETUP
+Now Preserve Capital/No Cockiness/Risk Less Tmro🙏
+Recap to follow $TSLA $LCID $AGC $RDW $RDBX https://t.co/inAWq8Vngc",0.023,Other,0.263,1
+kaggle_stock_tweets,2022-04-28 14:04:46+00:00,TSLA,I’m a conservative and I own a @Tesla not because I want to save the earth but because they are so freaking fun to drive!,0.036,Other,0.176,1
+kaggle_stock_tweets,2022-05-18 16:30:55+00:00,TSLA,"I'm a conservative, Elon. I don't attack you for your mercurial politics of convenience. (Remember your Hillary endorsement in 2016, when CA subsidies &amp; US tax credits were so important to $tsla? Not surprised you're now sucking up to Trumpians.) I attack you for your lying. https://t.co/D76qp1O5iP",-0.181,Other,0.186,1
+kaggle_stock_tweets,2022-06-24 14:15:08+00:00,PG,"Amazon, $AMZN, said its Alexa virtual assistant could mimic the voice of a specific person based on a less than a minute of provided recording.",0.015,Product Launch,0.311,1
+kaggle_stock_tweets,2022-04-07 21:23:39+00:00,TSLA,How do you think $TSLA GigaTexas CyberRodeo will go to tonight? https://t.co/x20muKvCM2,0.029,Other,0.192,1
+kaggle_stock_tweets,2022-02-18 12:26:34+00:00,TSLA,"Growth stocks have been crushed this year (NDX -14%, TSLA -24%)  by 3 things: Fed tightening, Ukraine crisis, re-rating of Covid favs who pulled rev forward ( $RBLX $SHOP $ROKU). But not all growth stocks are created equal. $TSLA FY’22 EPS ests +21% YTD. EV adoption is soaring. https://t.co/T8dSs0fgfh",0.15,Other,0.202,1
+kaggle_stock_tweets,2021-11-07 01:50:25+00:00,TSM,Look who I bumped into!!! #ArcaneWatchParty @TSM_Myth https://t.co/Ues87T37ri,-0.058,Other,0.151,1
+kaggle_stock_tweets,2021-11-08 11:33:23+00:00,TSLA,"2/Jefferies increased its $TSLA PT to a Street high $1,400 (from $950), and raised 2021-2023 EPS ests by 16% to reflect accelerating growth/profitability. Strong Oct China #s should lead analysts to raise FY’21 ests to &gt;900K (Street 889K). TSLA -5% on Elon tweet poll seems high.",0.939,Analyst Rating,0.392,2
+kaggle_stock_tweets,2022-07-10 01:42:43+00:00,TSM,"Day 3 - Losers Bracket - Round 2
+#ALGS Year 2 Championship
+Match 5
+
+1. @TSM 
+2. @FNATIC_JP  
+3. @AYMEsports 
+ 
+💥https://t.co/chN63VllEc
+💥https://t.co/eGBNHPQNBk https://t.co/83L9KK02Qi",0.003,Analyst Rating,0.391,1
+kaggle_stock_tweets,2022-05-05 17:47:32+00:00,TSLA,"If $TSLA bought $RIVN, I wouldn’t be mad about it. https://t.co/TUmBcostdC",-0.024,Merger/Acquisition,0.379,2
+kaggle_stock_tweets,2022-07-20 05:20:53+00:00,TSLA,"The @tesla Semi, roadster and Cybertruck are 🔥🔥🔥 🤤🤤🤤🤤 ⁦@elonmusk⁩ https://t.co/s3JGAJ0YoL",-0.015,Product Launch,0.53,2
+kaggle_stock_tweets,2022-05-09 20:12:39+00:00,AAPL,"UPDATED: Stocks right now vs their 52-week highs:
+
+• $AAPL: -16.9%
+• $TSLA: -36.7%
+• $AMZN: -42.3%
+• $NVDA: -51%
+• $ARKK: -69%
+• $LCID: -71.7%
+• $CRSP: -74.5%
+• $PLTR: -74.6%
+• $NFLX: -75.3%
+• $ZM: -77.3%
+• $TDOC: -82.5%
+• $SHOP: -80.7%
+• $RIVN: -87.3%
+• $HOOD: -89% https://t.co/2ULXN7Xobb",-0.012,Other,0.253,1
+kaggle_stock_tweets,2022-04-26 14:07:22+00:00,TSLA,This is Elon. Too high volume bars on the sell side. And just think if this has to happen 20 more times to get the equity. $TSLA,-0.024,Other,0.241,1
+kaggle_stock_tweets,2021-10-03 21:58:54+00:00,TSLA,"3/ $TSLA 3Q delivs should ease two big concerns of instit pms underweight TSLA:  
+1/ The global chip shortage is not hurting $TSLA as it has every other auto mnfr;
+2/ China demand is obviously not slowing, with record China Sept and 3Q domestic sales (Sept CPCA #s 10/9).",0.747,Analyst Rating,0.302,2
+kaggle_stock_tweets,2022-01-03 20:01:09+00:00,PG,"One trend has emerged out of last 2 years: Co's like $AMZN have grown so big, they don't even try &amp; compete anymore. Prime means 5 days +, products often cost more than if you bought from the original manu &amp; the site is littered with crappy Chinese co's offering inferior products",-0.881,Other,0.178,1
+kaggle_stock_tweets,2021-10-01 01:30:24+00:00,TSLA,"How it started...How it's still going
+
+@Chamath  $TSLA 
+
+Owned it...sold it...didn't own it...nah just pumped it
+
+#wtf https://t.co/ZdQamjqZi8",-0.004,Other,0.239,1
+kaggle_stock_tweets,2022-06-27 12:04:59+00:00,TSLA,"Just hop in and tell your @Tesla where you want to go :) 
+
+Full video: https://t.co/gEehtOo8rq @elonmusk #FSDBeta https://t.co/5fVZVW96ar",0.0,Other,0.222,1
+kaggle_stock_tweets,2022-01-10 14:40:28+00:00,TSLA,"ARK's 10-month old $TSLA model assumes that in 2025 (a year that starts in about 35 months), there will be 1.4 trillion robotaxi miles driven.  That is equivalent to almost half of the total miles driven in the U.S (cars, trucks, buses), and about equal to all passenger miles. https://t.co/BElELfUQwM",0.063,Other,0.2,1
+kaggle_stock_tweets,2021-11-18 20:57:03+00:00,PG,"Todays plays 🐼
+
+$TSM Swing 11/26 121c hit +113% (1.64 to 3.50)
+
+$NVDA Lotto failed.
+
+$GOOGL 3000c hit +159% (8.65 to 22.40)
+
+$AMZN 3630c hit +354% (17.33 to 78.65) https://t.co/vgMYArTM9K",-0.168,Other,0.219,1
+kaggle_stock_tweets,2022-08-17 15:04:57+00:00,TSM,"THEY'RE GOING IN BLIND 🫣
+
+@TSMViss, @ImperialHal, and @TSM_Reps take on the no hitmarker challenge. 1 shot? Full health? Who knows.
+
+🎬: https://t.co/Rfj4H7pxyQ https://t.co/t6fRLtqxBy",0.044,Other,0.217,1
+kaggle_stock_tweets,2022-04-09 21:59:23+00:00,AMD,"Grab a drink! 🥃
+
+It's time for some CHART REQUESTS!🐼
+ 
+-Limit 1 per person
+-No penny stocks
+-Will do as many as I can b/t tonight/ tmw
+
+Please Like &amp; Retweet! Thank you
+
+$SPY $AMZN $AAPL $BA $NFLX $GOOGL $SHOP $TSLA $AMD $ROKU $NVDA $FB $TTD $PYPL $DOCU $CCIV $ETSY $SQ $MSFT",0.084,Market Commentary,0.456,1
+kaggle_stock_tweets,2022-04-03 22:22:18+00:00,TSLA,Just doing my part in helping the mission of a sustainable future 👊 $tsla https://t.co/NzOfP99B17,0.269,Other,0.171,1
+kaggle_stock_tweets,2022-08-23 12:15:46+00:00,TSLA,"Good Morning!
+
+I mainly trade the same 10 stocks/etfs daily:
+
+Ranked from most to least traded
+
+1. $TSLA
+2. $AMZN
+3. $SPY
+4. $AAPL
+5. $NFLX
+6. $META
+7. $NVDA
+8. $AMD
+9. $QQQ
+10. $IWM",0.009,Market Commentary,0.333,1
+kaggle_stock_tweets,2022-05-11 14:33:27+00:00,PG,"After a week of talking about all the moves he is making and how ""fortunes are made and lost"" in times like this,  the $GK ETF has traded a total of zero shares in every name since May 4.  Also still owns $AMZN after shitting on it and saying he's ""done"" with it. https://t.co/u19sU562h5",-0.196,Market Commentary,0.398,1
+kaggle_stock_tweets,2022-06-01 01:27:11+00:00,PG,$AMZN Monthly retest of the former breakout level. https://t.co/rHlLDd4BZq,-0.581,Other,0.204,1
+kaggle_stock_tweets,2021-11-17 09:01:49+00:00,TSLA,"Lets play some game: 
+A) $TSLA splits first
+B) $TSLA hits $1500 first 
+
+I know, I don't do polls.",-0.025,Other,0.164,1
+kaggle_stock_tweets,2022-03-11 16:40:51+00:00,TSLA,"Repeat after me: “2 new factories in a month”. 
+
+It’s mind boggling that Tesla trades this low. 
+
+$TSLA #Tesla",-0.274,Other,0.246,1
+kaggle_stock_tweets,2022-04-12 02:15:40+00:00,TSM,TSM Academy lost 12-14 verse Moonrise and then 7-13 verse Able Esports they are out of the tournament.,-0.507,Other,0.165,1
+kaggle_stock_tweets,2021-11-29 15:05:56+00:00,TSLA,Told you it would be a good day and buying the Friday $TSLA dip would pay off. Congrats to those that did.,0.663,Other,0.272,1
+kaggle_stock_tweets,2022-06-29 19:48:58+00:00,AAPL,"Would $AAPL consider buying $PTON? The software, the user data, the connection to their watch, phones, AppleTV...etc. Totally thinking out loud but intriguing. At this valuation, I do think #Peloton is an interesting buy for at least a move back to $15.",0.158,Other,0.266,1
+kaggle_stock_tweets,2021-10-26 23:20:00+00:00,TSLA,69 days until $TSLA Q4 P&amp;D report 🚀,-0.021,Earnings,0.46,2
+kaggle_stock_tweets,2022-02-02 22:03:21+00:00,META,"$FB's P/E ratio was 30x last year, now down to 18x which is the lowest ever for the company with the exception of Dec 2018.",-0.961,Earnings,0.592,5
+kaggle_stock_tweets,2022-02-24 19:56:35+00:00,NIO,$NIO 1.2 Billion Dollars traded hands today. 🤯,0.043,Other,0.198,1
+kaggle_stock_tweets,2021-10-31 13:48:06+00:00,TSLA,"Next milestone reached!
+11000 holders!
+#KODI ain't stopping.
+
+Don't forget our @Tesla giveaway!
+https://t.co/yLP978y5XO
+
+#BSCGems #Tesla @elonmusk #bts #binance #BNB #BinanceSmartChain https://t.co/yX3NppgEG2",0.088,Other,0.168,1
+kaggle_stock_tweets,2022-09-17 17:25:53+00:00,AMZN,"IF YOU INVESTED $10,000 IN THEIR IPOS YOU WOULD NOW HAVE 
+
+$MSFT MICROSOFT $10,000 -&gt; $36 MILLION
+$AMZN AMAZON $10,000 -&gt; $14.5 MILLION
+$AAPL APPLE $10,000 -&gt; $13.8 MILLION
+$GOOGL GOOGLE $10,000 -&gt; $250,000",0.05,Other,0.229,1
+kaggle_stock_tweets,2021-10-29 20:02:50+00:00,XPEV,"🤑 Daily recap🤑
+
+$NKE 165C +300% 🥳🥳
+$AMD 120/118P Nov 5 +50% 🚀
+$RBLX 85C +50% 🔥
+$WKHS 7C -20% ❌
+$QQQ puts made some, lost some B/E ❌
+$XPEV $MRNA lottos ❌
+
+Today marks an important milestone for my journey. 
+0 red days this month  💪💪
+
+grateful to @unusual_whales 🙏🙏",0.172,Other,0.29,1
+kaggle_stock_tweets,2022-03-03 12:05:29+00:00,TSLA,For all those doubters. $TSLA https://t.co/XaVGiZ28LD,0.004,Other,0.165,1
+kaggle_stock_tweets,2021-10-21 11:49:03+00:00,TSLA,"$TSLA - DUTCH GOVT FORENSIC LAB DECODES TESLA'S DATA-STORAGE SYSTEM
+
+DUTCH LAB SAYS TESLA STORING FAR MORE DATA THAN INVESTIGATORS PREVIOUSLY AWARE OF",0.013,Other,0.152,1
+kaggle_stock_tweets,2022-04-21 19:27:54+00:00,TSLA,"The level of denial that I am seeing on Twitter today from $TSLA detractors mirrors the level of denial I saw after Q32019's stellar quarter. 
+
+The difference is that this time, they're all talk and no action. Everyone is afraid to short Tesla now, rightfully so.
+
+Fwaud, bro.",-0.421,Other,0.195,1
+kaggle_stock_tweets,2021-12-01 22:12:27+00:00,TSLA,"Let me get this straight Faucci.
+
+Get fully vaccinated; but still can get delta &amp; Omicrom
+
+Wear a mask; but still can get delta &amp; Omicrom
+
+If you get Omicrom; symptoms are mild but you should still be vaccinated &amp; wear masks
+
+What are we panicking over here? Just live life
+
+$TSLA",-0.013,Other,0.137,1
+kaggle_stock_tweets,2022-09-08 16:43:09+00:00,TSLA,"@elonmusk @austinhinson_ @Tesla Good move. But how about not charging a customer also at first place? 
+
+No one changes appointment unless its some emergency",-0.033,Other,0.213,1
+kaggle_stock_tweets,2022-02-01 09:37:49+00:00,NIO,"$NIO better numbers than I expected. Just under 10,000 deliveries, 9,652 in January. Even tho $XPEV and $LI had slightly more deliveries our Revenue was much, much higher. https://t.co/lNbkkNu9nW",0.922,Earnings,0.33,4
+kaggle_stock_tweets,2021-11-01 02:52:26+00:00,TSLA,@elonmusk @SawyerMerritt @Tesla In fact. We just toasted you at a party. A client was there. It’s helped her out a lot.,0.755,Other,0.181,1
+kaggle_stock_tweets,2022-09-28 21:09:53+00:00,PG,"Amazon, $AMZN, is encouraging customer-service workers at US call centers to work from home, signaling its preference for remote work in certain roles that would help save money on real estate, per Bloomberg.",0.698,Management Change,0.544,3
+kaggle_stock_tweets,2022-08-10 21:23:45+00:00,NFLX,JUST IN: Disney $DIS surpasses Netflix $NFLX in total streaming subscribers with 221 million total subscriptions.,0.65,Other,0.151,1
+kaggle_stock_tweets,2022-07-14 11:00:06+00:00,TSLA,"MS Jonas lowered his PT on $TSLA by $50. Yes, only $50 and it becomes global news in 10 min. Comical.",0.01,Analyst Rating,0.333,1
+kaggle_stock_tweets,2022-05-04 01:51:49+00:00,TSLA,"The BUSTED GROWTH STORY continues...
+
+$TSLA #NoDemand #CompetitionPrematurelyComing https://t.co/z8T2wh0mOd",0.269,Market Commentary,0.326,1
+kaggle_stock_tweets,2021-12-03 17:28:06+00:00,PG,"Financial Markets &amp; Investing require mastery over one’s psychological &amp; emotional state
+
+Information doesn’t = transformation
+
+Many believe they would have held $AMZN during its 36,000% returns but few would have stomached volatility
+
+Asymmetrical Investing=Volatility $eGLD $MEX https://t.co/1fHu9HsU1f",0.01,Market Commentary,0.304,1
+kaggle_stock_tweets,2022-03-10 18:30:21+00:00,TSLA,"Tesla will continue to pay Ukrainian employees who returned to Ukraine to fight the Russian occupiers.
+
+The company will pay them a salary for at least three months.
+@Tesla @elonmusk @klwtts https://t.co/de6mhosWgt",-0.067,Geopolitical,0.364,3
+kaggle_stock_tweets,2021-10-12 05:02:37+00:00,AMZN,"$1k worth of $VUG you own:
+$100 of Appl,$100 Msft, $70 AMZN, $70 GOOGL, $40 FB, $25 Tsla, $23 NVDA etc &amp; in 5 major sectors. Breakin it down like this helped me understand why index investin is so powerful. 2index/2tech. You do own it all. Shout out Stockaveli @_masterinvestor https://t.co/uwnA9gXyv3",0.084,Other,0.284,1
+kaggle_stock_tweets,2022-02-06 15:38:27+00:00,TSLA,"5/ Is the $TSLA bull thesis of 5M units by 2025 achievable?  If we believe 1/EV adoption goes from 11% in 2022 to 30% by 2025; 2/TSLA can hold its ~21% EV share as it expands to pickups and compacts (~1/3 TAM); and 3/TSLA expands its capacity to meet demand, 5M by 2025 is doable. https://t.co/JtlBkUqNWM",0.764,Other,0.231,1
+kaggle_stock_tweets,2022-01-21 12:29:11+00:00,AAPL,"""We think the life raft of tech is going to be $MSFT $AAPL,"" says @DivesTech on sell-off. ""The work from home names, you'll see those multiples to continue to compress...we don't view this as the end of the tech rally. We view it more as a bifurcation."" https://t.co/7dK9x9j2Wv",-0.05,Analyst Rating,0.383,1
+kaggle_stock_tweets,2022-05-12 23:59:18+00:00,AAPL,"Weeknd chart thread a success, $AAPL hit 140, $MSFT 250, $TSLA 700, $AMZN 2045 $GOOGL just sideways, may not do them every week but let me know if you found them useful https://t.co/SShaPgzXtz",0.07,Market Commentary,0.51,1
+kaggle_stock_tweets,2022-03-24 17:20:56+00:00,MSFT,I’m not suggesting $TSLA will do another stock split this year. I am suggesting they follow GOOG’s and AMZN’s  lead and get shareholder approval this year for an increase in authorized shares so they can be ready to do another split if and when it makes sense.,0.308,Other,0.275,1
+kaggle_stock_tweets,2022-02-27 17:59:04+00:00,TSLA,"There’s no debate: $TSLA fundamentals continue to get stronger, with FY’22 EPS ests now +21% YTD; FY’23 EPS ests +17% YTD, driven by higher volumes (best quality of EPS growth). TSLA stock -23% YTD (NDX -13%) is pure macro &amp; geopolitical. Ultimately, fundamentals are what matter. https://t.co/5iVVXj9nFE",0.617,Geopolitical,0.559,5
+kaggle_stock_tweets,2022-01-14 00:17:11+00:00,TSLA,"3 years ago, @2170cell E.T. Barnum tried convincing me that $TSLA could not sell Model 3 in Europe because they couldn’t comply with EU regulations.
+
+He said Tesla was doomed. I was unconvinced. 🤣
+
+He deleted his tweets, but I kept the receipts. 🤓
+
+https://t.co/jzvsU44vfu https://t.co/bchdxUTypv",-0.349,Regulatory/Legal,0.309,3
+kaggle_stock_tweets,2022-01-04 04:23:22+00:00,TSLA,".⁦@elonmusk⁩ @tesla do you feel there is a moral incompatibility to doing business in a region using slave labor? Do these partnerships support human trafficking?
+
+Tesla Opens Showroom in China’s Xinjiang, Region @ Center of U.S. Genocide Allegations https://t.co/hdl6JgleGC",0.017,Other,0.277,1
+kaggle_stock_tweets,2022-07-20 16:13:26+00:00,TSLA,"$TSLA CC questions:
+1/ FY’22 Vol guide of 1.5M?
+2/ Outlook for 2H Auto gross margin ex-ZEV?
+3/ Timing on FSD single-stack broad release?
+4/ CT/Semi timing?
+5/ New factory capacity update (2022-2023)?
+6/ Capital deployment after all internal projects?
+@MartinViecha @elonmusk",0.04,Other,0.248,1
+kaggle_stock_tweets,2022-04-12 10:24:23+00:00,PG,"$NASDAQ is still on ~25X multiple - now with downgrades (AMZN, GOOG, FB, NFLX).  20% downside to get to Average. Last time 10yr UST yields were &gt;2.7%, the PE was below 20X!!  =&gt; plenty of room for valuation adjustment - particularly with EPS revisions now -ve!!  @saxena_puru; https://t.co/wPeQbCvdhE",-0.773,Other,0.277,1
+kaggle_stock_tweets,2022-05-14 16:44:02+00:00,KO,"My Favorite Dividend Aristocrats 
+👇
+
+$ABT 💉
+$ABBV 💊 
+$AFL 💵
+$CAT 🏗
+$CVX ⛽️
+$KO 🥤
+$EMR ⚡️
+$GD 🛩
+$JNJ 💊
+$NEE 💡
+$PEP 🍪
+$PG 🧴
+$O 🏪
+$TGT 🛒
+
+What would you add?",0.019,Dividend or Buyback,0.445,1
+kaggle_stock_tweets,2022-03-10 18:24:04+00:00,MSFT,"Markets Slump
+Putin's Demands
+Inflation Soars
+$AMZN Spilt
+Ditching 60-40 Portfolio
+Best Dividend Ideas
+Operation Warp Speed for American Oil
+@KennyPolcari
+@fitz_keith 
+@shanas621
+@AnnBerry_NYC
+@DavidANicholas
+@MarshaBlackburn
+Making Money
+Tune In
+RT
+https://t.co/klFkq1PpXb",0.06,Other,0.284,1
+kaggle_stock_tweets,2022-08-24 13:50:10+00:00,TSLA,Can you believe it? I'm still holding on to my $TSLA shares. Progress. LOL.,0.056,Other,0.156,1
+kaggle_stock_tweets,2021-11-16 11:58:49+00:00,AAPL,"$AAPL  was 'just a phone'
+
+$TSLA  was 'just a car'
+
+$NVDA was 'just a chip'
+
+$BAYC  was 'just a jpeg'",-0.012,Other,0.167,1
+kaggle_stock_tweets,2021-12-01 11:58:27+00:00,TSLA,My Cyber Whistle isn't showing up in my order history this morning. Anyone else seeing the same in their $TSLA account?,-0.155,Other,0.232,1
+kaggle_stock_tweets,2021-11-14 09:08:15+00:00,TSM,@BankzAkuma @TSM_Myth that was the plan but not surprised you didn’t figure it out you literally have an NFT pfp 💀,0.061,Other,0.174,1
+kaggle_stock_tweets,2022-08-06 21:02:38+00:00,GOOG,@Angry_Staffer I don’t know who Greg Gutfeld is so started to give it a goog and then thought OH HELL NO and petted my dog instead #selfcare,-0.173,Other,0.177,1
+kaggle_stock_tweets,2022-02-18 19:24:58+00:00,TSLA,"Don’t know about the market.
+Just work hard, improve my cash flow. Buy more shares that I think it’s a wonderful company like $PLTR and $TSLA 
+Repeat this until 50.
+Good time will come💎",0.487,Market Commentary,0.401,1
+kaggle_stock_tweets,2021-11-12 17:27:09+00:00,MSFT,"6) If you always think you're late, you'll never be early.
+
+If you bought $AAPL after the iPhone, you still made good $
+
+I you bought $AMZN after AWS, you still made good $
+
+When it comes to the best companies in the world, you can get in ""late"" and still make big returns.",0.09,Other,0.164,1
+kaggle_stock_tweets,2022-07-14 01:48:24+00:00,TSLA,"While uberbulls will downplay this, Andrej wouldn’t leave if FSD was on the verge of attaining full self-driving (L4), so I have to assume it’s not close. The good news: Most investors put little incremental value in FSD above its take rate, so $TSLA may not fall much (-1% AH).",-0.663,Other,0.206,1
+kaggle_stock_tweets,2022-07-22 16:05:24+00:00,TSM,"The winning team fight for @OGesports as they OBLITERATE @TSM, with that @bzmdota 4-man dream coil! ✨ #RiyadhMasters https://t.co/hFjxZwUnD4",0.006,Other,0.149,1
+kaggle_stock_tweets,2021-10-02 14:06:05+00:00,TSLA,The last time $TSLA posted quarterly volumes on a Saturday was 1/2/2021.  That release came out at 9:30am ET.  See chart below from @troyteslike. https://t.co/5DkvzC1d81,-0.089,Other,0.239,1
+kaggle_stock_tweets,2021-10-09 20:33:39+00:00,TSM,"@TSM_Beaulo Streamsniping &amp; a lack of repercussions for people who deliberately ruin your content are the main reasons why I stopped streaming
+
+Rising toxicity &amp; frustrations with high ranked players not having solid game knowledge are the main reasons why I play the game with less frequency",-0.655,Other,0.141,1
+kaggle_stock_tweets,2021-12-03 16:17:24+00:00,TSLA,"I advise to grab as much $TSLA as you can. 
+Not financial advice.",-0.014,Market Commentary,0.375,1
+kaggle_stock_tweets,2022-07-25 21:30:06+00:00,PG,"I am sharing 2 proprietary levels where I may purchase these stocks .. 
+
+$aapl at 100 (now 155) 
+
+$TSLA at 500 (now 800) 
+
+Check my pinned tweets for more levels like that of $nflx $amd $nvda and $amzn 🤞",0.057,Market Commentary,0.31,1
+kaggle_stock_tweets,2022-06-27 13:00:04+00:00,MSFT,Cost of multi cloud at one of the largest investment banks in the world. $AMZN $GOOG $MSFT https://t.co/T6W5EVYOIX,0.133,Other,0.193,1
+kaggle_stock_tweets,2022-01-19 07:44:44+00:00,TSLA,"Investing in $TSLA is like investing in all these leading companies at the cutting edge of technology.
+
+@elonmusk https://t.co/tE7sJNjwQP",0.1,Other,0.229,1
+kaggle_stock_tweets,2021-12-17 14:29:05+00:00,AMD,"$TSLA $AAPL $AMD 
+TSLA support 910, 900, filled the gap
+AAPL 168,170,172 key levels
+AMD 133,136 level
+NVDA if can build over 280
+
+VIX needs under 22 for these to bounce and reclaim bullish 34-50 EMAs at open
+
+If any of them under EMAs and premarket lows, careful o n longs",0.307,Other,0.251,1
+kaggle_stock_tweets,2022-04-04 11:03:22+00:00,TSLA,"Although it would be 100% contrary to his STATED reasons for buying Twitter, if Musk REALLY did it to eventually take control and ban $TSLA shortsellers, I must admit that it would be HILARIOUS!",-0.183,Management Change,0.365,2
+kaggle_stock_tweets,2022-01-02 21:21:15+00:00,GOOG,"McCullough and Malone interviews with Joe Rogan were deleted by both Twitter and YouTube in a coordinated move. 
+
+What are these cucks so afraid of?
+
+$GOOG $TWTR",-0.684,Other,0.126,1
+kaggle_stock_tweets,2022-01-05 20:22:14+00:00,TSLA,"It's as if $TSLA didn't beat delivery estimates by 40,000 cars, and won't have an earnings beat, with revenues more than $1B above estimates.
+
+🤣",0.051,Other,0.269,1
+kaggle_stock_tweets,2022-04-29 20:21:14+00:00,AMZN,"Nasdaq down 15% on the month, this is the largest drop since —- 2008. GFC. 
+
+$NQ_F $QQQ $SPY $AAPL $TSLA $AMZN 
+
+I had been warning about this entire year. https://t.co/xyeAGfwo7X",-0.964,Other,0.285,1
+kaggle_stock_tweets,2021-12-31 12:58:53+00:00,TSLA,"Many $TSLA critics legitimately think Elon sold shares bc he knew a *trunk latch* recall would hurt the stock price. 
+
+We're down a massive -1.5% since the announcement. 
+
+Smart guy, that Elon. 🤦‍♂️🙄",-0.96,Other,0.219,1
+kaggle_stock_tweets,2022-08-31 20:39:17+00:00,AMD,"$AMD
+#chart #Weekly 
+$AMD approaching huge support levels
+Last of my #Idea/alert swings/LTs we got 75/80 to 100+
+Our Earnings Hold Alert also paid good
+Still my Favourite #LT in large caps
+80/82 risk right now if you are adding , track with market
+other levels on chart https://t.co/EOKBddcutP",0.533,Market Commentary,0.319,1
+kaggle_stock_tweets,2022-01-08 14:38:32+00:00,NIO,You can now lease $NIO ES8 included BAAS in 🇳🇴 that’s amazing! https://t.co/MxGiqRip0o,0.107,Product Launch,0.41,2
+kaggle_stock_tweets,2022-05-10 11:58:08+00:00,TSLA,I wonder how $TSLA shareholders or @elonmusk feel about @CathieDWood loading up a bunch of $GM shares yesterday after selling a small percentage of her Tesla shares the past couple of months. It would be like Warren Buffett making phone calls on a Samsung phone or drinking Pepsi.,-0.047,Other,0.266,1
+kaggle_stock_tweets,2022-04-20 09:28:58+00:00,TSLA,My thesis that we'll see $TSLA below 100$ entirely relies on these kind of furus : https://t.co/FgvnMqVTI0,0.003,Other,0.257,1
+kaggle_stock_tweets,2022-06-03 10:25:02+00:00,TSLA,"May not be today, next week, or next month but at some point $TSLA is going to take off. 🚀🚀🚀 
+
+I can feel it in my gut! That or it’s just gas. 💨 But I’m pretty sure it’s the former. 🤣",-0.05,Other,0.198,1
+kaggle_stock_tweets,2022-06-09 13:15:58+00:00,TSLA,"Watch for $TSLA to turn around as soon as the second half comes around. 
+
+Revenues will get stronger. 
+
+Operations will get stronger.
+
+Profits will get stronger. 
+
+Cash flow will get stronger.
+
+Factories will get bigger. 
+
+Products will get better. 
+
+Ignore the stock movements!",0.448,Other,0.173,1
+kaggle_stock_tweets,2021-11-22 01:19:33+00:00,NIO,"Weekly Watchlist 🐳
+
+$AMD 160c &gt; 156.92 | PT: 158.90
+$TSM 128c &gt; 125 | PT: 128.46
+$LCID 60c &gt; 55.44 | PT: 60
+$COIN 340c &gt; 338.47 | PT: 346
+$MRK 80p &lt; 80 | PT: 78
+$NIO 40c &gt; 39.11 | PT: 40
+$MU 85c &gt; 84 | PT: 86
+$ZM 225p &lt; 246 | PT 230
+
+Made with @unusual_whales https://t.co/HMI0Lcxyh9",-0.049,Other,0.175,1
+kaggle_stock_tweets,2022-08-25 21:28:17+00:00,ENPH,"A broad rally hit wall street ahead of tomorrow's Jackson Hole speech by Fed Chair Powell. Net highs resumed highlighting the need to focus on strong groups. Strength was seen in tech, solar and individual leaders $ENPH $CELH $WOLF. Oil stocks advanced despite a drop in Oil $DVN https://t.co/VOwxjNAEM4",0.901,Other,0.195,1
+kaggle_stock_tweets,2022-09-02 01:53:56+00:00,TSLA,"Portfolio Update: After some rebalancing today here's what I hold.
+
+$SNOW, $CRWD, $DDOG, $MDB, $TSLA, $ZS, $NET, $S
+
+The last two are additions today.",0.009,Other,0.257,1
+kaggle_stock_tweets,2022-07-12 01:50:19+00:00,TSLA,$TSLA Textbook bear pennant following this mornings opening dive. Caught a nice move with the team based on the levels sent out yesterday. 💰 https://t.co/8tQkQRwzNU,0.88,Other,0.242,1
+kaggle_stock_tweets,2022-07-14 19:18:01+00:00,MSFT,"JUST IN: Amazon $AMZN sold 100,000 items per minute during Prime Day 2022.",0.028,Other,0.299,1
+kaggle_stock_tweets,2022-08-02 23:25:19+00:00,TSLA,"Just face it, Tesla is an unbelievable company, generating unbelievable progress. 
+
+Maybe that's the hardest thing a lot of potential $TSLA investors may struggle with, it's simply unbelievable.",0.058,Other,0.169,1
+kaggle_stock_tweets,2022-02-28 21:31:37+00:00,TSLA,"“I own 80 cars. The driving dynamics on the Lucid Air are the best there is” — Lucid Air customer, quoted in Lucid earnings release
+
+Lucid makes cars for people who have 80 and can easily choose another if they need to. Tesla is designed to be the only car you need. $LCID $TSLA",0.062,Earnings,0.33,2
+kaggle_stock_tweets,2021-12-16 18:42:49+00:00,AAPL,"DECEMBER HAS BEEN A GREAT MONTH SO FAR BEEN FOCUSING ON QUALITY OVER QUANTITY
+
+POSTED ONLY 4 TRADES THIS MONTH
+
+$LCID 45 CALLS  LOST  6% 📉
+
+$AAPL 175 CALLS MADE 300% 📈
+
+$SPY 463 CALLS MADE 60% 📈
+
+$AMD 140 CALLS MADE 50% 📈",-0.004,Other,0.241,1
+kaggle_stock_tweets,2022-01-03 19:19:25+00:00,AAPL,"Wait, has AAPL become a $3T?
+
+I mean no one is tweeting about it :)",-0.082,Other,0.259,1
+kaggle_stock_tweets,2022-09-19 15:24:25+00:00,NFLX,"$NFLX #NFLX Tea, anyone? https://t.co/JCTMsyWTH6",-0.008,Market Commentary,0.471,1
+kaggle_stock_tweets,2022-04-20 20:08:53+00:00,TSLA,@SawyerMerritt @Tesla thank you automakers for advertising for tesla 😂 https://t.co/8IBWQrylJM,0.364,Other,0.175,1
+kaggle_stock_tweets,2022-02-08 01:01:23+00:00,TSLA,"@JennyHPhoto @Tesla @elonmusk Wow, Jenny I'm still amazed that you weren't hurt worse in that accident, God and Tesla were looking after you that day. Time to but it in your passed. 
+Thoughts and Prayers from SWFL.❣🙏❣ https://t.co/mFlczjZxyr",0.029,Other,0.154,1
+kaggle_stock_tweets,2021-11-19 16:50:07+00:00,TSLA,"Somebody pull the plug on $TSLA already, enough of this bullshit.
+
+This was a 50b company 2 fucking years ago, now it’s worth 1.1 trillion?
+
+GTFO of here.",-0.056,Other,0.215,1
+kaggle_stock_tweets,2022-01-29 17:03:09+00:00,META,"There would be nothing more meta than Meta getting the $META ticker
+
+I think Zuckerberg and Facebook $FB are about to swoop in and make that a reality 👀 https://t.co/f3xrDNt6Zy",0.047,Other,0.297,1
+kaggle_stock_tweets,2022-02-18 00:34:03+00:00,NIO,Trying to figure out how $NIO isn’t $100 already: https://t.co/PSI9kUroDa,0.003,Other,0.166,1
+kaggle_stock_tweets,2022-03-19 22:28:25+00:00,TSLA,"The momentum for $TSLA will be shifting very soon as Giga Berlin &amp; Giga Texas gets off running.
+
+$TSLAQ I hope you got your buttholes ready. 
+
+🔥",0.193,Other,0.274,1
+kaggle_stock_tweets,2021-11-06 18:22:58+00:00,TSLA,"The United States congress has approved $7.5 billion to fund the buildout of electric vehicle chargers along the nation’s highways. 
+
+$TSLA @elonmusk",0.482,Other,0.144,1
+kaggle_stock_tweets,2021-10-22 13:35:21+00:00,TSLA,"New ATH for $TSLA, congrats to all shareholders!",0.484,Analyst Rating,0.506,2
+kaggle_stock_tweets,2022-09-05 02:51:23+00:00,TSLA,"No one in the world can make a car that has a lower cost to own than own than Tesla. 
+
+This is serious value. $TSLA",0.058,Other,0.194,1
+kaggle_stock_tweets,2022-02-11 16:58:06+00:00,TSLA,"California has become the first US state to register more than a million plug-in cars, with almost 25% of them arriving in 2021 alone. In California’s case, reaching the 1-million milestone took 11 years. @Tesla",0.152,Other,0.155,1
+kaggle_stock_tweets,2022-04-23 16:53:00+00:00,AMZN,If you want to see young people squirm. Ask them how many streamers they actually pay for… $nflx $wbd $aapl $amzn $dis #Netflix,-0.057,Other,0.167,1
+kaggle_stock_tweets,2022-04-28 20:04:50+00:00,AMZN,"Tremendous warning issued in my substack for $Amzn see below at 2900 now 2550
+
+Join for more 
+
+https://t.co/ILXiW73IKJ https://t.co/VwpiGA8ueL",-0.254,Market Commentary,0.464,1
+kaggle_stock_tweets,2022-06-18 19:01:49+00:00,NIO,BREAKING NEWS: $AUDI is suing $NIO because NIO has round tires too,-0.908,Other,0.23,1
+kaggle_stock_tweets,2022-05-02 19:32:16+00:00,TSLA,"$TSLA goes up = someone knows something
+$TSLA goes down = someone forgot what they knew",-0.735,Other,0.206,1
+kaggle_stock_tweets,2021-11-15 15:13:58+00:00,AMD,"@BlenderDev @AMD Great to see the hardware industry investing engineering time in improving Blender. Free/Open Source Software works, for everyone!",0.443,Other,0.147,1
+kaggle_stock_tweets,2021-12-27 00:43:16+00:00,NIO,"$NIO will enter 25 markets by 2025, but yet people constantly every day tell me to sell. My gut instinct is stay the course. Long-term investing has always been the way. It has paid out big in $TSLA $AAPL $AMZN and $NIO BTW USA they are coming… https://t.co/Z6e3ZWLWl3",0.073,Other,0.267,1
+kaggle_stock_tweets,2022-04-19 20:36:46+00:00,MSFT,"Lot of guys think $NFLX cheap at 260..
+
+It’s not.. 
+
+It’s a bloated 🤰 shit content company losing people left and right 
+
+I am a subscriber and I haven’t watched it in 6 months 
+
+When I watch TV I watch $AMZN Prime TV",-0.347,Other,0.209,1
+kaggle_stock_tweets,2021-10-29 15:05:48+00:00,META,Don't hate me. I'm now long $FB.,-0.082,Dividend or Buyback,0.43,2
+kaggle_stock_tweets,2022-02-26 23:23:03+00:00,TSM,"Faith defended for another day, ggs @TSM #clgfighting",0.035,Other,0.229,1
+kaggle_stock_tweets,2022-03-27 22:02:03+00:00,TSLA,"$AMD - Above 122 - Trade Idea 💡 -  April 1 125C
+
+Closed at 119.67
+
+Harder trade between 114-122
+
+Once AMD can reclaim 122 it will setup for 125, 128 next
+
+Puts can work under 114
+-
+$AAPL $AMD $AMZN $BA $FB $LCID $MSFT $NFLX $NIO $MRNA $NVDA $ROKU $UPST $SPX $SPY $TSLA $ZM $LRCX https://t.co/F7NP0UGxKI",0.086,Other,0.298,1
+kaggle_stock_tweets,2021-11-01 16:10:49+00:00,TSLA,"Tesla GigaTexas first shots for November! 
+
+@Tesla @elonmusk @omead 
+
+1/ Images Taken:  November 1, 2021 by @JoeTegtmeyer https://t.co/QxbN0vVPLu",0.001,Product Launch,0.385,1
+kaggle_stock_tweets,2022-02-02 01:30:41+00:00,AMZN,Oh my.  Rippy rippy. The Qcom  tomorrow’s.  Amzn on deck.  No one can be short Amzn.,-0.015,Earnings,0.37,2
+kaggle_stock_tweets,2022-04-20 22:09:40+00:00,NFLX,It would not be surprising if the recent increase in Netflix subscriber churn is followed be elevated churn of Amazon Prime subscribers given the price increase in 2022. That’s what Volition’s data suggests is possible. https://t.co/VsFLCyGkZh $NFLX $AMZN @volitioncapital,0.073,Other,0.205,1
+kaggle_stock_tweets,2022-05-06 19:01:00+00:00,TSM,"For the upcoming VALORANT competitions, we have decided to expand our staff to better serve our players and vision. @TSM_Daeda will now be working as a Data Analyst in both VALORANT and R6, and we have brought aboard @ItopataOW as a Strategic Analyst. https://t.co/zPRE4E2lEU",0.428,Other,0.193,1
+kaggle_stock_tweets,2021-11-19 18:04:38+00:00,MSFT,"Which would you choose to hold for the next 5 years?
+
+A
+Google $GOOGL
+Tesla $TSLA
+Square $SQ
+Alibaba $BABA
+
+B
+Apple $AAPL
+Bitcoin $BTC
+Berkshire $BRKB
+Palantir $PLTR
+
+C
+Microsoft $MSFT
+Ethereum $ETH
+Disney $DIS
+PayPal $PYPL
+
+D
+Amazon $AMZN
+Nvidia $NVDA
+Netflix $NFLX
+Peloton $PTON",0.062,Other,0.191,1
+kaggle_stock_tweets,2021-10-30 11:03:53+00:00,TSLA,The best company. The best cars.  The best stock. The best online community. $TSLA https://t.co/fqCN9T3M8E,0.209,Other,0.226,1
+kaggle_stock_tweets,2022-01-12 18:19:10+00:00,TSLA,"Excellent thread on an effort to penalize Californians who install solar power: a new $60/month tax. 😳 Government at its worst.
+
+This is super messed up.  More people need to find out what’s going on and tell @GavinNewsom how they feel about it.
+
+$TSLA @elonmusk https://t.co/xYmZi3MSrC",-0.751,Other,0.158,1
+kaggle_stock_tweets,2022-01-02 20:45:47+00:00,TSLA,"@marcoarment @Tesla So many downgrades in this update. 
+
+🚫 heated seats removed
+🚫 defroster removed 
+🚫 eta text harder to read
+🚫 tire pressure buried 
+🚫 trip info buried 
+🚫 less characters in podcast/music titles
+🚫 removed time stamps for media 
+🚫 2 taps for common used nav buttons",-0.051,Other,0.183,1
+kaggle_stock_tweets,2022-04-27 11:40:34+00:00,TSLA,"$TSLA is back, baby - up 0.41% in pre-market!! https://t.co/KOcYNgHCZ8",0.89,Other,0.221,1
+kaggle_stock_tweets,2022-04-22 04:42:19+00:00,TSLA,"Lucid Air Is Again the Top Ranked Electric Vehicle, Beating Out Tesla and Porsche $lcid $tsla 
+https://t.co/2lAPV1mfOf",0.932,Product Launch,0.423,3
+kaggle_stock_tweets,2022-02-09 22:03:08+00:00,AAPL,"I love it when investment thesis' are laid out so simply. 
+
+Martin Taylor’s thesis for $AAPL back in 2010: https://t.co/sVju5PNWpg",0.021,Other,0.173,1
+kaggle_stock_tweets,2021-11-03 20:17:17+00:00,TSM,"@Station3Media @cyr @TSM_Myth @mayahiga6 @EsfandTV handsome luigi, not cringe luigi at all 🌝",-0.039,Other,0.126,1
+kaggle_stock_tweets,2021-11-28 16:31:34+00:00,ENPH,"Notable growth leaders finding support around the following moving avgs:
+8-day EMA: $RBLX $NVDA $NET $AMD $PANW $PSTG $TTD
+
+21-day EMA: $TSLA $ENPH $SI $DDOG $U $ON $NFLX $MRVL $SQM $LTHM $ZS $CROX
+
+50-day/10-week SMA: $APP $COIN $SKIN $FANG $DVN $ZI $DXCM $SNOW $INMD $IIPR $AMBA",0.453,Market Commentary,0.375,1
+kaggle_stock_tweets,2021-10-12 17:36:29+00:00,TSM,@Nokokopuffs_ @TSM big congrats broski,0.018,Other,0.155,1
+kaggle_stock_tweets,2022-09-22 21:51:28+00:00,AMZN,"Year-to-Date performance:
+
+1. $FB: -58%
+2. $AMZN: -31%
+3. $AAPL: -16%
+4. $NFLX: -60%
+5. $GOOGL: -31%
+6. $MSFT: -28%
+7. $TSLA: -28%
+8. $F: -41%
+9. $PYPL: -55%
+
+All FAANG stocks, aside from $AAPL, are now in bear market territory.
+
+The fact that $SPX isn’t down 30%+ is a miracle.",-0.877,Other,0.234,1
+kaggle_stock_tweets,2022-03-22 06:54:20+00:00,TSLA,"This is the day. 
+Fresh good smelling new model Ys will be delivered in Giga Berlin Germany. 
+
+$TSLA",0.335,Product Launch,0.525,2
+kaggle_stock_tweets,2022-02-06 15:08:27+00:00,TSLA,"If you want to predict the future stock price of $tsla, just take the pattern of Amazon or Google and copy it 
+
+Tesla grows faster and has higher profit https://t.co/Yr9T6xPZTg",0.087,Other,0.263,1
+kaggle_stock_tweets,2022-02-23 19:43:26+00:00,META,"First they sold $BABA to 15x PE and I didn’t care because it’s a Chinese VIE.
+
+Then they sold $FB to 15x PE and I didn’t care because the Metaverse is a joke.
+
+Then they sold my Stonks... because they had nothing else left to sell.
+
+#MarginCall",-0.042,Other,0.15,1
+kaggle_stock_tweets,2021-11-12 21:34:15+00:00,TSLA,"ARK Invest's Cathie Wood Is Sure Tesla's Rough Week Just a 'Blip' on Way to $3,000 $TSLA
+
+#Tesla 
+https://t.co/h69VDy2muf",0.354,Analyst Rating,0.411,1
+kaggle_stock_tweets,2022-04-01 19:34:25+00:00,TSLA,@EZebroni @Tesla @elonmusk Fuck that one got me,0.118,Other,0.233,1
+kaggle_stock_tweets,2022-04-20 16:32:00+00:00,DIS,Florida Senate passes bill that could dissolve $DIS special district status,-0.087,Management Change,0.31,2
+kaggle_stock_tweets,2022-09-23 22:09:07+00:00,TSM,Id like to remind you guys that you cancelled him but tsm reginald still got a job https://t.co/L6UkLwBJMC,0.267,Management Change,0.316,2
+kaggle_stock_tweets,2022-07-15 19:53:38+00:00,AMZN,BREAKING: $AMZN sinking after it halts plans on offices in Tennessee and Washington.,-0.96,Other,0.214,1
+kaggle_stock_tweets,2022-05-19 00:15:00+00:00,AAPL,"Trade plan for Thursday ✅
+
+$SPX big sell off after failing to hold 4000. If SPX breaks 3875 we can see a drop to 3800-3838 next. Puts can work under 3900
+
+$AAPL if it fails 138 we can see 132. Puts can work under the 138 support
+
+$AMZN setting up for a move to 2000 this month",-0.909,Other,0.24,1
+kaggle_stock_tweets,2022-05-30 16:21:34+00:00,TSLA,"This is the truth. 💯 
+
+$TSLA #Tesla https://t.co/CYKixxC8Kl",0.011,Other,0.147,1
+kaggle_stock_tweets,2022-04-08 22:58:00+00:00,TSLA,"Elon Musk can't avoid scrutiny of his Tesla, $TSLA tweets, the SEC has said.",-0.189,Regulatory/Legal,0.478,3
+kaggle_stock_tweets,2022-09-07 13:10:50+00:00,TSLA,probably nothing $TSLA https://t.co/f3zRoEGDYa,-0.015,Other,0.25,1
+kaggle_stock_tweets,2022-03-18 15:40:44+00:00,TSLA,"Digging @BenAffleck’s Plaid shirt with his Plaid Tesla. It’s wicked Good Ben!
+@Tesla @TeslaClubSoCal https://t.co/AJ0wG7wBmL",0.042,Other,0.271,1
+kaggle_stock_tweets,2021-12-26 09:57:46+00:00,TSLA,"If someone turns this $TSLA pattern into a sweater, I'd buy the heck out of it. Just saying. Maybe a new addition to the @Tesla store next year? https://t.co/rCIKMkENuU",0.045,Other,0.264,1
+kaggle_stock_tweets,2021-10-05 08:40:53+00:00,META,Mark Zuckerberg yesterday $FB https://t.co/mCX9bbcHhU,0.053,Other,0.3,1
+kaggle_stock_tweets,2022-08-01 21:28:12+00:00,NIO,"$NIO Morgan Stanley Expects $NIO to deliver 36,000-38,000 cars for Q3. Thats an average of 12,974 per month for the next 2 months. Hopefully NEO Park Opens early September and they beat these expectations. Long &amp; Strong",0.929,Analyst Rating,0.45,2
+kaggle_stock_tweets,2022-02-18 13:55:30+00:00,TSLA,"BREAKING: Putin says he's ready to follow negotiation track with NATO. 
+
+$TSLA",0.219,Geopolitical,0.44,4
+kaggle_stock_tweets,2021-10-07 19:01:48+00:00,TSLA,"With $TSLA hitting $800 I just crossed a ""milestone"" in my net worth.",0.631,Other,0.15,1
+kaggle_stock_tweets,2022-03-01 12:01:54+00:00,TSLA,$TSLA Berlin opening just a couple/few weeks away. Then the fun really starts.,0.036,Product Launch,0.554,2
+kaggle_stock_tweets,2021-12-01 10:05:02+00:00,TSLA,$tsla probably sold more Cyber Truck whistles than $f has sold EV’s this past month. https://t.co/GV3oOsrQSd,0.098,Other,0.188,1
+kaggle_stock_tweets,2022-03-28 10:47:37+00:00,TSLA,"Hold on. $TSLA is up 5% premarket because it's asking shareholders' approval for a stock split ""at this year's annual meeting""? 
+
+$TSLA annual shareholder meetings are usually in September or October. 
+
+$TSLAQ https://t.co/rPvY8pDkdR",0.566,Management Change,0.491,3
+kaggle_stock_tweets,2022-05-26 09:26:43+00:00,TSLA,"Volkswagen makes 40% of their profits from China. 
+
+China is moving to EVs fast. 
+
+And Chinese consumers don’t want legacy auto EVs. $TSLA https://t.co/zo6ge3nZso",0.087,Other,0.154,1
+kaggle_stock_tweets,2022-01-25 21:38:31+00:00,TSLA,It’s funny that Microsoft is down 5% in AH’s on earnings and everyone panics. Then you got $tsla which goes up/down 5% every damn day.,-0.948,Earnings,0.443,4
+kaggle_stock_tweets,2022-09-19 15:54:40+00:00,TSLA,"Tesla Giga Austin Deliveries Accelerating, Raising Confidence in 500K Q4 - Chowdhry 🏣⚡️ 
+
+“Reiterated a Buy rating and $760 PT on $TSLA.” 
+
+https://t.co/LmeefWUa2x #Tesla #EV https://t.co/dD966PD6Kj",0.845,Analyst Rating,0.569,2
+kaggle_stock_tweets,2022-06-18 13:25:22+00:00,MSFT,"2022 Returns
+$TWTR: -13%
+$GOOG: -26%
+$AAPL: -26%
+$MSFT: -26%
+$CRM: -36%
+$AMZN: -36%
+$ADBE: -36%
+$TSLA: -38%
+$ZM: -40%
+$AMD: -43%
+$NVDA: -46%
+$MRNA: -50%
+$META: -51%
+$TEAM: -53%
+$SPOT: -58%
+$PYPL: -61%
+$SQ: -64%
+$SNOW: -65%
+$ETSY: -67%
+$NFLX: -71%
+$SNAP: -74%
+$W: -76%
+$SHOP: -77%",-0.035,Other,0.295,1
+kaggle_stock_tweets,2022-03-19 02:04:13+00:00,TSM,@TSM_Daeda Ill join you on this one,0.038,Other,0.191,1
+kaggle_stock_tweets,2021-11-10 19:21:31+00:00,TSM,@TSM @hazedCS I wanna die,-0.007,Management Change,0.361,2
+kaggle_stock_tweets,2022-05-10 19:54:04+00:00,TSM,@TSM_Leffen @FrYonni @NintendoAmerica @BandaiNamcoUS @Sora_Sakurai @god @JoeBiden @Batman @BarackObama @supercell @BrunoMars @NintendoSwitch @SUPERSMASHbros @NintendoJapan @POTUS @Scotus @jesus Thank you so much leffen,0.498,Other,0.17,1
+kaggle_stock_tweets,2021-11-08 02:23:25+00:00,DIS,"#earningsCDI / Implied Move ✅
+
+$PYPL 💳 $RBLX 🧩 $SPCE 🚀 $U 🎮 $NIO 🚘 $DIS 📺 $COIN 🪙
+
+🕵️‍♀️🔍 #acechar #EDDE #FDDE https://t.co/iOjfELv7PK",0.012,Earnings,0.862,3
+kaggle_stock_tweets,2022-08-03 20:54:03+00:00,TSLA,My $TSLA shares are again worth &gt; $10M after 3 months 🙌,0.76,Other,0.238,1
+kaggle_stock_tweets,2021-11-20 20:38:53+00:00,TSLA,My nephew loves #Tesla and #SpaceX. $TSLA https://t.co/SM490Or6QJ,0.022,Product Launch,0.597,2
+kaggle_stock_tweets,2022-09-09 18:01:08+00:00,TSLA,A close above the 200 day moving average is fuckin bullish for long term Tesla investors at $295.36. $TSLA,0.37,Other,0.215,1
+kaggle_stock_tweets,2022-02-09 22:13:07+00:00,TSLA,"Add animal cruelty to Elon's list of abuses. Shocking he's not in prison yet, but there is still time. $TSLA
+
+https://t.co/GFPyxPwJdD",-0.041,Other,0.204,1
+kaggle_stock_tweets,2022-07-24 15:40:57+00:00,COST,"$cost $200 discounts on $aapl iPad 
+
+This is not “normal”",-0.06,Other,0.151,1
+kaggle_stock_tweets,2022-06-08 18:52:23+00:00,AAPL,Hard to imagine what's going to happen when $AAPL will puke.,-0.195,Other,0.151,1
+kaggle_stock_tweets,2022-01-21 10:29:04+00:00,AAPL,"Apple Price Target Raised to $205 from $165 at Wells Fargo - PLX-AI
+$AAPL",0.915,Analyst Rating,0.685,2
+kaggle_stock_tweets,2021-12-01 19:29:19+00:00,AAPL,Covered my $AAPl short for zero loss. Took that money and put it into $TSLA dip. More money to be made in $TSLA on these swings.,0.096,Other,0.193,1
+kaggle_stock_tweets,2022-09-03 12:43:45+00:00,AMZN,"The heavy weights in 2022, YTD:
+
+$NFLX -62.47%
+$NVDA -53.58%
+$META -52.34%
+$GOOGL -25.54%
+$AMZN -23.52%
+$MSFT -23.37%
+$TSLA -23.29%
+$AAPL -11.89% https://t.co/EC7djnbOn0",0.008,Other,0.221,1
