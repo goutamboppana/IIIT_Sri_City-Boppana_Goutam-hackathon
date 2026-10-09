@@ -6,9 +6,13 @@ Source 2 (tweets): data/stock_tweets.csv (Kaggle) if present, else the Hugging F
 """
 import os
 import re
+import difflib
 from datetime import datetime, timezone
 from pathlib import Path
+from dataclasses import dataclass
+from typing import Optional
 
+import numpy as np
 import pandas as pd
 from dotenv import load_dotenv
 load_dotenv()
@@ -23,6 +27,9 @@ COMPANIES = {
     "bank of america": "BAC", "exxon": "XOM", "walmart": "WMT",
     "johnson & johnson": "JNJ", "pfizer": "PFE", "boeing": "BA",
 }
+
+# Company names sorted by length (longest first) to match "bank of america" before "america"
+COMPANY_NAMES_SORTED = sorted(COMPANIES.keys(), key=len, reverse=True)
 
 FINANCE_WORDS = re.compile(
     r"\b(earnings|revenue|profit|guidance|downgrade|upgrade|merger|acquisition|acquire[sd]?|"
@@ -48,29 +55,65 @@ SAMPLE_HEADLINES = [
 
 
 EXCHANGE_TAG = re.compile(r"\((?:NYSE|NASDAQ|NYSEARCA|AMEX)[:\s]+([A-Za-z.]{1,6})\)", re.IGNORECASE)
+CASHTAG = re.compile(r"\$([A-Za-z]{1,5})\b")
 
 
-def find_ticker(text):
-    """Exchange tag (NYSE:CORR), then cashtag ($AAPL), then company name. None if nothing found."""
-    m = EXCHANGE_TAG.search(str(text))
+@dataclass
+class TickerMatch:
+    ticker: str
+    confidence: str  # "high", "medium", "low"
+    method: str      # "exchange_tag", "cashtag", "company_name_with_finance", "company_name_alone"
+
+
+def find_ticker(text: str) -> Optional[TickerMatch]:
+    """
+    Find ticker with confidence level.
+    Priority: exchange tag > cashtag > company name with finance context > company name alone.
+    Returns None if no match.
+    """
+    s = str(text)
+    
+    # 1. Exchange tag (highest confidence)
+    m = EXCHANGE_TAG.search(s)
     if m:
-        return m.group(1).upper()
-    m = re.search(r"\$([A-Za-z]{1,5})\b", str(text))
+        return TickerMatch(m.group(1).upper(), "high", "exchange_tag")
+    
+    # 2. Cashtag (high confidence)
+    m = CASHTAG.search(s)
     if m:
-        return m.group(1).upper()
-    low = str(text).lower()
-    for name, ticker in COMPANIES.items():
+        return TickerMatch(m.group(1).upper(), "high", "cashtag")
+    
+    low = s.lower()
+    
+    # 3. Company name WITH finance context (medium confidence)
+    for name in COMPANY_NAMES_SORTED:
         if re.search(rf"\b{re.escape(name)}\b", low):
-            return ticker
+            # Require at least one finance word in the same text
+            if FINANCE_WORDS.search(s):
+                return TickerMatch(COMPANIES[name], "medium", "company_name_with_finance")
+    
+    # 4. Company name alone (low confidence) - only for tweets where cashtags are common
+    # For news, we skip this to avoid false positives like "Tesla, Inc. reserved for PyPI package"
     return None
 
 
-def is_relevant(text, ticker):
-    return ticker is not None or bool(FINANCE_WORDS.search(str(text)))
+def is_relevant(text: str, ticker_match: Optional[TickerMatch]) -> bool:
+    """
+    Stricter relevance: require either a confident ticker match OR finance words.
+    Low-confidence company-name-only matches are NOT considered relevant on their own.
+    """
+    if ticker_match and ticker_match.confidence in ("high", "medium"):
+        return True
+    return bool(FINANCE_WORDS.search(str(text)))
 
 
 def _now():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def _text_similarity(a: str, b: str) -> float:
+    """Quick similarity check using difflib.SequenceMatcher."""
+    return difflib.SequenceMatcher(None, a.lower(), b.lower()).ratio()
 
 
 def load_news(n=50):
@@ -122,14 +165,54 @@ def load_tweets(n=100, seed=1):
 def load_all(n_each=100):
     df = pd.concat([load_news(n_each), load_tweets(n_each)], ignore_index=True)
     df["text"] = df["text"].astype(str).str.strip()
-    df["ticker"] = [t if isinstance(t, str) and t else find_ticker(x)
-                    for t, x in zip(df["ticker"], df["text"])]
+    
+    # Find tickers with confidence
+    ticker_matches = [find_ticker(x) for x in df["text"]]
+    df["ticker_match"] = ticker_matches
+    df["ticker"] = [m.ticker if m else None for m in ticker_matches]
+    df["ticker_confidence"] = [m.confidence if m else None for m in ticker_matches]
+    df["ticker_method"] = [m.method if m else None for m in ticker_matches]
+    
     df["timestamp"] = df["timestamp"].fillna(_now()).astype(str)
-
+    
     before = len(df)
-    df = df[df["text"].str.len() >= 15]
-    df = df[[is_relevant(x, t) for x, t in zip(df["text"], df["ticker"])]]
+    
+    # Track rejection reasons
+    rejection_reasons = []
+    
+    # Filter: minimum text length
+    keep = df["text"].str.len() >= 15
+    rejection_reasons.extend(["short_text"] * (~keep).sum())
+    df = df[keep].copy()
+    
+    # Filter: relevance
+    keep = [is_relevant(x, t) for x, t in zip(df["text"], df["ticker_match"])]
+    rejection_reasons.extend(["irrelevant"] * (~pd.Series(keep)).sum())
+    df = df[keep].copy()
+    
+    # Near-duplicate detection (keep first occurrence)
+    # Use first 100 chars for speed
+    texts_short = df["text"].str[:100].tolist()
+    is_dup = [False] * len(texts_short)
+    for i in range(len(texts_short)):
+        if is_dup[i]:
+            continue
+        for j in range(i + 1, len(texts_short)):
+            if not is_dup[j] and _text_similarity(texts_short[i], texts_short[j]) > 0.85:
+                is_dup[j] = True
+    rejection_reasons.extend(["near_duplicate"] * sum(is_dup))
+    # Use boolean array aligned with df index
+    df = df[~np.array(is_dup)].copy()
+    
+    # Exact duplicate removal (fallback)
     df = df.drop_duplicates(subset="text").reset_index(drop=True)
-    print(f"Ingested {before} items, kept {len(df)} after filtering "
+    
+    kept = len(df)
+    print(f"Ingested {before} items, kept {kept} after filtering "
+          f"(rejected: {before - kept} - "
+          f"short: {rejection_reasons.count('short_text')}, "
+          f"irrelevant: {rejection_reasons.count('irrelevant')}, "
+          f"near_dup: {rejection_reasons.count('near_duplicate')}) "
           f"(sources: {', '.join(sorted(df['source'].unique()))})")
-    return df[["source", "timestamp", "ticker", "text"]]
+    
+    return df[["source", "timestamp", "ticker", "ticker_confidence", "ticker_method", "text"]]
