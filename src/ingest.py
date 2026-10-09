@@ -10,6 +10,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+from dotenv import load_dotenv
+load_dotenv()
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 
@@ -92,8 +94,8 @@ def load_news(n=50):
                 df = pd.DataFrame(rows)
                 df["source"] = "newsapi"
                 return df
-        except Exception as e:
-            print(f"NewsAPI failed ({e}); using sample headlines instead.")
+        except Exception:
+            print("NewsAPI failed; using sample headlines instead.")
     df = pd.DataFrame({"text": SAMPLE_HEADLINES, "timestamp": _now(), "ticker": None})
     df["source"] = "sample_headlines"
     return df.head(n)
