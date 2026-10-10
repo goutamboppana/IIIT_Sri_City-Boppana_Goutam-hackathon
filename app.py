@@ -273,7 +273,7 @@ with tab_market:
         # Filters
         mcol1, mcol2 = st.columns(2)
         with mcol1:
-            m_event_filter = st.multiselect("Event", sorted(market_sigs["event"].unique()), default=[])
+            m_event_filter = st.multiselect("Event", sorted(market_sigs["event"].unique()), default=[], key="market_event_filter")
         with mcol2:
             m_impact_min = st.slider("Min Impact", 1, 10, 1, key="mkt_impact")
 
