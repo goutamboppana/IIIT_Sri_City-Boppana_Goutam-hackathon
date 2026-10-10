@@ -1,4 +1,10 @@
-"""Module A dashboard. Run from the project root:  streamlit run app.py"""
+"""S&P Global AI/NLP Risk Engine Hackathon Dashboard.
+Run from the project root:  streamlit run app.py
+
+Tabs:
+- Module A: Portfolio Overview, Stock Signals, Market Signals, Weights Over Time, Replay Step, Methodology
+- Module B: Stress Testing
+"""
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -8,7 +14,13 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-from src.rebalance import load_signals, top_tickers, assign_steps, rebalance, get_market_signals
+from src.rebalance import (
+    load_signals, top_tickers, assign_steps, rebalance, get_market_signals,
+    DEFAULT_INDEX_CONSTITUENTS
+)
+from src.stress import (
+    run_stress_test, run_multiple_scenarios, list_scenarios, SCENARIOS, SECTOR_MAP
+)
 
 UP, DOWN, GREY = "#1D9E75", "#D85A30", "#C8C6BD"
 ROOT = Path(__file__).parent
@@ -102,10 +114,26 @@ market_sigs = get_market_signals(signals)
 st.sidebar.caption(f"Market-wide signals: {len(market_sigs)}")
 
 # ---------- Sidebar: Index Settings ----------
+
 st.sidebar.header("Index Settings")
-all_tickers = signals["ticker"].dropna().unique().tolist()
-default_tickers = top_tickers(signals, 15)
-tickers = st.sidebar.multiselect("Stocks in Index", all_tickers, default=default_tickers)
+
+# Fixed universe of 15 well-known US-listed companies
+all_tickers = [
+    "AAPL", "MSFT", "AMZN", "NVDA", "GOOGL",
+    "META", "TSLA", "JPM", "GS", "BAC",
+    "XOM", "WMT", "JNJ", "PFE", "BA"
+]
+
+# Keep only stocks that have at least one signal in the loaded dataset
+available_tickers = set(signals["ticker"].dropna().unique())
+default_tickers = [t for t in all_tickers if t in available_tickers]
+
+tickers = st.sidebar.multiselect(
+    "Stocks in Index",
+    options=all_tickers,
+    default=default_tickers
+)
+
 if len(tickers) < 3:
     st.warning("Select at least 3 stocks.")
     st.stop()
@@ -153,8 +181,9 @@ st.markdown(
 )
 
 # ---------- Tabs ----------
-tab_overview, tab_signals, tab_market, tab_time, tab_replay, tab_method = st.tabs([
-    "Portfolio Overview", "Stock Signals", "Market Signals", "Weights Over Time", "Replay Step", "Methodology"
+tab_overview, tab_signals, tab_market, tab_time, tab_replay, tab_method, tab_stress = st.tabs([
+    "Portfolio Overview", "Stock Signals", "Market Signals", "Weights Over Time", "Replay Step", "Methodology",
+    "📉 Stress Testing (Module B)"
 ])
 
 # ---- Tab 1: Portfolio Overview ----
@@ -175,7 +204,7 @@ with tab_overview:
         tbl = pd.DataFrame({"Start": weights.iloc[0] * 100, "Now": weights.iloc[-1] * 100})
         tbl["Change (pp)"] = tbl["Now"] - tbl["Start"]
         st.dataframe(tbl.sort_values("Change (pp)", ascending=False).round(2), width="stretch")
-    
+
     # Sentiment summary for selected stocks
     st.subheader("Sentiment Summary (Selected Stocks)")
     sent_summary = used.groupby("ticker").agg(
@@ -190,7 +219,7 @@ with tab_overview:
 # ---- Tab 2: Stock Signals (Searchable/Filterable) ----
 with tab_signals:
     st.subheader("All Signals for Selected Stocks")
-    
+
     # Filters
     fcol1, fcol2, fcol3 = st.columns(3)
     with fcol1:
@@ -199,7 +228,7 @@ with tab_signals:
         sent_filter = st.selectbox("Sentiment", ["All", "Positive (>0)", "Negative (<0)", "Neutral (≈0)"])
     with fcol3:
         impact_min = st.slider("Min Impact", 1, 10, 1)
-    
+
     # Apply filters
     filtered = used.copy()
     if event_filter:
@@ -211,14 +240,14 @@ with tab_signals:
     elif sent_filter == "Neutral (≈0)":
         filtered = filtered[filtered["sentiment"].between(-0.1, 0.1)]
     filtered = filtered[filtered["impact"] >= impact_min]
-    
+
     # Search
     search = st.text_input("Search text", placeholder="Filter by keyword in signal text...")
     if search:
         filtered = filtered[filtered["text"].str.contains(search, case=False, na=False)]
-    
+
     st.caption(f"Showing {len(filtered)} of {len(used)} signals")
-    
+
     # Display table
     display_cols = ["timestamp", "ticker", "sentiment", "event", "event_confidence", "impact", "text"]
     available_cols = [c for c in display_cols if c in filtered.columns]
@@ -237,7 +266,7 @@ with tab_signals:
 with tab_market:
     st.subheader("Market-Wide Signals (No Confident Ticker Match)")
     st.caption("These signals affect aggregate market risk but not individual stock weights.")
-    
+
     if market_sigs.empty:
         st.info("No market-wide signals in current dataset.")
     else:
@@ -247,18 +276,18 @@ with tab_market:
             m_event_filter = st.multiselect("Event", sorted(market_sigs["event"].unique()), default=[])
         with mcol2:
             m_impact_min = st.slider("Min Impact", 1, 10, 1, key="mkt_impact")
-        
+
         m_filtered = market_sigs.copy()
         if m_event_filter:
             m_filtered = m_filtered[m_filtered["event"].isin(m_event_filter)]
         m_filtered = m_filtered[m_filtered["impact"] >= m_impact_min]
-        
+
         m_search = st.text_input("Search market signals", placeholder="Filter by keyword...")
         if m_search:
             m_filtered = m_filtered[m_filtered["text"].str.contains(m_search, case=False, na=False)]
-        
+
         st.caption(f"Showing {len(m_filtered)} of {len(market_sigs)} market signals")
-        
+
         m_cols = ["timestamp", "sentiment", "event", "event_confidence", "impact", "source", "text"]
         m_avail = [c for c in m_cols if c in m_filtered.columns]
         st.dataframe(
@@ -277,7 +306,7 @@ with tab_time:
     movers = list(dict.fromkeys(list(final.index[:3]) + list(final.index[-3:])))
     show = st.multiselect("Highlighted Stocks", tickers, default=movers)
     st.caption("Change in weight vs equal-weight start (percentage points)")
-    
+
     x = list(delta.index)
     fig = go.Figure()
     for t in tickers:
@@ -296,7 +325,7 @@ with tab_time:
     style(fig, 450)
     fig.update_layout(margin=dict(l=0, r=70, t=10, b=0))
     st.plotly_chart(fig, width="stretch")
-    
+
     # Event breakdown driving weight changes
     st.subheader("Event Breakdown by Step")
     step_event = used.groupby(["step_label", "event"]).size().unstack(fill_value=0)
@@ -364,6 +393,146 @@ For each time step:
 - Ticker mapping is keyword-based; may misattribute
 """)
 
+# ---- Tab 7: Stress Testing (Module B) ----
+with tab_stress:
+    st.subheader("Portfolio Stress Testing")
+    st.caption(
+        "⚠️ **SIMULATED ESTIMATES ONLY** — Results are based on explicit hypothetical assumptions, "
+        "not historical backtests. They do not represent actual losses or predict future performance."
+    )
+
+    # Scenario selection
+    scenarios_list = list_scenarios()
+    scenario_options = {s["name"]: s["key"] for s in scenarios_list}
+    scenario_options["Custom Scenario"] = "custom"
+
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        selected_scenario_name = st.selectbox(
+            "Select Stress Scenario",
+            options=list(scenario_options.keys()),
+            index=0,
+            help="Predefined scenarios with explicit assumptions. All are SIMULATED, not historical."
+        )
+    with col2:
+        st.write("")  # spacer
+        st.write("")  # spacer
+        if st.button("🔄 Run Stress Test", type="primary", width="stretch"):
+            st.session_state.run_stress = True
+
+    selected_scenario_key = scenario_options[selected_scenario_name]
+
+    # Show scenario description
+    if selected_scenario_key != "custom":
+        scenario = SCENARIOS[selected_scenario_key]
+        st.info(f"**{scenario.name}**: {scenario.description}")
+
+        # Show sector shocks
+        with st.expander("View Sector Shocks (Assumptions)"):
+            if scenario.sector_shocks:
+                shock_df = pd.DataFrame(
+                    [{"Sector": k, "Shock": f"{v:+.0%}"} for k, v in scenario.sector_shocks.items()]
+                )
+                shock_df["Shock Numeric"] = [v for v in scenario.sector_shocks.values()]
+                shock_df = shock_df.sort_values("Shock Numeric")
+                st.dataframe(shock_df[["Sector", "Shock"]], hide_index=True, width="stretch")
+            st.caption(f"Default shock for unlisted sectors: {scenario.default_shock:+.0%}")
+    else:
+        st.info("**Custom Scenario**: Define your own sector shocks below.")
+        with st.expander("Define Custom Sector Shocks", expanded=True):
+            st.caption("Enter shock as percentage (e.g., -0.20 for -20%). Sectors not listed use default.")
+            custom_shocks = {}
+            default_shock = st.number_input("Default Shock", value=-0.15, step=0.01, format="%.2f")
+            for sector in sorted(set(SECTOR_MAP.values())):
+                custom_shocks[sector] = st.number_input(
+                    f"{sector} Shock", value=default_shock, step=0.01, format="%.2f",
+                    key=f"custom_{sector}"
+                )
+
+    # Run stress test
+    if st.session_state.get("run_stress", False) or selected_scenario_key != "custom":
+        # Get current portfolio weights (final rebalanced weights)
+        portfolio_weights = weights.iloc[-1]
+
+        if selected_scenario_key == "custom":
+            result = run_stress_test(
+                portfolio_weights, tickers, "custom",
+                custom_shocks={**custom_shocks, "default": default_shock},
+                sector_map=SECTOR_MAP
+            )
+        else:
+            result = run_stress_test(portfolio_weights, tickers, selected_scenario_key, sector_map=SECTOR_MAP)
+
+        # Display results
+        st.markdown("---")
+        st.subheader("Stress Test Results")
+
+        # Portfolio-level summary
+        port_return = result["portfolio_return"]
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Portfolio Return", f"{port_return:.2%}", delta=f"{port_return:.2%}")
+        with col2:
+            worst_sector = result["contrib_by_sector"].idxmin()
+            worst_contrib = result["contrib_by_sector"].min()
+            st.metric("Worst Sector", worst_sector, delta=f"{worst_contrib:.2%}")
+        with col3:
+            best_sector = result["contrib_by_sector"].idxmax()
+            best_contrib = result["contrib_by_sector"].max()
+            st.metric("Best Sector", best_sector, delta=f"{best_contrib:.2%}")
+
+        # Sector contribution chart
+        st.subheader("Sector Contributions to Portfolio Return")
+        sector_contrib = result["contrib_by_sector"].sort_values()
+        fig_sect = px.bar(
+            x=sector_contrib.values, y=sector_contrib.index, orientation="h",
+            labels={"x": "Contribution to Portfolio Return", "y": ""},
+            color=sector_contrib.values,
+            color_continuous_scale=["#D85A30", "#C8C6BD", "#1D9E75"],
+            color_continuous_midpoint=0
+        )
+        fig_sect.update_traces(hovertemplate="%{y}: %{x:.2%}<extra></extra>")
+        fig_sect.add_vline(x=0, line_color="#999", line_width=1)
+        fig_sect.update_layout(height=300, showlegend=False, coloraxis_showscale=False)
+        st.plotly_chart(style(fig_sect), width="stretch")
+
+        # Holdings detail
+        st.subheader("Holding-Level Breakdown")
+        holdings = result["holdings_detail"].copy()
+        holdings["Weight"] = (holdings["weight"] * 100).round(2)
+        holdings["Shock"] = (holdings["shock"] * 100).round(1)
+        holdings["Contribution (pp)"] = (holdings["contribution"] * 100).round(2)
+        display_holdings = holdings[["ticker", "Weight", "sector", "Shock", "Contribution (pp)"]].rename(
+            columns={"ticker": "Ticker", "sector": "Sector"}
+        )
+        st.dataframe(display_holdings.sort_values("Contribution (pp)"), width="stretch", hide_index=True)
+
+        # Assumptions disclosure
+        with st.expander("Assumptions & Disclaimers", expanded=False):
+            for key, val in result["assumptions"].items():
+                if key == "disclaimer":
+                    st.warning(val)
+                else:
+                    st.caption(f"**{key}**: {val}")
+
+        # Scenario comparison
+        st.markdown("---")
+        st.subheader("Scenario Comparison")
+        comparison = run_multiple_scenarios(portfolio_weights, tickers, sector_map=SECTOR_MAP)
+        st.dataframe(
+            comparison.style.format({
+                "Portfolio Return": "{:.2%}",
+                "Worst Sector Contribution": "{:.2%}",
+                "Best Sector Contribution": "{:.2%}",
+            }),
+            width="stretch", hide_index=True
+        )
+
+        st.caption(
+            "All scenarios are SIMULATED with explicit hypothetical assumptions. "
+            "No historical price data was used. Results do not represent actual losses."
+        )
+
 # ---------- Footer ----------
 st.markdown("---")
-st.caption("S&P Global AI/NLP Risk Engine Hackathon • Module A: Tactical Index Rebalancer")
+st.caption("S&P Global AI/NLP Risk Engine Hackathon • Module A: Tactical Index Rebalancer • Module B: Stress Testing")

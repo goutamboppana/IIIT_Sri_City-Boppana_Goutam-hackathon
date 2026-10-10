@@ -3,7 +3,7 @@ No model downloads, no API calls."""
 import pytest
 import pandas as pd
 from src.ingest import (
-    find_ticker, is_relevant, load_all, TickerMatch,
+    find_ticker, find_tickers, is_relevant, load_all, TickerMatch, TickerMatches,
     COMPANIES, FINANCE_WORDS, _text_similarity
 )
 
@@ -61,6 +61,116 @@ class TestFindTicker:
         assert m.method == "cashtag"
 
 
+class TestFindTickers:
+    """Tests for multi-ticker find_tickers function."""
+
+    def test_single_ticker_returns_matches(self):
+        matches = find_tickers("$AAPL beats earnings")
+        assert len(matches.matches) == 1
+        assert matches.matches[0].ticker == "AAPL"
+        assert matches.matches[0].confidence == "high"
+        assert matches.matches[0].method == "cashtag"
+
+    def test_multiple_cashtags(self):
+        matches = find_tickers("$AAPL and $MSFT both rose")
+        assert len(matches.matches) == 2
+        tickers = {m.ticker for m in matches.matches}
+        assert tickers == {"AAPL", "MSFT"}
+
+    def test_multiple_companies_with_finance_context(self):
+        matches = find_tickers("Apple and Microsoft both beat earnings expectations")
+        assert len(matches.matches) == 2
+        tickers = {m.ticker for m in matches.matches}
+        assert tickers == {"AAPL", "MSFT"}
+
+    def test_exchange_tag_and_cashtag_combined(self):
+        matches = find_tickers("Apple (NASDAQ: AAPL) and $MSFT rose")
+        assert len(matches.matches) == 2
+        methods = {m.method for m in matches.matches}
+        assert "exchange_tag" in methods
+        assert "cashtag" in methods
+
+    def test_primary_returns_highest_confidence(self):
+        matches = find_tickers("Microsoft mentions $AAPL stake")
+        primary = matches.get_primary()
+        assert primary is not None
+        assert primary.ticker == "AAPL"  # cashtag beats company name
+        assert primary.confidence == "high"
+
+    def test_no_duplicate_tickers(self):
+        # Same company via cashtag and name should deduplicate
+        matches = find_tickers("Apple ($AAPL) beats earnings")
+        assert len(matches.matches) == 1
+        assert matches.matches[0].ticker == "AAPL"
+        assert matches.matches[0].confidence == "high"  # cashtag wins
+
+    def test_unknown_cashtag_not_matched(self):
+        matches = find_tickers("$XYZABC is a fake ticker")
+        # Unknown ticker not in COMPANIES should not match
+        assert len(matches.matches) == 0
+
+    def test_invalid_ticker_syntax_rejected(self):
+        matches = find_tickers("$TOOLONGTICKER not valid")
+        assert len(matches.matches) == 0
+
+    def test_netflix_primary_over_incidental_jnj(self):
+        """Netflix is the subject; J&J mentioned incidentally → NFLX should be primary."""
+        text = "Netflix shares climb on subscriber data; Johnson & Johnson also mentioned"
+        matches = find_tickers(text)
+        primary = matches.get_primary()
+        assert primary is not None, "Should have a primary match"
+        assert primary.ticker == "NFLX", f"Expected NFLX primary, got {primary.ticker}"
+        # JNJ should still be matched but not primary
+        tickers = {m.ticker for m in matches.matches}
+        assert "JNJ" in tickers, "JNJ should still be detected"
+        # NFLX should have higher or equal confidence
+        nflx_match = next(m for m in matches.matches if m.ticker == "NFLX")
+        jnj_match = next(m for m in matches.matches if m.ticker == "JNJ")
+        # Both should be medium (same confidence), but NFLX should win tiebreak
+        assert nflx_match.confidence == jnj_match.confidence == "medium"
+
+    def test_finance_context_scoped_to_sentence(self):
+        """Finance word in separate sentence should not upgrade unrelated company."""
+        text = "Apple announced new iPhone. Fed raises rates today."
+        matches = find_tickers(text)
+        apple_match = next((m for m in matches if m.ticker == "AAPL"), None)
+        # Apple appears in first sentence without finance words
+        # Fed raises rates is in second sentence
+        # Apple should NOT get medium confidence from distant finance word
+        assert apple_match is None or apple_match.confidence == "low", \
+            f"Apple should not get medium confidence from distant finance word, got {apple_match.confidence if apple_match else None}"
+
+    def test_anker_amazon_deal_rejected(self):
+        """Product deal article without finance words → irrelevant."""
+        text = "Anker EufyCam 40% off on Amazon Prime Day"
+        matches = find_tickers(text)
+        assert not is_relevant(text, matches), "Product deal without finance words should be irrelevant"
+
+    def test_amazon_revenue_attributed_to_amazon(self):
+        """Amazon revenue article with Anker mention → AMZN primary."""
+        text = "Amazon revenue boosted by Anker camera sales on Prime Day"
+        matches = find_tickers(text)
+        primary = matches.get_primary()
+        assert primary is not None
+        assert primary.ticker == "AMZN", f"Expected AMZN primary, got {primary.ticker}"
+
+    def test_multi_company_no_arbitrary_primary_by_name_length(self):
+        """Multi-company financial news should not pick primary by longest name."""
+        text = "Nvidia and AMD both beat earnings expectations"
+        matches = find_tickers(text)
+        primary = matches.get_primary()
+        # Both have same confidence (medium), same method
+        # Should not deterministically pick one based on name length
+        # Acceptable: primary is None (ambiguous) or tiebreak by first mention
+        tickers = {m.ticker for m in matches.matches}
+        assert tickers == {"NVDA", "AMD"}
+        # If a primary is chosen, it should be the first-mentioned company
+        if primary is not None:
+            # Nvidia appears first in text
+            assert primary.ticker == "NVDA", \
+                f"Expected first-mentioned NVDA as primary, got {primary.ticker}"
+
+
 class TestIsRelevant:
     """Tests for relevance filtering."""
 
@@ -107,7 +217,9 @@ class TestLoadAll:
         df = load_all(n_each=5)
         assert isinstance(df, pd.DataFrame)
         assert len(df) > 0
-        assert list(df.columns) == ["source", "timestamp", "ticker", "ticker_confidence", "ticker_method", "text"]
+        expected_cols = ["source", "timestamp", "ticker", "ticker_confidence", "ticker_method",
+                         "all_tickers", "all_ticker_confidences", "all_ticker_methods", "text"]
+        assert list(df.columns) == expected_cols
 
     def test_no_duplicate_texts(self):
         df = load_all(n_each=10)
@@ -121,6 +233,12 @@ class TestLoadAll:
         df = load_all(n_each=10)
         valid_conf = {"high", "medium", None}
         assert set(df["ticker_confidence"].dropna().unique()).issubset(valid_conf)
+
+    def test_all_tickers_column_present(self):
+        df = load_all(n_each=10)
+        assert "all_tickers" in df.columns
+        assert "all_ticker_confidences" in df.columns
+        assert "all_ticker_methods" in df.columns
 
 
 class TestFinanceWordsRegex:

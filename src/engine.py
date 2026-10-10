@@ -1,8 +1,27 @@
 """Core NLP risk engine: text in -> structured risk signal out.
 
 Models load lazily (on first use), so importing this file does not need torch.
+
+Event Taxonomy (12 categories + "Other"):
+- Earnings: Quarterly results, guidance, EPS, revenue
+- Analyst Rating: Upgrades, downgrades, price target changes
+- Management Change: CEO/CFO departures, board changes, executive appointments
+- Dividend or Buyback: Dividend announcements, share repurchase programs
+- Merger/Acquisition: M&A deals, acquisitions, takeovers, strategic investments
+- Product Launch: New products, services, technology announcements
+- Macroeconomic: Fed policy, inflation, GDP, unemployment, interest rates
+- Geopolitical: Wars, sanctions, trade disputes, political instability
+- Regulatory/Legal: Lawsuits, investigations, regulatory actions, compliance
+- Credit Event: Defaults, bankruptcies, debt restructuring, rating changes
+- Market Commentary: General market analysis, technical analysis, opinions
+- Other: Catch-all for low-confidence classifications
+
+Impact Score Formula (documented, deterministic):
+  base_severity[event] × (0.5 + 0.5 × |sentiment|) × (0.5 + 0.5 × event_confidence)
+  Clipped to [1, 10] integer.
 """
 import re
+import logging
 
 from src.impact import impact_score, EVENT_BASE
 
@@ -19,6 +38,8 @@ assert set(EVENT_LABELS) | {"Other"} == set(EVENT_BASE), "Label mismatch between
 
 _sentiment_model = None
 _event_model = None
+
+_logger = logging.getLogger(__name__)
 
 
 def clean(text):
@@ -59,12 +80,18 @@ def sentiment_scores(texts, batch_size=16):
         if isinstance(o, dict):          # guard for single-dict outputs
             o = [o]
         probs = {x["label"]: x["score"] for x in o}
-        scores.append(probs.get("positive", 0.0) - probs.get("negative", 0.0))
+        score = probs.get("positive", 0.0) - probs.get("negative", 0.0)
+        # Clamp to [-1, 1] for safety
+        score = max(-1.0, min(1.0, score))
+        scores.append(round(score, 3))
     return scores
 
 
 def classify_events(texts, batch_size=8):
-    """Zero-shot NLI: returns (label, confidence) per text; weak guesses become 'Other'."""
+    """Zero-shot NLI: returns (label, confidence) per text; weak guesses become 'Other'.
+
+    Note: confidence is the raw model score (not calibrated probability).
+    """
     res = _get_event_model()(
         list(texts),
         candidate_labels=EVENT_LABELS,
@@ -78,7 +105,7 @@ def classify_events(texts, batch_size=8):
         label, score = r["labels"][0], r["scores"][0]
         if score < OTHER_THRESHOLD:
             label = "Other"
-        results.append((label, score))
+        results.append((label, round(score, 3)))
     return results
 
 
@@ -92,9 +119,9 @@ def analyze_batch(texts):
     for text, s, (event, conf) in zip(texts, sentiments, events):
         out.append({
             "text": text,
-            "sentiment": round(s, 3),
+            "sentiment": s,
             "event": event,
-            "event_confidence": round(conf, 3),
+            "event_confidence": conf,
             "impact": impact_score(event, s, conf),
         })
     return out

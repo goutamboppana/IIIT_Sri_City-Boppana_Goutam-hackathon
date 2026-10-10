@@ -9,9 +9,12 @@ class SignalSchema:
     """Expected schema for risk signals."""
     source: str                    # e.g., "newsapi", "sample_headlines", "kaggle_stock_tweets", "hf_finance_tweets"
     timestamp: str                 # ISO 8601 UTC timestamp
-    ticker: Optional[str]          # Stock ticker (e.g., "AAPL") or None for market-wide
+    ticker: Optional[str]          # Primary stock ticker (e.g., "AAPL") or None for market-wide
     ticker_confidence: Optional[str]  # "high", "medium", or None
     ticker_method: Optional[str]   # "exchange_tag", "cashtag", "company_name_with_finance", or None
+    all_tickers: Optional[str]     # Pipe-separated list of all matched tickers
+    all_ticker_confidences: Optional[str]  # Pipe-separated confidences
+    all_ticker_methods: Optional[str]      # Pipe-separated methods
     text: str                      # Original text content
     sentiment: Optional[float]     # FinBERT score in [-1, 1]
     event: Optional[str]           # Event category (e.g., "Earnings", "Other")
@@ -19,7 +22,8 @@ class SignalSchema:
     impact: Optional[int]          # Impact score in [1, 10]
 
     # Columns required for raw ingested data (before engine)
-    INGEST_REQUIRED = ["source", "timestamp", "ticker", "ticker_confidence", "ticker_method", "text"]
+    INGEST_REQUIRED = ["source", "timestamp", "ticker", "ticker_confidence", "ticker_method",
+                       "all_tickers", "all_ticker_confidences", "all_ticker_methods", "text"]
     # Columns required for full signals (after engine)
     FULL_REQUIRED = INGEST_REQUIRED + ["sentiment", "event", "event_confidence", "impact"]
 

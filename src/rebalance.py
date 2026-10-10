@@ -12,11 +12,29 @@ Rule, applied once per time step:
 
 Market-wide signals (no ticker or low-confidence ticker) are retained for aggregate
 market-risk analysis but do not drive individual stock weights.
+
+Key Design Principles:
+- Portfolio constituents are EXPLICITLY CONFIGURED, separate from the engine's
+  company recognition universe. The engine recognizes ~80 companies; the index
+  holds only its configured constituents.
+- Only signals with high/medium confidence ticker matches for INDEX CONSTITUENTS
+  drive weight changes. Signals for non-constituents are ignored for rebalancing.
+- Deterministic: given same signals, parameters, and step assignment, output is identical.
+- Not a backtest: weight changes reflect simulated tilts, NOT actual returns.
 """
 import numpy as np
 import pandas as pd
 
-from src.ingest import find_ticker, TickerMatch
+from src.ingest import find_ticker, TickerMatch, TickerMatches
+
+
+# Default demo portfolio (15 large caps across sectors)
+# This is INDEPENDENT of the engine's COMPANIES recognition universe.
+DEFAULT_INDEX_CONSTITUENTS = [
+    "AAPL", "MSFT", "AMZN", "NVDA", "GOOGL",
+    "META", "TSLA", "JPM", "GS", "BAC",
+    "XOM", "WMT", "JNJ", "PFE", "BA"
+]
 
 
 def _extract_ticker(match) -> str | None:
@@ -26,6 +44,13 @@ def _extract_ticker(match) -> str | None:
     if isinstance(match, str) and match.strip():
         return match.strip().upper()
     return None
+
+
+def _extract_tickers_from_all(all_tickers: str) -> list[str]:
+    """Parse pipe-separated ticker string into list."""
+    if not all_tickers or not isinstance(all_tickers, str):
+        return []
+    return [t.strip().upper() for t in all_tickers.split("|") if t.strip()]
 
 
 def _is_confident_match(match) -> bool:
@@ -41,18 +66,12 @@ def load_signals(source):
     df = pd.read_csv(source)
     if "ticker" not in df.columns:
         df["ticker"] = None
-    
+
     # Handle multiple formats:
-    # 1. New format with ticker_match (serialized TickerMatch objects)
-    # 2. New format with ticker_confidence + ticker_method columns
+    # 1. New format with ticker_matches (serialized TickerMatches objects) - unlikely in CSV
+    # 2. New format with ticker_confidence + ticker_method + all_tickers columns
     # 3. Legacy format (string ticker only)
-    if "ticker_match" in df.columns:
-        # Format 1: use ticker_match directly
-        df["ticker"] = df["ticker_match"].apply(_extract_ticker)
-        df["ticker_confidence"] = df["ticker_match"].apply(
-            lambda m: m.confidence if isinstance(m, TickerMatch) else None
-        )
-    elif "ticker_confidence" in df.columns and "ticker_method" in df.columns:
+    if "ticker_confidence" in df.columns and "ticker_method" in df.columns:
         # Format 2: columns already present, just ensure ticker is uppercase
         df.loc[df["ticker"].notna(), "ticker"] = df.loc[df["ticker"].notna(), "ticker"].str.upper()
     else:
@@ -62,14 +81,20 @@ def load_signals(source):
             for t, x in zip(df["ticker"], df["text"])
         ]
         df["ticker_confidence"] = None
-    
+        df["ticker_method"] = None
+
+    # Ensure multi-ticker columns exist
+    for col in ["all_tickers", "all_ticker_confidences", "all_ticker_methods"]:
+        if col not in df.columns:
+            df[col] = ""
+
     # Keep ALL signals (including market-wide ones without ticker)
     # Only drop rows where text is missing
     df = df.dropna(subset=["text"]).copy()
-    
+
     # Normalize ticker to uppercase where present
     df.loc[df["ticker"].notna(), "ticker"] = df.loc[df["ticker"].notna(), "ticker"].str.upper()
-    
+
     df["ts"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True, format="mixed").dt.tz_localize(None)
     return df.reset_index(drop=True)
 
@@ -92,7 +117,7 @@ def assign_steps(df, n_steps=20, freq="auto"):
         df["step"] = np.arange(len(df)) * n // len(df)
         df["step_label"] = "Step " + (df["step"] + 1).astype(str)
         return df, "replay"
-    
+
     if df["ts"].notna().all() and df["ts"].dt.normalize().nunique() >= 5:
         df = df.sort_values("ts").reset_index(drop=True)
         days = df["ts"].dt.normalize()
@@ -126,10 +151,13 @@ def _apply_limits(w, lo, hi):
 def rebalance(df, tickers, sensitivity=0.5, decay=0.1, max_weight=0.15, min_weight=0.01):
     """df must already have 'step' and 'step_label' (see assign_steps).
     Returns (weights, scores): DataFrames with one row per step ('Start' first).
-    
+
     Only signals with high/medium confidence ticker matches affect individual stock weights.
     Market-wide signals (no ticker or low confidence) are excluded from stock-specific
     rebalancing but preserved in the dataframe for aggregate analysis.
+
+    IMPORTANT: Only signals for the configured `tickers` (index constituents) are used.
+    Signals for companies outside the index are ignored for weight calculations.
     """
     n = len(tickers)
     w0 = np.full(n, 1.0 / n)
