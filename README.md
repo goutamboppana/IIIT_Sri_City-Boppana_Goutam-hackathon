@@ -48,12 +48,25 @@ Tweets (Kaggle stock tweets) -------+                |
            (Rebalancer)        (Stress Test)       (Streamlit)
 ```
 
+## Recent Fixes (v1.1)
+
+1. **`assign_steps` now respects `n_steps`** — When `freq="auto"`, the function evaluates all standard pandas frequencies (year, quarter, month, week, day) and selects the one whose non-empty bucket count is closest to the requested step count. This prevents the previous behavior where dated data with >60 unique days silently defaulted to weekly buckets (44 steps for 5 years of data) regardless of the `n_steps` parameter.
+
+2. **Default portfolio includes multi-ticker constituents** — The dashboard sidebar now scans `all_tickers` / `all_ticker_confidences` columns for high/medium confidence mentions. Stocks like GOOGL and JPM that appeared only in multi-ticker signals (0 primary signals) are now included by default.
+
+3. **Dashboard signals match rebalancer logic** — The "Replay Step" tab uses `_expand_multi_ticker_signals()` identically to `rebalance()`, so displayed signals exactly match what drives each step's portfolio weights. Previously the tab filtered only by primary `ticker` column.
+
+4. **Multi-ticker expansion correctness verified** — Expansion does not double-count primary tickers, filters out low-confidence matches, excludes out-of-portfolio tickers from weight calculations (while preserving them for market-wide analysis), and deduplicates on (step, ticker, text, sentiment, impact).
+
 ### Data Quality Improvements
 - **Ticker mapping**: Exchange tag → Cashtag ($AAPL) → Company name *with finance context* (reduces false positives like "Tesla, Inc. reserved for PyPI package")
 - **Relevance filtering**: Requires confident ticker match OR finance keywords
 - **Near-duplicate detection**: Drops articles with >85% text similarity
 - **Rejection tracking**: Logs counts of rejected items by reason (short, irrelevant, near-duplicate, exact-duplicate)
 - **Multi-ticker support**: Articles mentioning multiple companies capture all with confidence levels
+- **Auto frequency selection**: `assign_steps(freq="auto")` evaluates year/quarter/month/week/day and picks the frequency whose bucket count is closest to the requested `n_steps` (previously ignored `n_steps` for dated data)
+- **Dashboard default tickers**: Now includes constituents that appear in multi-ticker signals (e.g., GOOGL, JPM) not just primary ticker column
+- **Dashboard signal display**: Uses the same multi-ticker expansion as the rebalancer, so "Replay Step" tab shows exactly the signals driving each step's weights
 
 ## Run it
 
@@ -216,6 +229,8 @@ sample/             bundled sample signals for demo
    Run engine in Google Colab or Linux; dashboard works locally with pre-generated signals.
 6. **Sample data only**: Without API keys, demo uses 20 headlines + HF tweets.
 7. **Stress tests are hypothetical**: Scenarios are not fitted to historical episodes.
+8. **Data sparsity**: Source dataset has only 129 signals over 5 years with a 4-year gap (2022→2026).
+   Monthly bucketing helps but some months have few signals.
 
 ## Reproducibility
 

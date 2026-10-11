@@ -1,0 +1,27 @@
+{
+  "name": "iiit_sri_city-boppana_goutam-hackathon",
+  "version": "1.0.0",
+  "description": "An NLP engine that reads financial text (news headlines and stock tweets) and turns it into structured risk signals, plus a dashboard that uses those signals to rebalance a mock stock index (Module A) and run portfolio stress tests (Module B).",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goutamboppana/IIIT_Sri_City-Boppana_Goutam-hackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/goutamboppana/IIIT_Sri_City-Boppana_Goutam-hackathon/issues"
+  },
+  "homepage": "https://github.com/goutamboppana/IIIT_Sri_City-Boppana_Goutam-hackathon#readme",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}
