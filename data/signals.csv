@@ -1,0 +1,457 @@
+source,timestamp,ticker,ticker_confidence,ticker_method,all_tickers,all_ticker_confidences,all_ticker_methods,text,sentiment,event,event_confidence,impact
+newsapi,2026-10-09T22:27:59Z,DAL,medium,company_name_with_finance,DAL,medium,company_name_with_finance,Dow Jones Top Company Headlines at 5 PM ET: Brands Say They're Pouring Tariff Refunds Into Marketing | Delta .... Dow Jones Top Company Headlines at 5 PM ET: Brands Say They're Pouring Tariff Refunds Into Marketing | Delta ...morningstar.com,0.013,Other,0.118,1
+newsapi,2026-10-09T22:25:44Z,,,,,,,"Daniel Lurie argues progressivism led San Francisco astray on public safety, drug crisis. Daniel Lurie says San Francisco got ""entrapped in our progressive values"" and got to a point where the city wasn't taking stock of their problems.",0.3,Other,0.191,1
+newsapi,2026-10-09T22:25:02Z,,,,,,,"1966 Sunbeam Tiger Mk 1A. This 1966 Sunbeam Tiger Mk 1A was refurbished under previous ownership prior to 2004, and it was listed on BaT in June 2021 before being acquired by the selling dealer in February 2024 and then listed again on BaT in April 2024. The vehicle was issued a certi…",0.016,Merger/Acquisition,0.38,2
+newsapi,2026-10-09T22:22:35Z,,,,,,,Cramer’s week ahead: Earnings kick off as banks and chipmakers face big tests. CNBC’s Jim Cramer said next week’s earnings reports will give investors a clearer picture of corporate performance and the strength of the AI trade.,0.781,Earnings,0.79,5
+newsapi,2026-10-09T22:22:04Z,,,,,,,"Zelensky slams Trump’s ‘weak decision’. Ukraine’s Vladimir Zelensky has lashed out at US President Donald Trump over his decision to lift sanctions on Russian diesel exports, accusing Washington of striking a deal with Moscow behind Kiev’s back.",-0.922,Other,0.202,1
+newsapi,2026-10-09T22:18:13Z,,,,,,,"Strive reportedly buys 638 Bitcoin with preferred stock proceeds this week. Strive's strategic Bitcoin acquisition may boost investor confidence, potentially driving its stock price higher amid ongoing financial maneuvers.
+The post Strive reportedly buys 638 Bitcoin with preferred stock proceeds this week appeared first on Crypto Bri…",0.908,Merger/Acquisition,0.573,5
+newsapi,2026-10-09T22:17:16Z,,,,,,,"Has Buying DraftKings Stock's Dips Paid Off?. stock has dropped 20% since its high on September 14, 2026. A decline of this speed often prompts investors to reconsider their positions, yet no new financial results triggered the selloff. The company last reported earnings on August 6, 2026, and held its c…",-0.964,Other,0.204,1
+newsapi,2026-10-09T22:17:14Z,,,,,,,"Stock May Be 43% Undervalued Despite Dividend Focus. American Tower has seen its share price move around in recent years, and the question now is whether the current valuation lines up with the cash flows its towers and data centers can realistically generate. With the stock closing at US$166.73, investors are …",0.097,Dividend or Buyback,0.307,1
+newsapi,2026-10-09T22:17:10Z,T,high,exchange_tag,T,high,exchange_tag,"Stock Market Today, Oct. 9: AT&T Slides on SpaceX Spectrum Deal Threat. AT&T (NYSE:T), a wireless and fiber connectivity giant, closed at $22.17, down 9.81%. Space Exploration Technologies' spectrum deal raised competitive concerns for legacy wireless providers, and investors are watching Q3 earnings for guidance and subscriber t…",-0.965,Earnings,0.387,4
+newsapi,2026-10-09T22:17:09Z,,,,,,,"Constellation Brands (STZ) Stock Looks Undervalued After a 42% Three Year Slide. Constellation Brands has seen its share price fall 42.2% over the past three years, even as the business continues to lean on its earnings power from beer, wine and spirits. With the stock recently closing at US$123.63 after a short term bounce, the question …",-0.964,Earnings,0.319,4
+newsapi,2026-10-09T22:17:08Z,,,,,,,"Stock Could Be A Bargain Despite Its 36% Run. Medtronic has delivered a 35.8% gain over the past three years, yet recent share price softness raises a straightforward question for investors who care about fundamentals. Are the cash flows from its medical technology portfolio enough to support where the s…",0.319,Macroeconomic,0.317,3
+newsapi,2026-10-09T22:17:06Z,,,,,,,"Stock Falls Amid Market Uptick: What Investors Need to Know. closed at $29.70 in the latest trading session, marking a -2.53% move from the prior day. This change lagged the S&P 500's daily gain of 0.6%. At the same time, the Dow added 0.83%, and the tech-heavy Nasdaq gained 0.64%.
+Heading into today, shares of the shi…",-0.51,Market Commentary,0.565,1
+newsapi,2026-10-09T22:17:05Z,CAT,high,exchange_tag,CAT|GLW,high|high,exchange_tag|exchange_tag,"Caterpillar vs. Corning: Which Industrials Stock Is a Better Buy in 2026?. As global infrastructure needs clash with the rapid expansion of digital networks, investors often weigh industrial power against technological innovation. Choosing between Caterpillar (NYSE:CAT) and Corning (NYSE:GLW) means deciding which trend offers better…",0.077,Other,0.258,1
+newsapi,2026-10-09T22:17:00Z,,,,,,,"AST SpaceMobile, Inc. (ASTS) Stock Sinks As Market Gains: Here's Why. AST SpaceMobile, Inc. (ASTS) closed at $50.93 in the latest trading session, marking a -10.55% move from the prior day. The stock fell short of the S&P 500, which registered a gain of 0.6% for the day. Meanwhile, the Dow gained 0.83%, and the Nasdaq, a tech-h…",-0.906,Market Commentary,0.34,1
+newsapi,2026-10-09T22:16:53Z,,,,,,,"Why Boston Scientific (BSX) Outpaced the Stock Market Today. ended the recent trading session at $42.73, demonstrating a +1.64% change from the preceding day's closing price. The stock's performance was ahead of the S&P 500's daily gain of 0.6%. On the other hand, the Dow registered a gain of 0.83%, and the technology-…",0.859,Market Commentary,0.313,1
+newsapi,2026-10-09T22:16:50Z,,,,,,,ERG (BIT:ERG) Stock Could Be Trading At A Premium Following A New Poland Wind Deal. ERG has delivered a positive 3 year return while the share price has been softer over shorter periods. This puts fresh focus on whether today's valuation is still in line with what its earnings can support. With the stock last closing at €22.00 and fresh cont…,0.902,Earnings,0.374,4
+newsapi,2026-10-09T22:16:49Z,,,,,,,"If a Stock Market Crash Is Coming, Billionaire Investor Bill Ackman Says You Should Do This 1 Thing Right Now. If a Stock Market Crash Is Coming, Billionaire Investor Bill Ackman Says You Should Do This 1 Thing Right Now
+Billionaire Bill Ackman has become one of the most closely followed investors in the modern era.
+His hedge fund, Pershing Square Holdings, typically …",0.045,Market Commentary,0.508,1
+newsapi,2026-10-09T22:16:39Z,,,,,,,"Beats Stock Market Upswing: What Investors Need to Know. closed at $378.81 in the latest trading session, marking a +2.12% move from the prior day. The stock exceeded the S&P 500, which registered a gain of 0.6% for the day. At the same time, the Dow added 0.83%, and the tech-heavy Nasdaq gained 0.64%.
+Heading into…",0.837,Market Commentary,0.541,1
+newsapi,2026-10-09T22:16:36Z,,,,,,,"Stock Sinks As Market Gains: What You Should Know. closed the most recent trading day at $20.66, moving -2.59% from the previous trading session. This move lagged the S&P 500's daily gain of 0.6%. Meanwhile, the Dow experienced a rise of 0.83%, and the technology-dominated Nasdaq saw an increase of 0.64%.
+Com…",0.674,Market Commentary,0.411,1
+newsapi,2026-10-09T22:16:28Z,,,,,,,"Surpasses Market Returns: Some Facts Worth Knowing. closed the most recent trading day at $159.91, moving +2.2% from the previous trading session. The stock exceeded the S&P 500, which registered a gain of 0.6% for the day. Elsewhere, the Dow saw an upswing of 0.83%, while the tech-heavy Nasdaq appreciated by …",0.9,Market Commentary,0.357,1
+newsapi,2026-10-09T22:16:08Z,,,,,,,"Outperforms Broader Market: What You Need to Know. In the latest trading session, Eaton (ETN) closed at $429.65, marking a +1.21% move from the previous day. The stock outperformed the S&P 500, which registered a daily gain of 0.6%. Elsewhere, the Dow gained 0.83%, while the tech-heavy Nasdaq added 0.64%.
+Com…",0.855,Other,0.259,1
+newsapi,2026-10-09T22:15:59Z,,,,,,,"Laps the Stock Market: Here's Why. In the latest trading session, Baidu Inc. (BIDU) closed at $85.33, marking a +1.68% move from the previous day. This change outpaced the S&P 500's 0.6% gain on the day. At the same time, the Dow added 0.83%, and the tech-heavy Nasdaq gained 0.64%.
+Prior to to…",0.74,Market Commentary,0.394,1
+newsapi,2026-10-09T22:14:49Z,,,,,,,"Live updates: Donald Trump establishes panel to investigate Fed governor Lisa Cook. Live updates: Trump makes deal with Putin for diesel; Vance rallies voters in Ohio with Husted
+President Trump on Friday announced Russia will supply the U.S. and global market with diesel amid soaring fuel prices.
+“I have just concluded a highly successful d…",0.835,Other,0.152,1
+newsapi,2026-10-09T22:12:40Z,UNP,medium,company_name_with_finance,UNP|NSC,medium|medium,company_name_with_finance|company_name_with_finance,IBEW joins opposition to Union Pacific-Norfolk Souther merger. The International Brother of Electrical Workers has joined six other unions in opposing the proposed acquisition of Norfolk Southern Corp. by Union Pacific Corp.,-0.734,Merger/Acquisition,0.543,5
+newsapi,2026-10-09T22:11:20Z,,,,,,,"Super Micro contractor pleads guilty in Nvidia AI chip rerouting scheme. The guilty plea highlights the ongoing challenges in enforcing export controls, potentially impacting US-China tech relations and market stability.
+The post Super Micro contractor pleads guilty in Nvidia AI chip rerouting scheme appeared first on Crypto Brief…",-0.617,Other,0.26,1
+newsapi,2026-10-09T22:11:12Z,,,,,,,"Breaking Down the Top Warner Bros. Execs’ $1.1 Billion Paramount Windfall. David Zaslav and his top four top lieutenants bagged a massive stock payout, while 1,500 employees also got large equity windfalls
+The post Breaking Down the Top Warner Bros. Execs’ $1.1 Billion Paramount Windfall appeared first on TheWrap.",0.039,Management Change,0.4,2
+newsapi,2026-10-09T22:10:58Z,,,,,,,"‘Morally Wrong’: Trump Sparks Anger on Left and Right By Lifting Russian Sanctions. Trump sparked a wave of bipartisan shock and anger on Friday when he announced he was lifting sanctions on Russian diesel in a bid to lower prices
+The post ‘Morally Wrong’: Trump Sparks Anger on Left and Right By Lifting Russian Sanctions first appeared on Me…",-0.37,Other,0.143,1
+newsapi,2026-10-09T22:10:15Z,,,,,,,"2004 BMW R1150R at No Reserve. This 2004 BMW R1150R was acquired by the seller in 2026, and it now shows 2,500 miles. Finished in Titanium Silver Metallic, the motorcycle is powered by an air-cooled 1,130cc opposed-twin paired with a six-speed transmission. It also has an enclosed drivesha…",0.081,Other,0.238,1
+newsapi,2026-10-09T22:04:37Z,,,,,,,"Wall Street Rallies Ahead of Next Week's Earnings | Closing Bell. Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with ...",0.112,Earnings,0.724,3
+newsapi,2026-10-09T22:01:27Z,WMT,high,exchange_tag,WMT|COST,high|high,exchange_tag|exchange_tag,"Walmart vs. Costco: Why the Cheaper Earnings Stock Costs More for Cash Flow. Walmart Inc. (NASDAQ:WMT) and Costco Wholesale Corporation (NASDAQ:COST) compete for household spending through different models. Walmart combines stores, delivery, marketplaces and advertising. Costco relies on low merchandise markups and a paid membership r…",0.06,Earnings,0.528,2
+newsapi,2026-10-09T22:01:24Z,,,,,,,"SpaceX snaps up the 800 MHz spectrum T-Mobile dumped for $2.9 billion — and T-Mobile, Verizon, AT&T stocks are sliding. SpaceX snaps up the 800 MHz spectrum T-Mobile dumped for $2.9 billion — and T-Mobile, Verizon, AT&T stocks are sliding
+When T-Mobile and Sprint completed their merger in 2020, one of the conditions the company agreed to was selling off its 800 MHz spectrum po…",-0.945,Merger/Acquisition,0.36,5
+newsapi,2026-10-09T22:01:10Z,AAPL,high,exchange_tag,AAPL|TGT,high|medium,exchange_tag|company_name_with_finance,"Apple’s App Store Growth Improved in September. What UBS Sees Coming in October Is Harder. September brought better App Store news for Apple Inc. (NASDAQ:AAPL). UBS says revenue grew 5% year over year, compared with no growth in August. However, analyst David Vogt, who rates Apple Neutral and has a $296 price target, says it is too early to draw br…",0.892,Analyst Rating,0.397,2
+newsapi,2026-10-09T22:01:03Z,MSFT,high,exchange_tag,MSFT|GOOGL,high|high,exchange_tag|exchange_tag,"Microsoft vs. Alphabet: Which AI Cloud Stock Is Cheaper After the Capital Spending?. Microsoft Corporation (NASDAQ:MSFT) and Alphabet Inc. (NASDAQ:GOOGL) compete for enterprise computing budgets, but buying their shares also means financing the servers behind those services. At the October 7 close, Microsoft cost about 59 times trailing free …",0.126,Other,0.184,1
+newsapi,2026-10-09T22:00:52Z,DAL,medium,company_name_with_finance,DAL,medium,company_name_with_finance,"Delta’s loyalty and premium push continue to pay off. This story was originally published on CX Dive. To receive daily news and insights, subscribe to our free daily CX Dive newsletter.
+Dive Brief:
+- Delta Air Lines' loyalty ecosystem and premium services continue to push the airline's earnings higher, with reve…",0.919,Earnings,0.592,5
+newsapi,2026-10-09T22:00:00Z,,,,,,,Government debt: Election promises ignore the cost – Bruce Cotterill. OPINION: Returning to 2017 public service staffing could save $2b annually.,0.573,Other,0.297,1
+newsapi,2026-10-09T22:00:00Z,,,,,,,"Why Record Crude Output Can’t Solve America’s Diesel Crisis. The United States is producing more crude oil than ever. According to the Energy Information Administration, U.S. crude production is on track to average a record 13.8 million barrels per day in 2026, surpassing the previous record set last year.  Yet diesel …",0.604,Other,0.203,1
+newsapi,2026-10-09T21:59:30Z,,,,,,,"Decade-old RAM is making a comeback. CPU makers have noticed that the seemingly unending RAM price hikes are making it tough for a lot of us to upgrade our PCs. Their solution? A return to last-gen DDR4 RAM. Intel and AMD are making new CPUs that’ll support the older, more affordable type of mem…",0.697,Other,0.163,1
+newsapi,2026-10-09T21:59:21Z,,,,,,,"XRP treasury firm Evernorth completes deal to list under XRPN. Evernorth's public listing under XRPN could accelerate institutional adoption and innovation within the XRP ecosystem, enhancing its market presence.
+The post XRP treasury firm Evernorth completes deal to list under XRPN appeared first on Crypto Briefing.",0.701,Other,0.242,1
+newsapi,2026-10-09T21:58:30Z,,,,,,,"Canada's new Defence Investment Agency could be a 'driver' for these TSX stocks, says analyst. The Week in Stocks: What National Bank added to its dividend all-stars portfolio, why David Rosenberg sees the market 'flashing a warning' and more",0.035,Analyst Rating,0.349,1
+newsapi,2026-10-09T21:57:00Z,SPT,high,exchange_tag,SPT,high,exchange_tag,"Rosen Law Firm Announces Investigation of Breaches of Fiduciary Duties by the Directors and Officers of Sprout Social, Inc. - SPT. NEW YORK, Oct. 9, 2026 /PRNewswire/ -- Rosen Law Firm, a global investor rights law firm, announces an investigation of potential breaches of fiduciary duties by the directors and officers of Sprout Social, Inc. (NASDAQ: SPT). If you currently own shares of S…",-0.014,Regulatory/Legal,0.578,2
+newsapi,2026-10-09T21:56:02Z,,,,,,,2026-27 Fantasy Basketball: Dan Titus' observations on all 30 teams ahead of your drafts. Fantasy basketball analyst Dan Titus takes a trip around the NBA to see how things are shaking out in the preseason.,0.006,Other,0.217,1
+newsapi,2026-10-09T21:52:49Z,,,,,,,"The Federal Government Just Posted the Largest Annual Budget Deficit Since COVID. That spending increase was primarily driven by entitlement programs, the military, and interest payments on the national debt. The CBO notes that Social Security spending increased by 5 percent last year due to ""increases in average benefits and in the number…",0.913,Other,0.25,1
+newsapi,2026-10-09T21:52:25Z,AMZN,medium,company_name_with_finance,AMZN,medium,company_name_with_finance,"ESP LTD Lars Frederiksen Volsung Signature Electric Guitar - Oxblood Satin $1299. ESP LTD Lars Frederiksen Volsung Signature Electric Guitar - Oxblood Satin [amazon.com] $1,299.00 
+ 
+This item is currently temporarily out of stock. 
+However, you can place an order at the current...",-0.272,Other,0.221,1
+newsapi,2026-10-09T21:50:28Z,,,,,,,"News of the day: Small businesses, job losses, heat pumps, interest rates, marital assets and more. It’s Friday, Oct. 9. Here are the top stories we’re following today.",-0.132,Other,0.269,1
+newsapi,2026-10-09T21:48:02Z,,,,,,,"46k-Mile 2008 Land Rover Range Rover Supercharged at No Reserve. This 2008 Land Rover Range Rover Supercharged was previously sold on BaT in October 2021 and again on BaT in August 2024, when it was acquired by the previous owner. The truck was later traded to the selling dealer and now has 46k miles. Finished in Alaska Wh…",0.012,Other,0.178,1
+newsapi,2026-10-09T21:46:57Z,VRT,high,exchange_tag,VRT|ETN,high|high,exchange_tag|exchange_tag,"Vertiv vs. Eaton: Which AI Power Stock Offers More Cash Flow for the Price?. Vertiv Holdings Co (NYSE:VRT) and Eaton Corporation plc (NYSE:ETN) supply the physical infrastructure that allows data centers to operate. Vertiv concentrates on critical digital infrastructure, including power and cooling. Eaton combines electrical power man…",0.062,Other,0.221,1
+newsapi,2026-10-09T21:46:44Z,,,,,,,"SoftBank Wants up to $100 Billion From Gulf Investors for AI — but Its $65 Billion OpenAI Bet Is Raising Eyebrows. SoftBank Wants up to $100 Billion From Gulf Investors for AI — but Its $65 Billion OpenAI Bet Is Raising Eyebrows
+Benzinga and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+SoftBank Group Corp. is sounding out Gulf in…",0.271,Other,0.252,1
+newsapi,2026-10-09T21:46:37Z,ASTS,high,exchange_tag,ASTS,high,exchange_tag,"Stock Market Today, Oct. 9: AST SpaceMobile Slides on SpaceX Spectrum Move. AST SpaceMobile (NASDAQ:ASTS), a satellite-based mobile broadband network for standard smartphones, closed at $50.97, down 10.48%. Pressure from SpaceX's spectrum move weighed on shares, while investors are now watching carrier partnerships and commercializat…",-0.965,Market Commentary,0.561,2
+newsapi,2026-10-09T21:46:19Z,R,high,exchange_tag,R,high,exchange_tag,"Ryder Declares Quarterly Cash Dividend. Company Pays Dividend for 201st Consecutive Quarter
+MIAMI, October 09, 2026--(BUSINESS WIRE)--The Board of Directors of Ryder System, Inc. (NYSE: R) declared a regular quarterly cash dividend of $1.01 per share of common stock to be paid on December 18, 2026 …",0.015,Dividend or Buyback,0.517,2
+newsapi,2026-10-09T21:45:52Z,CMTL,high,exchange_tag,CMTL,high,exchange_tag,"Comtech To Host Fourth Quarter and Fiscal Year 2026 Earnings Conference Call. CHANDLER, Ariz., October 09, 2026--(BUSINESS WIRE)--Oct. 9, 2026-- Comtech Telecommunications Corp. (NASDAQ: CMTL) (""Comtech"" or the ""Company""), a global communications technology leader, today announced that it plans to release its fourth quarter and fiscal …",0.025,Earnings,0.842,3
+newsapi,2026-10-09T21:45:42Z,,,,,,,"Americans’ debt soars near Great Recession levels, even as wealth levels rise: Fed data. Americans’ debt has soared near levels not seen since the wake of the Great Recession – a cause for concern even as most families have seen their wealth increase and consumer spending has remained strong, according to federal data released Friday.",0.466,Credit Event,0.477,5
+newsapi,2026-10-09T21:45:03Z,,,,,,,"“Jerry Jones Is Getting Up There in Age”- NFL Analyst Makes Plea to Cowboys Players for $23,200,000,000 Owner After Bucs Loss. When it comes to NFL owners, Jerry Jones is perhaps one of the most famous. Under his ownership, the Dallas Cowboys won three Super Bowls, but all of them happened during the 90’s, and the team has not won one since Super Bowl XXX in 1996, when Deion Sanders …",0.006,Other,0.258,1
+newsapi,2026-10-09T21:43:09Z,,,,,,,"Roy Wood Jr: Comedians Recap the Week: Roast Trump, Midterms, AI & More. In Have I Got News For You Season 5's recap for episodes 1-3, the panel discusses: Trump's $5K dividend Plan to entice voters, what is Trump-A-Palooza, AI's threat to humanity and data centers' negative impacts on our climate, Trump's government funded Midter…",-0.014,Dividend or Buyback,0.531,2
+kaggle_stock_tweets,2022-05-17 04:09:43+00:00,TSLA,high,cashtag,TSLA,high,cashtag,$TSLA Shanghai production capacity is near 50%,0.231,Other,0.207,1
+kaggle_stock_tweets,2021-12-05 21:04:38+00:00,AMZN,high,cashtag,AMZN,high,cashtag,"$AMZN: Creating and Ascending Broadening Wedge it seems like. 
+
+Textbook setup, just have to see if monday we will get a bounce at the bottom or a proper breakdown, either way we can play the bounce to top trendline to the break of bottom trend. 
+
+Mixed flow overall. https://t.co/Nu0EeFUhpE",0.034,Market Commentary,0.337,1
+kaggle_stock_tweets,2021-12-14 13:12:22+00:00,TSLA,high,cashtag,TSLA,high,cashtag,BREAKING: Daiwa Capital Markets raises $TSLA PT to $1050 from $860.,0.909,Analyst Rating,0.494,2
+kaggle_stock_tweets,2021-11-27 23:54:49+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"If you say you can’t afford an EV as you put $5 a gallon or $110 a week into your ICE car. And maintenance, brakes and oil. My net cost to own my model 3 for 3.5 years was $125 a month. You must factor all costs and resale value.   #tesla $tsla",-0.004,Other,0.194,1
+kaggle_stock_tweets,2022-04-24 23:52:07+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"This is really bad. Musk realizing he's about to be charged for fraud and could lose his position/the company. 
+
+Goes to the Saudis to essentially tell them to manufacture a narrative to help bail him out.
+
+In the end, wrist slap by @SEC_Enforcement and ""worth it"" $TSLA $TSLAQ https://t.co/OP7cn4EyLC",-0.682,Management Change,0.305,3
+kaggle_stock_tweets,2021-11-18 23:17:58+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Another favorable, unbiased $TSLA story by @DowJonesAl. @elonmusk https://t.co/LHr3GE4pTk",0.077,Other,0.227,1
+kaggle_stock_tweets,2022-08-24 12:32:42+00:00,AMZN,high,cashtag,AMZN,high,cashtag,$PTON to sell on $AMZN.,0.058,Other,0.233,1
+kaggle_stock_tweets,2021-12-22 13:53:09+00:00,CRM,high,cashtag,CRM,high,cashtag,"$CRM Evercore ISI Reiterates Top Pick, Sees 50% Upside as Shares Trade at a Discount
+
+“We expect high-valuation stocks are likely to remain volatile (even a small misstep = trip to the penalty box) and as such, investors need to focus on software names that are: 1) durable..",0.452,Analyst Rating,0.471,2
+kaggle_stock_tweets,2022-02-20 13:16:29+00:00,V,high,cashtag,V|PG|HD|TGT|TXN|JPM|ABBV|MSFT|COST,high|high|high|high|high|high|high|high|high,cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag,"💰10 Dividend Growth Stocks💰
+
+$V 💳
+$PG 🧼
+$HD 👷🏻‍♂️
+$WM ♻️
+$TGT 🛍
+$TXN 🏙
+$JPM  🏦
+$ABBV 💊
+$MSFT  ☁️
+$COST  🛒",0.111,Dividend or Buyback,0.676,2
+kaggle_stock_tweets,2022-07-09 00:29:14+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Now with twitter basically a duck, will someone else quack? Not sure how this gets resolved but a huge mess for sure. The only real winner here is tesla.  $tsla $twtr",-0.074,Other,0.185,1
+kaggle_stock_tweets,2022-06-10 18:58:34+00:00,AMZN,high,cashtag,AMZN|HD,high|high,cashtag|cashtag,"Not sure when or how this all ends, but I would view the following as can't-miss, generational buying opportunities:
+
+$AMZN below $90
+$DIS below $80
+$GOOG below $95 (post-split)
+$HD below $250
+$MTN below $200
+$PLD below $100
+
+What are you watching?",-0.038,Other,0.204,1
+kaggle_stock_tweets,2021-10-18 18:47:10+00:00,AMZN,high,cashtag,AMZN|AAPL,high|high,cashtag|cashtag,"The Phases of $FB:
+
+Phase 1: Ad platform
+Phase 2: +Shopping and payment platform
+Phase 3: +AR/VR hardware platform
+Phase 4: +Metaverse App store
+
+So basically $FB becomes ( $FB + $AMZN + $AAPL ) in one company.",0.036,Product Launch,0.306,1
+kaggle_stock_tweets,2022-03-03 18:34:40+00:00,TSLA,medium,company_name_with_finance,TSLA,medium,company_name_with_finance,"Republicans should invite @Tesla CEO @elonmusk to Capitol Hill “to be part of the conversation” about the transition to electric vehicles, as the Biden administration shows favoritism to @GM and @Ford, says Republican @RepHerrell.
+#JustTheNews 
+https://t.co/EU6RfvmLjl",0.001,Other,0.244,1
+kaggle_stock_tweets,2021-11-12 01:07:01+00:00,TSLA,high,cashtag,TSLA,high,cashtag,Who’s ready for a $TSLA stock split?,-0.035,Other,0.209,1
+kaggle_stock_tweets,2022-06-08 02:36:52+00:00,,,,,,,Taiwan's $TSM says global high inflation has no direct impact on semiconductor industry.,-0.395,Macroeconomic,0.305,3
+kaggle_stock_tweets,2021-10-27 15:38:11+00:00,PYPL,high,cashtag,PYPL,high,cashtag,$PYPL could have just bought $PINS 🤷‍♂️,-0.0,Merger/Acquisition,0.356,2
+kaggle_stock_tweets,2021-12-08 15:26:57+00:00,AAPL,high,cashtag,AAPL,high,cashtag,Apple 5% away from a $3T valuation.  $AAPL,-0.844,Other,0.214,1
+kaggle_stock_tweets,2022-05-11 02:23:33+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"At $780 apiece you are getting $tsla that will change the world and take you to Mars in few years 
+
+Instead of looking at this you are bickering whether Jerome gonna pucker his lips and raise another 50 or 25 BP next month 
+
+Frankly it’s pathetic and sad 😢",-0.584,Other,0.182,1
+kaggle_stock_tweets,2022-08-12 15:10:28+00:00,NVDA,high,cashtag,NVDA|AMD|INTC,high|high|high,cashtag|cashtag|cashtag,"Very interesting data from Jefferies showing CPU and GPU instance share in the top cloud providers. Haven't come across this level of granularity before $NVDA $AMD $INTC 
+
+CPUs - clear trend of AMD taking share from Intel, but also AWS's Graviton being pushed strongly as well https://t.co/62pvghhgpL",0.856,Analyst Rating,0.437,2
+kaggle_stock_tweets,2021-11-12 21:56:22+00:00,BA,high,cashtag,BA|PYPL|SQ,high|high|high,cashtag|cashtag|cashtag,"11/12 Results 🏆
+
+$BA 222.5c: .86 ➡️ 1.8 ✅ 110%
+
+$PYPL 205c: .44 ➡️ 5.0 ✅✅✅ 1036%
+
+$SQ 230c: .89 ➡️ 1.25 ✅ 40%
+
+$NIO 43c: .60 ➡️ .79 ✅ 32%
+
+Have a great weekend! https://t.co/6pyONiBjHM",0.08,Earnings,0.313,2
+kaggle_stock_tweets,2022-04-11 05:08:26+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"*IF* @elonmusk decides to buy twitter (all of it) would you support this decision? 
+
+To do so, the sale of more $TSLA stock is likely necessary unless Elon takes out the largest line of credit in the history of earth.",0.072,Credit Event,0.418,3
+kaggle_stock_tweets,2022-04-14 03:59:33+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"I suspect at least a few are in this boat... hoping to hang on to their juicy salary for another 5 years before ""oops, we couldn't have seen this coming, don't blame me, SEEYA!!!""  
+
+$TSLA",-0.019,Earnings,0.376,2
+kaggle_stock_tweets,2022-06-23 15:45:00+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"More than 715k $TSLA option contracts traded already, 51% call 26% put",0.116,Other,0.213,1
+kaggle_stock_tweets,2021-12-19 19:19:28+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Biden will bring back BBB piecemeal so Dems have accomplishments for 2022 midterms. Biden’s 4 key objectives as President:
+1/ Economic recovery
+2/ Covid
+3/ Racial equality
+4/ Clean energy
+The EV credit can pass as a standalone without the $4.5K union bonus, driven by $GM. $tsla https://t.co/MQfPRy6qmb",0.339,Management Change,0.331,2
+kaggle_stock_tweets,2021-11-08 12:07:10+00:00,TSLA,high,cashtag,TSLA|AMZN,high|high,cashtag|cashtag,"$RIVN increased this week’s IPO price to $72-$74 ($65B), from $57-$62 previously. Ironically, @elonmusk tweet poll on whether to sell 10% of $TSLA shares to pay taxes due next Aug w/ options exercise, likely increases demand for $RIVN (20% owned by $AMZN) for EV diversification. https://t.co/LYxNCSenaO",0.902,Other,0.169,1
+kaggle_stock_tweets,2022-06-15 16:36:06+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"🥳Congrats everyone, we have reached 3.2K followers. THANKS to you guys.
+
+Lets celebrate 🎉 - we are giving away 320 $usdt to 5 lucky winner 🎁
+
+👉🏻Follow us @themoneyjacks 
+👉🏻Comment &amp; tag 5 friends
+👉🏻RETWEET
+
+Hurry up - ending in 12h ⏰
+
+$sol $luna $tsla
+
+https://t.co/VkHTGbmxg6",0.654,Other,0.234,1
+kaggle_stock_tweets,2022-04-23 01:51:47+00:00,TSLA,high,cashtag,TSLA|AAPL|AMZN|GOOGL|MSFT|NOW|ADBE|CRM|NVDA|SQ|TEAM|AMD|MRNA|SNOW|PYPL|NFLX|SHOP,high|high|high|high|high|high|high|high|high|high|high|high|high|high|high|high|high,cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag,"2022 Returns...
+$TWTR: +13%
+$TSLA: -5%
+$AAPL: -9%
+$AMZN: -13%
+$GOOGL: -17%
+$MSFT: -18%
+$NOW: -27%
+$ADBE: -28%
+$CRM: -33%
+$NVDA: -34%
+$SQ: -36%
+$TEAM: -36%
+$SNAP: -37%
+$AMD: -39%
+$MRNA: -45%
+$FB: -45%
+$PINS: -46%
+$SNOW: -49%
+$PYPL: -54%
+$NFLX: -64%
+$SHOP: -67%
+$RIVN: -68%",-0.038,Earnings,0.395,2
+kaggle_stock_tweets,2022-07-11 16:33:32+00:00,AAPL,high,cashtag,AAPL|MSFT|MRNA|CRM|AMZN|ADBE|TSLA|ZM|TEAM|AMD|NVDA|META|SNOW|SQ|PYPL|NFLX|SHOP,high|high|high|high|high|high|high|high|high|high|high|high|high|high|high|high|high,cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag,"2022 Returns
+$AAPL: -18%
+$GOOG: -19%
+$MSFT: -21%
+$TWTR: -22%
+$MRNA: -31%
+$CRM: -31%
+$AMZN: -32%
+$ADBE: -32%
+$TSLA: -34%
+$ZM: -40%
+$TEAM: -44%
+$AMD: -46%
+$NVDA: -48%
+$META: -51%
+$SNOW: -54%
+$SPOT: -57%
+$ETSY: -60%
+$SQ: -61%
+$PYPL: -62%
+$NFLX: -70%
+$SNAP: -70%
+$W: -73%
+$SHOP: -76%",-0.044,Other,0.264,1
+kaggle_stock_tweets,2022-07-05 17:33:22+00:00,JNJ,high,cashtag,JNJ|COST|MA|MSFT|ABBV|GOOGL|AMZN|AAPL,high|high|high|high|high|high|high|low,cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|cashtag|company_name_alone,"NUNCA VENDO ESTAS EMPRESAS
+
+Johnson &amp; Johnson $JNJ LVMH $MC Costco $COST
+Apple $Aaple Mastercard $MA Microsoft $MSFT
+AbbVie $ABBV ASML $ASML Alphabet $GOOGL
+Amazon $AMZN
+
+Fuente: stocktorch https://t.co/DDCWijPWnM",0.11,Other,0.256,1
+kaggle_stock_tweets,2022-06-28 22:27:48+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"THIS DAY IN $TSLAQ HISTORY:
+
+The last 4 years have been rough on $TSLA: backlog gone, demand evaporated... so sad.😥
+🤭 https://t.co/HHb1P0MCUT",-0.946,Other,0.193,1
+kaggle_stock_tweets,2021-11-07 18:55:04+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"All we need to do is convince 20 million different ppl to buy 1 share, and poof, no more Elon selling problem.
+
+💡
+
+$TSLA",0.078,Other,0.201,1
+kaggle_stock_tweets,2022-03-10 04:50:17+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Tesla on ""autopilot"" crashes into  road maintenance vehicle. The 25 y.o. worker setting up traffic cones killed. $TSLAQ $TSLA  https://t.co/G39sECcEJS",-0.881,Other,0.146,1
+kaggle_stock_tweets,2022-02-16 12:43:22+00:00,SHOP,high,cashtag,SHOP|AMZN,high|high,cashtag|cashtag,"$SHOP expects capex of $200m in 2022, $AMZN expects capex north of $60b in 2022.
+
+Even if you go by Amazon's recent acknowledgment that 40% of capex is for AWS &amp; 5% is for offices/stores that leaves $33b of 1p/3p capex vs $200m from shopify. https://t.co/o34pJp7iTt",0.088,Other,0.286,1
+kaggle_stock_tweets,2022-05-20 22:12:53+00:00,AMD,high,cashtag,AMD|DAL,high|low,cashtag|company_name_alone,"BEGINNER OPTIONS STARTER PACK:
+
+•$500-$1,000 cash account
+
+•1-2 Contracts MAX
+
+•10-15% Max Loss per trade
+
+•.3 Delta or Higher
+
+•At least 1K vol on strike
+
+•Trade $SPY $QQQ $AMD $IWM
+
+•1-3 OTM Strikes
+
+•NO 0DTE, 2+ DTE at least
+
+•No more than 4 trades a day",-0.016,Other,0.26,1
+kaggle_stock_tweets,2022-09-16 11:47:46+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Fed ex is a fed ex issue and not macro issue. I think markets will absorb the news today. That why I just bought 3,000 $tsla at $301 and will sell if opportunity is there or hold into next week. Enjoy the weekend everyone! https://t.co/a5irLbsBQ2",0.049,Other,0.19,1
+kaggle_stock_tweets,2022-04-11 13:52:25+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Before anyone asks, today’s $TSLA Stephenson Indicator™️ is $952.73.
+
+Not trading advice, do your own research, for entertainment purposes only, technical analysis is phrenology, etc. 
+https://t.co/BOwrHeS7Zg https://t.co/YhCTwhCENB",-0.016,Market Commentary,0.68,1
+kaggle_stock_tweets,2022-04-28 20:57:26+00:00,AAPL,high,cashtag,AAPL|AMZN,high|high,cashtag|cashtag,"$AAPL 🚀
+$AMZN 🪦
+
+Apple shows once again why it's on top. 90 billion in buybacks, beats on nearly everything. Amazon has its hands in everything and acts like it can't turn a profit.",-0.096,Dividend or Buyback,0.366,1
+kaggle_stock_tweets,2022-04-04 15:56:21+00:00,TSLA,high,cashtag,TSLA,high,cashtag,$TSLA gunnin for $1150 today. 🚀,0.039,Other,0.213,1
+kaggle_stock_tweets,2022-05-02 21:22:03+00:00,TSLA,high,cashtag,TSLA,high,cashtag,@WholeMarsBlog I am sure you are right.  It’s in Elon’s best interests to keep $TSLA stock stable or the $TWTR deal won’t get done. Finding new equity investors (beside Elon) is crucial to that objective.,0.14,Management Change,0.301,2
+kaggle_stock_tweets,2021-11-16 01:32:46+00:00,AMD,high,cashtag,AMD|QCOM|SQ|BA,high|high|high|high,cashtag|cashtag|cashtag|cashtag,"11/16 Watchlist 🔮
+
+$AMD 150c &gt; 147.40 | 143p &lt; 145.20
+$QCOM 175c &gt; 170 | 162.5p &lt; 167.35
+$DIS 162.5c &gt; 159 | 155p &lt; 157.80
+$SQ 242.5c &gt; 234.60 | 225p &lt; 231.20
+$BA 240c &gt; 234 | 227.5p &lt; 232",-0.045,Other,0.174,1
+kaggle_stock_tweets,2022-02-18 21:07:35+00:00,,,,,,,"I went through a very violent 50% bear market in China with $BABA and the reason why I survived was bc of puts
+One piece of advice: TAKE YOUR TIME to buy dips! 
+Do real margin of safety work. 
+Usually when it starts crashing it crashes WAY more. $FB was at $260 now it's at 206.",0.009,Other,0.285,1
+kaggle_stock_tweets,2022-01-21 13:36:24+00:00,AAPL,high,cashtag,AAPL,high,cashtag,"If $PTON built their bikes to break in a year like $AAPL does with their iPhone, they’d be fine. 😂",0.224,Other,0.184,1
+kaggle_stock_tweets,2021-12-10 12:19:18+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"I wonder if CNBC even knows that @elonmusk has now bought more $TSLA shares (12.8M) than he’s sold (11.0M) since the Twitter poll?
+@JoeSquawk
+@BeckyQuick 
+@carlquintanilla
+@jimcramer
+@SquawkCNBC 
+@SquawkStreet https://t.co/68fSRddavZ",-0.019,Other,0.249,1
+kaggle_stock_tweets,2022-08-02 02:15:00+00:00,META,high,cashtag,META|AAPL|AMZN|NFLX|GOOGL,high|high|high|high|high,cashtag|cashtag|cashtag|cashtag|cashtag,"With many tech companies citing uncertain macroeconomic times and bracing for a downturn in their earnings calls, we look at some of the biggest tech names and their cash vs. LT debt positions heading into the next few quarters. First up: FAANG. 
+
+$META $AAPL $AMZN $NFLX $GOOGL https://t.co/4Y0DlkqewP",-0.011,Macroeconomic,0.488,3
+kaggle_stock_tweets,2022-03-21 00:51:12+00:00,,,,,,,"$TAN Solar stocks are showing up on my scans or just buy the ETF 
+$SEDG $ENPH $NOVA $FSLR https://t.co/IcdNznM9Uq",0.077,Other,0.275,1
+kaggle_stock_tweets,2021-10-07 13:22:20+00:00,TSLA,high,cashtag,TSLA,high,cashtag,People called me crazy when I bought after $TSLA split in the $300s and $400s. They said I was buying in too high when it fell below $700. “Wait till it crashes!!” is what I’ve been hearing all the time. I’ll get the last laugh when I look back in 5 yrs 😏 https://t.co/R8crnECdx0,-0.361,Market Commentary,0.59,1
+kaggle_stock_tweets,2022-04-07 11:16:08+00:00,,,,,,,Short EU &amp; EM equities with US shorts  on SPX NDX INDU RTY and US mid caps. Short semis SMH &amp; US EU banks XLF EUFN &amp; 6 mega tech shorts AAPL AMZN FB MSFT NVDA GOOGL. Short credit LQD IGSB HYG JNK with short US T-bonds &amp; EM bonds. Short Bitcoin. Short US mortgages and real estate.,0.018,Credit Event,0.434,3
+kaggle_stock_tweets,2021-11-26 02:32:58+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Tesla has a market capitalization above $1 trillion dollars because the people holding it think it will be worth more in the future, people not holding it are lagging benchmarks, and people who want to bet against it are scared to have their face melted off yet again. $TSLA",-0.193,Market Commentary,0.387,1
+kaggle_stock_tweets,2021-10-24 17:18:46+00:00,AAPL,high,cashtag,AAPL|FDX|JPM|NVDA,high|high|high|high,cashtag|cashtag|cashtag|cashtag,"Public Weekly Watchlist:
+
+$AAPL over 150, 150c
+$ATVI over 81, 82c
+$FDX over 235, 240c
+$JPM over 172, 175c
+$NVDA over 232, 235c
+
+Charts and 2 #BONUS picks will be uploaded later tonight. Good luck, traders!",0.079,Market Commentary,0.422,1
+kaggle_stock_tweets,2022-05-02 13:29:29+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Daily update on $TSLA in ETFs (4/29).
+@garyblack00 increasing $FFND's exposure, now leading the pack with 12.15%.
+$ARKK purchase due to small inflows, but cannot mask the bleeding Assets under Management, now below $12bn for what was $42bn 15 months ago (see comment). 
+🐮💙🧡💚🖤 https://t.co/FfnSi97kTU",0.92,Other,0.184,1
+kaggle_stock_tweets,2022-03-17 16:08:21+00:00,AMZN,high,cashtag,AMZN,high,cashtag,$AMZN is setting up perfectly for #LottoFriday,0.162,Other,0.286,1
+kaggle_stock_tweets,2022-01-22 21:07:44+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"@TeslaPodcast We can agree to disagree, you’re a very valuable asset to $TSLA community and think you and @heydave7 deserve a direct interview with @elonmusk sooner or later…I have faith it will happen someday.  It will be historic for all of us $TSLA investors if/when it happens",0.328,Other,0.217,1
+kaggle_stock_tweets,2022-03-08 00:41:57+00:00,,,,,,,@ImperialHal The CEO across every platform possible 🤝,0.095,Management Change,0.326,2
+kaggle_stock_tweets,2022-04-19 14:23:56+00:00,AMD,high,cashtag,AMD,high,cashtag,1 ❤️ and I’ll end the 5 month downtrend on $AMD,-0.749,Other,0.238,1
+kaggle_stock_tweets,2022-08-01 16:44:40+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Spent this last week in Merida Mexico. Considering retiring there next year.
+
+Thanks $TSLA. https://t.co/JNgrWIWPPR",0.016,Other,0.162,1
+kaggle_stock_tweets,2022-02-03 14:05:08+00:00,,,,,,,"The CEO of Rumble will be joining @matt_kohrs LIVE at 1pm ET to discuss the future of social media, his opinions on recent $FB $GOOG announcements, the events around @joerogan and $SPOT, how Rumble intersects with all of this and more.
+
+Links to the stream will be shared shortly.",0.01,Other,0.177,1
+kaggle_stock_tweets,2022-02-25 21:57:56+00:00,AAPL,high,cashtag,AAPL|TSLA|PYPL,high|high|high,cashtag|cashtag|cashtag,"Here's a possible path to 4700/4800.
+
+It won't be a direct line but it's possible,  as long as we hold that 4200. 
+
+See the technical lay of land below. I can see 4600 4700 from where I sit. Now 4380. 
+
+$aapl  $tsla $pltr $arkk $pypl $fb https://t.co/dGiRdGGoee",0.053,Other,0.163,1
+kaggle_stock_tweets,2022-06-05 00:56:21+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"If you're looking to buy an EV, be careful what you listen to. Do your own research and you'll find  the true leader of the sustainable electric vehicle revolution... 
+$TSLA https://t.co/BdcIQ8Slwo",0.1,Other,0.207,1
+kaggle_stock_tweets,2022-09-21 16:56:45+00:00,AAPL,high,cashtag,AAPL,high,cashtag,"Apple, $AAPL, to move 25% iPhone production to India by 2025, 20% iPad and Apple Watch to Vietnam, per TechCrunch.",0.492,Other,0.242,1
+kaggle_stock_tweets,2022-07-28 20:02:06+00:00,AMZN,high,cashtag,AMZN,high,cashtag,"$AMZN Q2 Earnings
+
+Revenue: $121.2B v $119.7B Expected
+EPS: -$0.20 v $0.15 Expected",-0.017,Earnings,0.738,3
+kaggle_stock_tweets,2022-02-01 21:55:57+00:00,MSFT,high,cashtag,MSFT|AAPL|AMZN,high|high|high,cashtag|cashtag|cashtag,"In all seriousness, I don't know how you can look at the results from $MSFT $AAPL $GOOG and soon to be $FB and $AMZN (although the last is a big ?) and conclude that indices with big weightings in these companies are somehow going to ""mean revert"" 30/40/50% lower.",-0.655,Earnings,0.507,4
+kaggle_stock_tweets,2022-02-04 15:19:59+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Many people think spending &amp; investing $100K, $250K, $500K, $1M at a time is easy and generating $1M is lucky.
+
+Please try it. 
+
+The only people that will understand how difficult it actually is are the people that actually do it.
+
+$TSLA #Tesla",0.032,Other,0.178,1
+kaggle_stock_tweets,2022-09-07 23:01:39+00:00,INTC,high,cashtag,INTC,high,cashtag,"Pat Gelsinger says $INTC's Q3 and full-year sales are ""trending toward the lower end"" of the guidance ranges it issued in July (big ? is how much of this is due to demand weakening more vs. additional share loss). https://t.co/WcRnJM8axq",-0.949,Analyst Rating,0.361,2
+kaggle_stock_tweets,2022-03-23 02:54:21+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"Which Elon dance do you guys like better? 🕺
+
+Giga Shanghai 🇨🇳 vs Giga Berlin 🇩🇪
+
+$TSLA #Tesla 
+
+https://t.co/jP6emPKd1L",0.051,Geopolitical,0.338,3
+kaggle_stock_tweets,2022-01-13 21:04:16+00:00,PYPL,high,cashtag,PYPL|SHOP|CRWD|AMZN|SQ|AMD,high|high|high|high|high|high,cashtag|cashtag|cashtag|cashtag|cashtag|cashtag,"Another beauty 😅
+
+At least $CCL was green 😂 
+
+Added a few more $PYPL calls at the close
+
+Btm $SE $SHOP $PYPL $CRWD $TTD $AMZN $SQ $ATY $U $APPS $AMD $ROKU etc etc. 
+
+So much for a flat day 🤷‍♂️ 
+
+Hope you guys survived it 🙏
+
+On to tomorrow 💪
+
+🦜 https://t.co/cEkGDm4Tnr",0.435,Other,0.243,1
+kaggle_stock_tweets,2021-10-25 00:17:04+00:00,PYPL,high,cashtag,PYPL,high,cashtag,"Watchlist 👀:
+
+$LC - Earnings Oct 27
+$AFRM - Ready for new highs
+$DWAC - Options open up
+$SOFI - Consolidation in the $20’s
+$MELI - Oversold E-Commence play
+$PINS - $PYPL rumoured bid
+$SNAP - Over-reaction to earnings miss?
+$LCID - Production roll-out begins
+
+Good luck all!",0.006,Earnings,0.801,3
+kaggle_stock_tweets,2021-11-08 01:46:06+00:00,TSLA,high,cashtag,TSLA|GE|BA|AMZN|NVDA,high|high|high|high|high,cashtag|cashtag|cashtag|cashtag|cashtag,"-Trade ideas
+-Chart updates
+-Education 
+
+Watch it all in the weekend video here:
+https://t.co/3McuHAvtUn
+
+Reviewed:
+$SPY 
+$QQQ
+$IWM
+$BTC
+$ETH
+$TSLA
+$NIO
+$BLNK
+$GE
+$BA
+$LYFT
+$GRWG
+$DIS
+$UPST
+$BIGC
+$AMZN
+$NVDA
+$LCID
+$FCEL
+$FUBO",0.024,Market Commentary,0.393,1
+kaggle_stock_tweets,2022-04-12 12:51:13+00:00,TSLA,high,cashtag,TSLA,high,cashtag,"TESLA LAUNCHES MODEL Y STANDARD RANGE AWD FOR EMPLOYEES STARTING AT $60,000 AND WITH A FEW UPGRADES - ELECTREK
+$TSLA",0.15,Product Launch,0.84,2
+kaggle_stock_tweets,2021-11-04 16:47:43+00:00,TSLA,high,cashtag,TSLA,high,cashtag,I will never check the $TSLA ticker again.,-0.067,Other,0.169,1
+kaggle_stock_tweets,2022-02-14 02:59:37+00:00,TSLA,high,cashtag,TSLA,high,cashtag,I’m willing to bet that $TSLA does a new All-Time High before end of 2022. That means a 44% upside from Friday’s close.,0.907,Other,0.234,1
+kaggle_stock_tweets,2022-01-07 00:35:53+00:00,TSLA,high,cashtag,TSLA|MMM,high|low,cashtag|company_name_alone,"Annualised production capacity estimates for Tesla factories at end of 2022*:
+
+~1M  Shanghai
+~0.75M  Fremont
+~0.3M  Austin
+~0.3M  Berlin
+
+TOTAL ~2.35M
+
+* Capacity ≠ actual production + all factories are ramping so actual production # will be MUCH lower. 
+
+$TSLA",-0.763,Other,0.179,1
+kaggle_stock_tweets,2022-08-27 23:09:05+00:00,TSLA,high,cashtag,TSLA,high,cashtag,$TSLA will deliver 500k cars in Q4’22,0.228,Product Launch,0.438,2
+kaggle_stock_tweets,2022-02-03 21:07:40+00:00,AMZN,high,cashtag,AMZN,high,cashtag,"Amazon’s $AMZN Annual Revenue 
+
+2021: $469.8B
+2020: $386.1B
+2019: $280.5B
+2018: $232.9B
+2017: $177.9B
+2016: $136B
+2015: $107B
+2014: $89B
+2013: $74.5B
+2012: $61.1B
+2011: $48.1B
+2010: $34.2B
+2009: $24.5B
+2008: $19.2B
+2007: $14.8B
+2006: $10.7B
+2005: $8.5B",0.026,Other,0.235,1
+kaggle_stock_tweets,2022-03-15 19:34:39+00:00,TSLA,high,cashtag,TSLA,high,cashtag,Stop celebrating that $tsla broke 800. It is still down 400 dollars than where it should be. I don’t celebrate til it breaks 1200 again.,-0.81,Other,0.209,1
+kaggle_stock_tweets,2022-04-20 00:15:03+00:00,AMZN,high,cashtag,AMZN|NVDA,high|high,cashtag|cashtag,"Trade plan for Wednesday ✅
+
+$SPX if it breaks above 4474 we can see another push to 4500,4545. Calls can work above 4474
+
+$AMZN setting up for 3242 if it holds 3151 into Thursday. Calls can work above 3151
+
+$NVDA may need another day or two to set up for 233,241, Watch 225 tmrw",0.138,Other,0.297,1
+kaggle_stock_tweets,2022-01-26 21:06:26+00:00,TSLA,high,cashtag,TSLA,high,cashtag,very nice $TSLA https://t.co/X48NSNsJuq,0.159,Other,0.277,1
