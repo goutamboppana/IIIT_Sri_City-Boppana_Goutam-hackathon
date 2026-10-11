@@ -5,7 +5,8 @@ import numpy as np
 import pandas as pd
 from src.rebalance import (
     load_signals, top_tickers, assign_steps, rebalance, _apply_limits,
-    get_market_signals, _extract_ticker, _is_confident_match
+    get_market_signals, _extract_ticker, _is_confident_match,
+    _expand_multi_ticker_signals, _extract_tickers_from_all
 )
 from src.ingest import TickerMatch
 
@@ -265,7 +266,7 @@ class TestLoadSignals:
             "text": ["Apple beats", "Tesla downgraded"],
         })
         df.to_csv(csv, index=False)
-        
+
         loaded = load_signals(csv)
         assert len(loaded) == 2
         assert "ts" in loaded.columns
@@ -283,9 +284,137 @@ class TestLoadSignals:
             "text": ["Apple beats earnings"],
         })
         df.to_csv(csv, index=False)
-        
+
         loaded = load_signals(csv)
         assert "ticker" in loaded.columns
+
+
+class TestExpandMultiTickerSignals:
+    """Tests for multi-ticker signal expansion."""
+
+    def make_multi_ticker_df(self):
+        """Create a DataFrame with multi-ticker signals."""
+        return pd.DataFrame({
+            "timestamp": ["2024-01-01T12:00:00Z", "2024-01-02T12:00:00Z"],
+            "ticker": ["AAPL", "MSFT"],
+            "ticker_confidence": ["high", "high"],
+            "all_tickers": ["AAPL|GOOGL|MSFT", "MSFT|AMZN"],
+            "all_ticker_confidences": ["high|high|medium", "high|medium"],
+            "sentiment": [0.5, -0.3],
+            "event": ["Earnings", "Analyst Rating"],
+            "event_confidence": [0.8, 0.6],
+            "impact": [5, 3],
+            "text": ["Apple beats, Google and Microsoft mentioned", "Microsoft downgraded, Amazon mentioned"],
+        })
+
+    def test_expands_portfolio_constituents(self):
+        df = self.make_multi_ticker_df()
+        df["ts"] = pd.to_datetime(df["timestamp"], utc=True).dt.tz_localize(None)
+        df, _ = assign_steps(df, freq="day")
+
+        tickers = ["AAPL", "MSFT", "GOOGL", "AMZN"]
+        expanded = _expand_multi_ticker_signals(df, tickers)
+
+        # Should have original 2 rows + 3 additional (GOOGL from row 1, AMZN from row 2, MSFT from row 1)
+        # But deduplication removes MSFT from row 1 (already primary in row 2)
+        # So: AAPL(row1), MSFT(row2), GOOGL(row1), AMZN(row2), MSFT(row1) = 5 total
+        # Wait, MSFT is primary in row 2 and also in all_tickers of row 1
+        # After dedup on (step, ticker, text, sentiment, impact), MSFT from row 1 and row 2 are different steps
+        # So both should be kept
+        assert len(expanded) == 5  # 2 original + GOOGL + AMZN + MSFT(from row1)
+
+        # Check specific tickers present
+        expanded_tickers = set(expanded["ticker"].unique())
+        assert expanded_tickers == {"AAPL", "MSFT", "GOOGL", "AMZN"}
+
+        # GOOGL should have high confidence from row 1
+        googl_rows = expanded[expanded["ticker"] == "GOOGL"]
+        assert len(googl_rows) == 1
+        assert googl_rows.iloc[0]["ticker_confidence"] == "high"
+        assert googl_rows.iloc[0]["sentiment"] == 0.5
+        assert googl_rows.iloc[0]["impact"] == 5
+
+    def test_ignores_non_portfolio_tickers(self):
+        df = self.make_multi_ticker_df()
+        df["ts"] = pd.to_datetime(df["timestamp"], utc=True).dt.tz_localize(None)
+        df, _ = assign_steps(df, freq="day")
+
+        # Only AAPL and MSFT in portfolio
+        tickers = ["AAPL", "MSFT"]
+        expanded = _expand_multi_ticker_signals(df, tickers)
+
+        # Should only have AAPL and MSFT (no GOOGL, AMZN expansion)
+        assert set(expanded["ticker"].unique()) == {"AAPL", "MSFT"}
+        assert len(expanded) == 3  # AAPL(row1), MSFT(row2), MSFT(row1)
+
+    def test_ignores_low_confidence(self):
+        df = pd.DataFrame({
+            "timestamp": ["2024-01-01T12:00:00Z"],
+            "ticker": ["AAPL"],
+            "ticker_confidence": ["high"],
+            "all_tickers": ["AAPL|GOOGL"],
+            "all_ticker_confidences": ["high|low"],  # GOOGL low confidence
+            "sentiment": [0.5],
+            "event": ["Earnings"],
+            "event_confidence": [0.8],
+            "impact": [5],
+            "text": ["Apple beats, Google mentioned"],
+        })
+        df["ts"] = pd.to_datetime(df["timestamp"], utc=True).dt.tz_localize(None)
+        df, _ = assign_steps(df, freq="day")
+
+        tickers = ["AAPL", "GOOGL"]
+        expanded = _expand_multi_ticker_signals(df, tickers)
+
+        # GOOQL has low confidence, should not be expanded
+        assert set(expanded["ticker"].unique()) == {"AAPL"}
+        assert len(expanded) == 1
+
+    def test_deduplicates_primary_and_expanded(self):
+        """Primary ticker in all_tickers should not create duplicate rows."""
+        df = pd.DataFrame({
+            "timestamp": ["2024-01-01T12:00:00Z"],
+            "ticker": ["AAPL"],
+            "ticker_confidence": ["high"],
+            "all_tickers": ["AAPL|GOOGL"],
+            "all_ticker_confidences": ["high|high"],
+            "sentiment": [0.5],
+            "event": ["Earnings"],
+            "event_confidence": [0.8],
+            "impact": [5],
+            "text": ["Apple and Google beat earnings"],
+        })
+        df["ts"] = pd.to_datetime(df["timestamp"], utc=True).dt.tz_localize(None)
+        df, _ = assign_steps(df, freq="day")
+
+        tickers = ["AAPL", "GOOGL"]
+        expanded = _expand_multi_ticker_signals(df, tickers)
+
+        # Should have 2 rows: AAPL (primary) and GOOGL (expanded)
+        # AAPL from all_tickers should be deduplicated with primary
+        assert len(expanded) == 2
+        aapl_rows = expanded[expanded["ticker"] == "AAPL"]
+        assert len(aapl_rows) == 1
+
+    def test_rebalance_uses_expanded_signals(self):
+        """Integration test: rebalance should use expanded multi-ticker signals."""
+        df = self.make_multi_ticker_df()
+        df["ts"] = pd.to_datetime(df["timestamp"], utc=True).dt.tz_localize(None)
+        df, _ = assign_steps(df, freq="day")
+
+        tickers = ["AAPL", "MSFT", "GOOGL", "AMZN"]
+        weights, scores = rebalance(df, tickers, sensitivity=1.0, decay=0.0)
+
+        # GOOGL gets positive signal at step 0, AMZN gets negative at step 1
+        # Check cumulative scores across all steps
+        cum_scores = scores.sum()
+        assert cum_scores["GOOGL"] > 0.0   # Positive sentiment from row 1
+        assert cum_scores["AMZN"] < 0.0    # Negative sentiment from row 2
+
+        # GOOGL positive overall -> weight should increase from start
+        assert weights.iloc[-1]["GOOGL"] > weights.iloc[0]["GOOGL"]
+        # AMZN negative overall -> weight should decrease from start
+        assert weights.iloc[-1]["AMZN"] < weights.iloc[0]["AMZN"]
 
 
 if __name__ == "__main__":

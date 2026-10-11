@@ -53,6 +53,52 @@ def _extract_tickers_from_all(all_tickers: str) -> list[str]:
     return [t.strip().upper() for t in all_tickers.split("|") if t.strip()]
 
 
+def _expand_multi_ticker_signals(df, tickers):
+    """
+    Expand multi-ticker signals (all_tickers) into individual rows per portfolio constituent.
+
+    For each signal row, if all_tickers contains portfolio constituents with high/medium
+    confidence, create a separate signal row for each such ticker with the same
+    sentiment/event/impact/step. This captures signals where a stock was mentioned
+    but was not the primary ticker.
+    """
+    if "all_tickers" not in df.columns or "all_ticker_confidences" not in df.columns:
+        return df
+
+    expanded_rows = []
+    tickers_set = set(t.upper() for t in tickers)
+
+    for _, row in df.iterrows():
+        all_tks = _extract_tickers_from_all(row.get("all_tickers", ""))
+        all_confs = []
+        conf_str = row.get("all_ticker_confidences", "")
+        if conf_str and isinstance(conf_str, str):
+            all_confs = [c.strip().lower() for c in conf_str.split("|") if c.strip()]
+
+        # Pad confidences if needed (should match lengths)
+        while len(all_confs) < len(all_tks):
+            all_confs.append("low")
+
+        for tk, conf in zip(all_tks, all_confs):
+            if tk in tickers_set and conf in ("high", "medium"):
+                # Create a signal row for this ticker
+                new_row = row.copy()
+                new_row["ticker"] = tk
+                new_row["ticker_confidence"] = conf
+                # ticker_method could also be expanded but not needed for rebalancing
+                expanded_rows.append(new_row)
+
+    if not expanded_rows:
+        return df
+
+    expanded_df = pd.DataFrame(expanded_rows)
+    # Combine with original, deduplicate on (step, ticker, text) to avoid double-counting primary
+    combined = pd.concat([df, expanded_df], ignore_index=True)
+    # Drop exact duplicates (same step, ticker, text, sentiment, impact)
+    combined = combined.drop_duplicates(subset=["step", "ticker", "text", "sentiment", "impact"])
+    return combined.reset_index(drop=True)
+
+
 def _is_confident_match(match) -> bool:
     """Check if ticker match is high or medium confidence."""
     if isinstance(match, TickerMatch):
@@ -71,9 +117,16 @@ def load_signals(source):
     # 1. New format with ticker_matches (serialized TickerMatches objects) - unlikely in CSV
     # 2. New format with ticker_confidence + ticker_method + all_tickers columns
     # 3. Legacy format (string ticker only)
+
     if "ticker_confidence" in df.columns and "ticker_method" in df.columns:
-        # Format 2: columns already present, just ensure ticker is uppercase
-        df.loc[df["ticker"].notna(), "ticker"] = df.loc[df["ticker"].notna(), "ticker"].str.upper()
+        # Preserve existing metadata and normalize its format.
+        df.loc[df["ticker"].notna(), "ticker"] = (
+            df.loc[df["ticker"].notna(), "ticker"].astype(str).str.strip().str.upper()
+        )
+        df["ticker_confidence"] = (
+            df["ticker_confidence"].astype("string").str.strip().str.lower()
+        )
+
     else:
         # Format 3: Legacy format - recompute ticker from text
         df["ticker"] = [
@@ -158,7 +211,13 @@ def rebalance(df, tickers, sensitivity=0.5, decay=0.1, max_weight=0.15, min_weig
 
     IMPORTANT: Only signals for the configured `tickers` (index constituents) are used.
     Signals for companies outside the index are ignored for weight calculations.
+
+    Multi-ticker signals (from all_tickers column) are expanded so that each portfolio
+    constituent mentioned with high/medium confidence contributes to its weight.
     """
+    # Expand multi-ticker signals to capture all portfolio constituent mentions
+    df = _expand_multi_ticker_signals(df, tickers)
+
     n = len(tickers)
     w0 = np.full(n, 1.0 / n)
     hi = max(max_weight, 1.5 / n)      # keep the limits feasible for small indexes
