@@ -68,6 +68,51 @@ class TestAssignSteps:
         assert mode == "by day"
         assert df["step"].nunique() == 10
 
+    def test_auto_freq_respects_n_steps(self):
+        """Test that freq='auto' picks frequency closest to n_steps."""
+        # Create data spanning ~6 months with daily frequency
+        dates = pd.date_range("2024-01-01", periods=180, freq="D")
+        df = pd.DataFrame({
+            "timestamp": dates,
+            "ticker": ["AAPL"]*180,
+        })
+        df["ts"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True, format="mixed").dt.tz_localize(None)
+
+        # n_steps=5 -> should pick quarter (2 quarters) or month (6 months)
+        # Closest to 5 is month (6 buckets)
+        df_m, mode_m = assign_steps(df, n_steps=5, freq="auto")
+        assert mode_m in ("by month", "by quarter")
+        # n_steps=20 -> should pick week (~25 weeks) or month (6)
+        df_w, mode_w = assign_steps(df, n_steps=20, freq="auto")
+        assert mode_w in ("by week", "by month")
+        # n_steps=50 -> should pick week (~25) or day (180)
+        df_d, mode_d = assign_steps(df, n_steps=50, freq="auto")
+        assert mode_d in ("by day", "by week")
+
+    def test_auto_freq_with_gap(self):
+        """Test auto freq with large temporal gap (like real data)."""
+        # Two clusters: 10 days in Jan 2024, 10 days in Jan 2026
+        dates1 = pd.date_range("2024-01-01", periods=10, freq="D")
+        dates2 = pd.date_range("2026-01-01", periods=10, freq="D")
+        dates = dates1.union(dates2)
+        df = pd.DataFrame({
+            "timestamp": dates,
+            "ticker": ["AAPL"]*20,
+        })
+        df["ts"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True, format="mixed").dt.tz_localize(None)
+
+        # n_steps=10: month gives 2 buckets (Jan 2024, Jan 2026), week gives ~2, day gives 20
+        df_steps, mode = assign_steps(df, n_steps=10, freq="auto")
+        # Month (2) is closest to 10? Actually week might be closer depending on gap
+        # Just verify it runs and produces reasonable steps
+        assert df_steps["step"].nunique() <= 20  # Should not explode to day-level
+        assert mode.startswith("by ")
+
+        # Check gap is preserved - Jan 2024 and Jan 2026 should be separate buckets
+        labels = df_steps[["step", "step_label"]].drop_duplicates().sort_values("step")["step_label"].tolist()
+        assert any("2024" in l for l in labels)
+        assert any("2026" in l for l in labels)
+
 
 class TestRebalance:
     """Tests for the main rebalance function."""

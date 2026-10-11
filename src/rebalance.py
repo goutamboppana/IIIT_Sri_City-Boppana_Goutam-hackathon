@@ -156,12 +156,54 @@ def top_tickers(df, n=15):
     return df["ticker"].value_counts().head(n).index.tolist()
 
 
+def _choose_auto_freq(df, n_steps):
+    """
+    Choose the frequency that yields a bucket count closest to n_steps.
+    Evaluates standard pandas frequencies in order: year, quarter, month, week, day.
+    Returns the frequency string and the key Series for bucketing.
+    """
+    df_sorted = df.sort_values("ts")
+    days = df_sorted["ts"].dt.normalize()
+
+    # Candidate frequencies with their pandas period codes
+    freq_candidates = [
+        ("year", "Y"),
+        ("quarter", "Q"),
+        ("month", "M"),
+        ("week", "W"),
+        ("day", "D"),
+    ]
+
+    best_freq = "day"
+    best_key = days
+    best_diff = float("inf")
+
+    for freq_name, period_code in freq_candidates:
+        try:
+            if freq_name == "day":
+                key = days
+            else:
+                key = df_sorted["ts"].dt.to_period(period_code).dt.start_time
+            n_buckets = key.nunique()
+            diff = abs(n_buckets - n_steps)
+            # Prefer finer granularity on tie (smaller diff, then larger n_buckets)
+            if diff < best_diff or (diff == best_diff and n_buckets > best_key.nunique()):
+                best_diff = diff
+                best_freq = freq_name
+                best_key = key
+        except Exception:
+            continue
+
+    return best_freq, best_key
+
+
 def assign_steps(df, n_steps=20, freq="auto"):
     """Group signals into time steps.
 
-    Dated data: one step per day, week or month (freq="auto" picks day for up to 60 distinct
-    days, otherwise week). Undated data: replay the file in order, split into n_steps chunks.
-    Returns (df with 'step' and 'step_label', mode) where mode is 'by day/week/month' or 'replay'.
+    Dated data: one step per day, week, month, quarter, or year.
+    freq="auto" picks the frequency whose bucket count is closest to n_steps.
+    Undated data: replay the file in order, split into n_steps chunks.
+    Returns (df with 'step' and 'step_label', mode) where mode is 'by day/week/month/quarter/year' or 'replay'.
     """
     df = df.copy()
     # If no 'ts' column, fall back to replay mode
@@ -173,15 +215,18 @@ def assign_steps(df, n_steps=20, freq="auto"):
 
     if df["ts"].notna().all() and df["ts"].dt.normalize().nunique() >= 5:
         df = df.sort_values("ts").reset_index(drop=True)
-        days = df["ts"].dt.normalize()
         if freq == "auto":
-            freq = "week" if days.nunique() > 60 else "day"
-        if freq == "month":
+            freq, key = _choose_auto_freq(df, n_steps)
+        elif freq == "month":
             key = df["ts"].dt.to_period("M").dt.start_time
         elif freq == "week":
             key = df["ts"].dt.to_period("W").dt.start_time
+        elif freq == "quarter":
+            key = df["ts"].dt.to_period("Q").dt.start_time
+        elif freq == "year":
+            key = df["ts"].dt.to_period("Y").dt.start_time
         else:
-            freq, key = "day", days
+            freq, key = "day", df["ts"].dt.normalize()
         order = {k: i for i, k in enumerate(sorted(key.unique()))}
         df["step"] = key.map(order)
         df["step_label"] = key.dt.strftime("%Y-%m-%d")

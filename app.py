@@ -16,7 +16,7 @@ import streamlit as st
 
 from src.rebalance import (
     load_signals, top_tickers, assign_steps, rebalance, get_market_signals,
-    DEFAULT_INDEX_CONSTITUENTS
+    DEFAULT_INDEX_CONSTITUENTS, _expand_multi_ticker_signals, _extract_tickers_from_all
 )
 from src.stress import (
     run_stress_test, run_multiple_scenarios, list_scenarios, SCENARIOS, SECTOR_MAP
@@ -125,7 +125,19 @@ all_tickers = [
 ]
 
 # Keep only stocks that have at least one signal in the loaded dataset
+# Check both primary ticker AND all_tickers (multi-ticker signals)
 available_tickers = set(signals["ticker"].dropna().unique())
+# Also check all_tickers for multi-ticker mentions
+if "all_tickers" in signals.columns and "all_ticker_confidences" in signals.columns:
+    for _, row in signals.iterrows():
+        all_tks = _extract_tickers_from_all(row.get("all_tickers", ""))
+        all_confs = str(row.get("all_ticker_confidences", "")).split("|")
+        while len(all_confs) < len(all_tks):
+            all_confs.append("low")
+        for tk, conf in zip(all_tks, all_confs):
+            if conf.strip().lower() in ("high", "medium"):
+                available_tickers.add(tk.strip().upper())
+
 default_tickers = [t for t in all_tickers if t in available_tickers]
 
 tickers = st.sidebar.multiselect(
@@ -158,7 +170,11 @@ else:
 # ---------- Compute Rebalancing ----------
 signals, mode = assign_steps(signals, n_steps, freq)
 weights, scores = rebalance(signals, tickers, sensitivity, decay, max_weight, min_weight)
-used = signals[signals["ticker"].isin(tickers)]
+
+# Get signals that actually drive weights (including multi-ticker expansion)
+used = _expand_multi_ticker_signals(signals, tickers)
+used = used[used["ticker"].isin(tickers)].copy()
+
 change = (weights.iloc[-1] - weights.iloc[0]) * 100
 
 # ---------- Title & Summary ----------
