@@ -1,5 +1,7 @@
 # AI/NLP Risk Engine + Tactical Index Rebalancer + Stress Testing
 
+**Video Demo:** [Watch the demo on YouTube](https://www.youtube.com/watch?v=91JTRFemLJA)
+
 An NLP engine that reads financial text (news headlines and stock tweets) and turns it into structured
 risk signals, plus a dashboard that uses those signals to rebalance a mock stock index (Module A)
 and run portfolio stress tests (Module B).
